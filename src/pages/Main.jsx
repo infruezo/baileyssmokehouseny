@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Smokehouse from "../images/smokehouselogo.png";
 import Eaterylogo from "../images/eaterylogo.png";
 import SmokehouseBg from "../images/smokehouse-bg.jpg";
+import EateryBg from "../images/eatery-bg.jpg";
 
 const Main = () => {
   return (
@@ -29,7 +30,15 @@ const Main = () => {
           </div>
         </Link>
       </div>
-      <div className="lg:flex-1 min-h-screen bg-yellow-500 flex items-center justify-center">
+      <div className="lg:flex-1 min-h-screen relative flex items-center justify-center">
+        {/* background image and overlay */}
+        <div className="absolute w-full h-full top-0 left-0 -z-10">
+          <img src={EateryBg} className="w-full h-full object-cover" alt="" />
+
+          {/* overlay */}
+          <div className="bg-black w-full h-full absolute left-0 top-0 bg-opacity-25"></div>
+        </div>
+
         <Link to="/hours-and-menus">
           <div className="w-full h-full flex flex-col space-y-4 p-4 items-center">
             <img src={Eaterylogo} className="h-48 w-52" alt="logo" />
