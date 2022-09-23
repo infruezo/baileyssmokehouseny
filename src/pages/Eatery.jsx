@@ -1,7 +1,12 @@
 import React from "react";
+import Navbar from "../components/eatery/Navbar";
 
 const Eatery = () => {
-  return <div>Eatery</div>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 };
 
 export default Eatery;
