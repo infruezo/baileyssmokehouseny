@@ -4,6 +4,7 @@ import { MdLocationOn } from "react-icons/md";
 import { GrFacebook } from "react-icons/gr";
 import { FaTwitterSquare } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
+import { FiMenu } from "react-icons/fi";
 
 import EateryLogo from "../../images/eaterylogo.png";
 
@@ -41,21 +42,21 @@ const Navbar = () => {
               rel="noreferrer"
               target="_blank"
             >
-              <GrFacebook className="h-6 w-6" />
+              <GrFacebook className="h-4 w-4 lg:h-6 lg:w-6" />
             </a>
             <a
               href="https://twitter.com/baileysblauvelt"
               rel="noreferrer"
               target="_blank"
             >
-              <FaTwitterSquare className="h-7 w-7" />
+              <FaTwitterSquare className="h-5 w-5 lg:h-7 lg:w-7" />
             </a>
             <a
               href="https://www.instagram.com/baileysmokehouse/"
               rel="noreferrer"
               target="_blank"
             >
-              <AiFillInstagram className="h-8 w-8" />
+              <AiFillInstagram className="h-5 w-5 lg:h-8 lg:w-8" />
             </a>
           </div>
         </div>
@@ -74,6 +75,11 @@ const Navbar = () => {
             <a href="/">Menus</a>
             <a href="/">Gallery</a>
             <a href="/">Contact Us</a>
+          </div>
+
+          {/* mobile toggler */}
+          <div className="block lg:hidden">
+            <FiMenu className="h-8 w-8 cursor-pointer fill-current text-[#7F4726]" />
           </div>
         </div>
       </div>
