@@ -42,7 +42,7 @@ const Main = () => {
           <div className="bg-black w-full h-full absolute left-0 top-0 bg-opacity-25"></div>
         </div>
 
-        <Link to="/hours-and-menus">
+        <Link to="/eatery">
           <div className="w-full h-full flex flex-col space-y-4 p-4 items-center">
             <img src={Eaterylogo} className="h-48 w-56" alt="logo" />
             <h1 className="text-white font-bold lg:text-5xl text-2xl px-4 text-center">
