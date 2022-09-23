@@ -3,13 +3,9 @@ import "react-slideshow-image/dist/styles.css";
 import { Slide } from "react-slideshow-image";
 import { EaterySlideImages } from "../../utils/data";
 
-import img from "../../images/slider-1.png";
-
 const Slider = () => {
-  console.log(EaterySlideImages);
-
   return (
-    <div className="mt-12">
+    <div>
       <div className="slide-container">
         <Slide>
           {EaterySlideImages.map((slideImage, index) => (
@@ -26,7 +22,7 @@ const Slider = () => {
                     <p className="font-semibold lg:text-2xl text-sm">
                       {slideImage.text}
                     </p>
-                    <button className="shadow-md font-semibold px-6 py-4 bg-[#7F4726] rounded-full">
+                    <button className="shadow-md font-semibold px-6 py-4 bg-primary-eateryBrown rounded-full">
                       Our Menu
                     </button>
                   </div>

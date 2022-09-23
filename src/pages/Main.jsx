@@ -12,7 +12,7 @@ const Main = () => {
     <>
       <SocialsWidget />
 
-      <div className="min-h-screen w-full flex flex-col lg:flex-row font-poppins">
+      <div className="min-h-screen w-full flex flex-col lg:flex-row font-poppins relative">
         {/* Left Image */}
         <div className="lg:flex-1 min-h-screen relative flex items-center justify-center">
           {/* background image and overlay */}
@@ -63,6 +63,14 @@ const Main = () => {
               </h1>
             </div>
           </Link>
+        </div>
+
+        {/* Small Footer at the end of the page */}
+        <div className="lg:absolute bottom-0 left-0 flex items-center justify-center w-full h-12 bg-black  text-white font-semibold lg:text-sm text-xs">
+          <p className="tracking-wider">
+            Copyright © {new Date().getFullYear()} Bailey’s Smokehouse. All
+            Rights Reserved
+          </p>
         </div>
       </div>
     </>
