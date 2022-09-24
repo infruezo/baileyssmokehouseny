@@ -6,6 +6,7 @@ import Events from "../components/eatery/Events";
 import Menus from "../components/eatery/Menus";
 import Gallery from "../components/eatery/Gallery";
 import Contact from "../components/eatery/Contact";
+import Footer from "../components/eatery/Footer";
 
 const Eatery = () => {
   return (
@@ -22,9 +23,10 @@ const Eatery = () => {
       <div className="h-screen">
         <Gallery />
       </div>
-      <div className="h-screen">
-        <Contact />
-      </div>
+
+      <Contact />
+
+      <Footer />
     </div>
   );
 };

@@ -4,7 +4,7 @@ import SectionTitle from "./SectionTitle";
 const Gallery = () => {
   return (
     <div id="gallery">
-      <SectionTitle title="Gellery" />
+      <SectionTitle title="Gallery" />
     </div>
   );
 };

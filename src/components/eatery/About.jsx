@@ -11,12 +11,13 @@ const About = () => {
       <SectionTitle title="About Us" />
 
       <div className="flex flex-col space-y-6 lg:space-y-0 lg:flex-row w-full h-full">
+        {/* About us text section */}
         <div className="flex-1 h-[85%] w-full py-6 lg:py-0">
           <div className="h-full w-full flex flex-col justify-center lg:items-start items-center lg:px-24 space-y-4 px-6">
             <h1 className="text-primary-eateryBrown text-xl font-semibold">
               Welcome to the Bailey’s Eatery.
             </h1>
-            <p className="text-primary-eateryBrown/80">
+            <p className="text-primary-eateryBrown/70">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Aspernatur corporis totam quidem voluptatibus velit? Facilis
               labore in unde sapiente quidem explicabo itaque ullam, recusandae
@@ -28,6 +29,8 @@ const About = () => {
             </p>
           </div>
         </div>
+
+        {/* right side image */}
         <div className="flex-1 h-[85%] w-full py-6 lg:py-0">
           <div className="h-full w-full flex items-center justify-center px-6">
             <img
