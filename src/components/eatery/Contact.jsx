@@ -21,7 +21,7 @@ const Contact = () => {
                   Reservation
                 </h1>
 
-                <form className="px-4 mt-4 space-y-6">
+                <form className="px-0 lg:px-4 mt-4 space-y-6">
                   {/* one form item */}
                   <div>
                     <label htmlFor="name" className="text-lg font-semibold">

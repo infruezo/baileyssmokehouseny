@@ -4,6 +4,7 @@ import Navbar from "../components/eatery/Navbar";
 import Slider from "../components/eatery/Slider";
 import Events from "../components/eatery/Events";
 import Menus from "../components/eatery/Menus";
+import OpenTimes from "../components/eatery/OpenTimes";
 import Contact from "../components/eatery/Contact";
 import Footer from "../components/eatery/Footer";
 
@@ -15,6 +16,7 @@ const Eatery = () => {
       <About />
       <Events />
       <Menus />
+      <OpenTimes />
       <Contact />
       <Footer />
     </div>
