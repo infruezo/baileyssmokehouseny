@@ -14,15 +14,7 @@ const Eatery = () => {
       <Navbar />
       <Slider />
       <About />
-      <div className="h-screen">
-        <Events />
-      </div>
-      <div className="h-screen">
-        <Menus />
-      </div>
-      <div className="h-screen">
-        <Gallery />
-      </div>
+      <Events />
 
       <Contact />
 

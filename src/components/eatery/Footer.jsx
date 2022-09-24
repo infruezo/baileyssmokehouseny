@@ -34,7 +34,7 @@ const Footer = () => {
               <p className="text-sm px-4 lg:text-base lg:px-0 text-primary-eateryLightBrown">
                 Submit your Email to receive all the latest News.
               </p>
-              <form className="w-full relative ">
+              <form className="w-full relative px-4">
                 <input
                   type="email"
                   required
