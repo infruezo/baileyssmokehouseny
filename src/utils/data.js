@@ -11,6 +11,13 @@ import EventSlide1Thumbnail from "../images/event-1-thumbnail.png";
 import EventSlide2Thumbnail from "../images/event-2-thumbnail.png";
 import EventSlide3Thumbnail from "../images/event-3-thumbnail.png";
 
+// Eatery Menu items
+import Menu1 from "../images/menu-1.jpeg";
+import Menu2 from "../images/menu-2.jpeg";
+import Menu3 from "../images/menu-3.jpeg";
+import Menu1Thumbnail from "../images/menu-1-thumbnail.png";
+import Menu2Thumbnail from "../images/menu-2-thumbnail.png";
+import Menu3Thumbnail from "../images/menu-3-thumbnail.png";
 export const EaterySlideImages = [
   {
     image: EaterySlider1,
@@ -41,5 +48,20 @@ export const EateryEventSlideImages = [
   {
     original: EventSlide3,
     thumbnail: EventSlide3Thumbnail,
+  },
+];
+
+export const EateryMenuSlideImages = [
+  {
+    original: Menu1,
+    thumbnail: Menu1Thumbnail,
+  },
+  {
+    original: Menu2,
+    thumbnail: Menu2Thumbnail,
+  },
+  {
+    original: Menu3,
+    thumbnail: Menu3Thumbnail,
   },
 ];
