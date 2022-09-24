@@ -18,7 +18,7 @@ const EateryGallery = () => {
   };
 
   return (
-    <div className="z-[9999999]">
+    <div className="z-[9999999]" id="gallery">
       <SectionTitle title="Gallery" />
       <div className="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm mx-auto flex items-center justify-center gap-1 flex-wrap">
         {photos.map((src, index) => (

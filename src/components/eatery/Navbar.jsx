@@ -12,7 +12,8 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   let SmoothLink = Scroll.Link;
-  const [openMenu, setOpenMenu] = useState(false);
+
+  const [activeMenu, setActiveMenu] = useState(false);
 
   return (
     <nav className="w-full h-auto font-poppins text-sm flex flex-col space-y-0">
@@ -132,13 +133,88 @@ const Navbar = () => {
           <div className="block lg:hidden">
             <FiMenu
               className="h-8 w-8 cursor-pointer fill-current text-primary-eateryBrown"
-              onClick={(prev) => setOpenMenu(!prev)}
+              onClick={(prev) => setActiveMenu(true)}
             />
           </div>
 
-          {/* Mobile navigation */}
-          {openMenu && (
-            <div className="absolute left-0 top-0 md:hidden min-h-screen w-full bg-red-200 z-[10000]"></div>
+          {/* mobile menu */}
+          {activeMenu && (
+            <div className="fixed top-0 z-40 left-0 flex flex-col items-center w-full h-screen max-h-screen p-20 overflow-y-hidden bg-primary-eateryLightBrown text-primary-eateryBrown md:hidden">
+              <div className="absolute top-4 right-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-8 h-8 hover:text-primary-orange transform duration-300 cursor-pointer fill-current"
+                  onClick={() => setActiveMenu(false)}
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </div>
+              <img
+                src={EateryLogo}
+                alt="logo"
+                className="object-cover scale-50 transform w-full"
+              />
+              <div className="flex flex-col text-xl font-medium items-center justify-center mt-12 space-y-8 ">
+                <SmoothLink
+                  to="about"
+                  className="hover:text-primary-eateryBrown duration-200 cursor-pointer"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => setActiveMenu(false)}
+                >
+                  About Us
+                </SmoothLink>
+                <SmoothLink
+                  to="events"
+                  className="hover:text-primary-eateryBrown duration-200 cursor-pointer"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => setActiveMenu(false)}
+                >
+                  Events
+                </SmoothLink>
+                <SmoothLink
+                  to="menus"
+                  className="hover:text-primary-eateryBrown duration-200 cursor-pointer"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => setActiveMenu(false)}
+                >
+                  Menus
+                </SmoothLink>
+                <SmoothLink
+                  to="gallery"
+                  className="hover:text-primary-eateryBrown duration-200 cursor-pointer"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => setActiveMenu(false)}
+                >
+                  Gallery
+                </SmoothLink>
+                <SmoothLink
+                  to="contact"
+                  className="hover:text-primary-eateryBrown duration-200 cursor-pointer"
+                  spy={true}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => setActiveMenu(false)}
+                >
+                  Contact Us
+                </SmoothLink>
+              </div>
+            </div>
           )}
         </div>
       </div>
