@@ -10,10 +10,10 @@ const OpenTimes = () => {
         style={{ backgroundImage: `url(${storefront})` }}
       >
         {/* black overlay */}
-        <div className="absolute left-0 top-0 h-full w-full bg-black bg-opacity-20 z-10"></div>
+        <div className="absolute left-0 top-0 h-full w-full bg-black bg-opacity-20 "></div>
 
         {/* Informations overlay */}
-        <div className="absolute z-20 h-[80%] w-9/12 left-[15px] lg:w-[600px] bg-primary-eateryLightBrown lg:left-1/4 lg:-translate-x-1/4 top-1/2 -translate-y-1/2 rounded-md shadow-md ">
+        <div className="absolute  h-[80%] w-9/12 left-[15px] lg:w-[600px] bg-primary-eateryLightBrown lg:left-1/4 lg:-translate-x-1/4 top-1/2 -translate-y-1/2 rounded-md shadow-md ">
           <div className="h-full w-full flex flex-col justify-around lg:justify-start lg:p-8 p-4 text-primary-eateryBrown font-semibold text-sm lg:text-2xl lg:space-y-4">
             <p>
               Opens at <span className="text-black">7am</span>
