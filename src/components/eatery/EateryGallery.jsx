@@ -1,7 +1,8 @@
 import React from "react";
 import SectionTitle from "./SectionTitle";
+import { photos } from "../../utils/data";
 
-const Gallery = () => {
+const EateryGallery = () => {
   return (
     <div id="gallery">
       <SectionTitle title="Gallery" />
@@ -9,4 +10,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default EateryGallery;
