@@ -66,7 +66,7 @@ const Main = () => {
         </div>
 
         {/* Small Footer at the end of the page */}
-        <div className="lg:absolute bottom-0 left-0 flex items-center justify-center w-full h-12 bg-black  text-white font-semibold lg:text-sm text-xs">
+        <div className="lg:absolute bottom-0 left-0 flex items-center justify-center w-full h-12 bg-black  text-white font-semibold lg:text-sm text-xs text-center">
           <p className="tracking-wider">
             Copyright © {new Date().getFullYear()} Bailey’s Smokehouse. All
             Rights Reserved

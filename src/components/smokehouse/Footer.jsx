@@ -112,7 +112,7 @@ const Footer = () => {
         </div>
       </div>
       {/* bottom footer for copyrights */}
-      <div className="absolute bottom-0 left-0 flex items-center justify-center w-full h-12 bg-black  text-white font-semibold text-xs">
+      <div className="absolute bottom-0 left-0 flex items-center justify-center w-full h-12 bg-black  text-white font-semibold text-xs text-center">
         <p className="tracking-wide">
           Copyright © {new Date().getFullYear()} Bailey’s Smokehouse. All Rights
           Reserved

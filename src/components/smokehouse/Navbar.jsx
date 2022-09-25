@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <div className="w-full relative lg:h-[425px] h-[350px] font-poppins">
       {/* small fixed top menu for mobile */}
-      <div className="top-0 left-0 w-full bg-black lg:hidden h-12 fixed">
+      <div className="top-0 left-0 w-full bg-black lg:hidden h-12 fixed z-40">
         <div className="flex flex-row-reverse items-center px-4 justify-between h-full">
           {/* mobile toggler */}
           <GiHamburgerMenu
@@ -125,7 +125,7 @@ const Navbar = () => {
 
       {/* mobile menu */}
       {activeMenu && (
-        <div className="fixed top-0 z-40 left-0 flex flex-col items-center w-full h-screen max-h-screen px-20 py-10 overflow-y-hidden bg-[#161616] text-red-50 md:hidden">
+        <div className="fixed top-0 z-50 left-0 flex flex-col items-center w-full h-screen max-h-screen px-20 pt-3 pb-12 overflow-y-hidden bg-[#161616] text-red-50 md:hidden">
           <div className="absolute top-4 right-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -144,11 +144,7 @@ const Navbar = () => {
             </svg>
           </div>
           <Link to="/home">
-            <img
-              src={Logo}
-              alt="logo"
-              className="object-cover scale-50 transform w-full"
-            />
+            <img src={Logo} alt="logo" className="object-cover h-24 w-full " />
           </Link>
           <div className="flex flex-col text-xl font-medium items-center justify-center mt-12 space-y-6 ">
             <Link
