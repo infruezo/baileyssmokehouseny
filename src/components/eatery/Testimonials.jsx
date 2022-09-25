@@ -8,7 +8,7 @@ const Testimonials = () => {
   return (
     <div className="lg:my-32 my-16 w-full xl:h-[600px] lg:h-[500px] h-[400px]">
       <div
-        className="h-full w-full relative bg-fixed bg-no-repeat bg-cover bg-black bg-opacity-50"
+        className="h-full w-full relative lg:bg-fixed bg-no-repeat bg-cover bg-black bg-opacity-50"
         style={{ backgroundImage: `url(${TestimonialBg})` }}
       >
         <div className="slide-container w-full h-full relative">

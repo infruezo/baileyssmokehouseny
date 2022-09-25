@@ -6,7 +6,7 @@ const OpenTimes = () => {
   return (
     <div className="mt-8 mb-16 lg:mt-16 lg:mb-32 w-full h-[500px]">
       <div
-        className="h-full w-full relative bg-fixed bg-no-repeat bg-cover"
+        className="h-full w-full relative lg:bg-fixed bg-no-repeat bg-cover"
         style={{ backgroundImage: `url(${storefront})` }}
       >
         {/* black overlay */}
