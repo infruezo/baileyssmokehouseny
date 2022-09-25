@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="flex-1 w-full h-auto flex flex-col space-y-8">
           {/* about us */}
           <div className="space-y-4">
-            <h1 className="text-2xl font-semibold">About Us</h1>
+            <h1 className="text-2xl font-semibold text-red-500">About Us</h1>
             <p className="text-xs lg:text-sm">
               At Baileys we take all reservations and also have a private party
               room available. Contact us by email or phone to make a reservation
@@ -22,7 +22,7 @@ const Footer = () => {
 
           {/* be social */}
           <div className="flex flex-col space-y-4">
-            <h1 className="text-xl font-semibold">Be Social</h1>
+            <h1 className="text-xl font-semibold text-red-500">Be Social</h1>
 
             <SocialsWidget direction="horizontal" />
           </div>
@@ -30,11 +30,11 @@ const Footer = () => {
 
         {/* center section of the footer */}
         <div className="flex-1 w-full h-auto flex flex-col space-y-4">
-          <h1 className="text-2xl font-semibold">Contact Us</h1>
+          <h1 className="text-2xl font-semibold text-red-500">Contact Us</h1>
           <div className="flex flex-col space-y-6">
             {/* one contact item */}
             <div className="flex items-center space-x-4 text-sm">
-              <BsFillTelephoneFill className="fill-current h-6 w-6" />
+              <BsFillTelephoneFill className="fill-current h-6 w-6 text-red-500" />
               <div className="flex flex-col space-y-1">
                 <p>845-398-1454</p>
                 <p>BBQ Takeout, Catering & Reservations</p>
@@ -43,13 +43,13 @@ const Footer = () => {
 
             {/* one contact item */}
             <div className="flex items-center space-x-4 text-sm">
-              <GrMail className="fill-current h-6 w-6" />
+              <GrMail className="fill-current h-6 w-6 text-red-500" />
               <a href="mailto:info@baileysny.com">info@baileysny.com</a>
             </div>
 
             {/* one contact item */}
             <div className="flex items-center space-x-4 text-sm">
-              <MdLocationOn className="fill-current h-6 w-6" />
+              <MdLocationOn className="fill-current h-6 w-6 text-red-500" />
               <div className="flex flex-col space-y-1">
                 <p>136 East Erie St.</p>
                 <p>Blauvelt, NY 10913</p>
@@ -60,7 +60,9 @@ const Footer = () => {
 
         {/* right side of the footer */}
         <div className="flex-1 w-full h-auto flex flex-col lg:space-y-4 space-y-6 mb-12 lg:mb-0">
-          <h1 className="text-2xl font-semibold">Our Newsletter</h1>
+          <h1 className="text-2xl font-semibold text-red-500">
+            Our Newsletter
+          </h1>
           <p className="text-xs">To receive the latest news from us please</p>
 
           <form className="w-full flex flex-col lg:space-y-4 space-y-6">
