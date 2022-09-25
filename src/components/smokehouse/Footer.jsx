@@ -59,7 +59,7 @@ const Footer = () => {
         </div>
 
         {/* right side of the footer */}
-        <div className="flex-1 w-full h-auto flex flex-col lg:space-y-4 space-y-6">
+        <div className="flex-1 w-full h-auto flex flex-col lg:space-y-4 space-y-6 mb-12 lg:mb-0">
           <h1 className="text-2xl font-semibold">Our Newsletter</h1>
           <p className="text-xs">To receive the latest news from us please</p>
 
@@ -112,7 +112,7 @@ const Footer = () => {
         </div>
       </div>
       {/* bottom footer for copyrights */}
-      <div className="lg:absolute bottom-0 left-0 flex items-center justify-center w-full h-12 bg-black  text-white font-semibold text-xs">
+      <div className="absolute bottom-0 left-0 flex items-center justify-center w-full h-12 bg-black  text-white font-semibold text-xs">
         <p className="tracking-wide">
           Copyright © {new Date().getFullYear()} Bailey’s Smokehouse. All Rights
           Reserved
