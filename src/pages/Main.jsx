@@ -10,7 +10,7 @@ import EateryBg from "../images/eatery-bg.jpg";
 const Main = () => {
   return (
     <>
-      <SocialsWidget />
+      <SocialsWidget direction="vertical" />
 
       <div className="min-h-screen w-full flex flex-col lg:flex-row font-poppins relative">
         {/* Left Image */}

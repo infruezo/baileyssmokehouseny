@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Main from "./pages/Main";
 import Eatery from "./pages/Eatery";
 import HoursMenus from "./pages/HoursMenus";
@@ -25,7 +25,7 @@ function App() {
         <Route path="/event-calendar" element={<Events />} />
         <Route path="/gallery" element={<SmokehouseGallery />} />
         <Route path="/contact-us" element={<Contact />} />
-        <Route path="*" element={<Home />} />
+        <Route path="*" element={<Navigate to="/home" />} />
       </Routes>
     </BrowserRouter>
   );

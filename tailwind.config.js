@@ -12,6 +12,7 @@ module.exports = {
     },
     fontFamily: {
       poppins: ["Poppins", "arial"],
+      title: ["'Diplomata SC'", "arial"],
     },
   },
   plugins: [],

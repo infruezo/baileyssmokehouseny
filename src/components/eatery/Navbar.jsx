@@ -143,7 +143,7 @@ const Navbar = () => {
               <div className="absolute top-4 right-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-8 h-8 hover:text-primary-orange transform duration-300 cursor-pointer fill-current"
+                  className="w-8 h-8 hover:text-primary-eateryBrown transform duration-300 cursor-pointer fill-current"
                   onClick={() => setActiveMenu(false)}
                   fill="none"
                   viewBox="0 0 24 24"
