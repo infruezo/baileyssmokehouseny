@@ -10,10 +10,12 @@ import Catering from "./pages/smokehouse/Catering";
 import Events from "./pages/smokehouse/Events";
 import SmokehouseGallery from "./pages/smokehouse/SmokehouseGallery";
 import Contact from "./pages/smokehouse/Contact";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/eatery" element={<Eatery />} />

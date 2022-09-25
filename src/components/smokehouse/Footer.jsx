@@ -79,7 +79,7 @@ const Footer = () => {
               />
 
               <label
-                for="termsCheckbox"
+                htmlFor="termsCheckbox"
                 className="inline-block cursor-pointer max-w-sm"
               >
                 Yes, I would like to receive emails from Baileys Smokehouse.
