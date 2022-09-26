@@ -14,7 +14,7 @@ const Banner = ({ title }) => {
       </div>
 
       {/* page title */}
-      <h1 className="absolute font-title w-full left-1/2 -translate-x-1/2 lg:top-3/4 top-[70%] -translate-y-1/2 xl:text-5xl lg:text-4xl text-xl text-white mx-auto text-center px-4 tracking-tight">
+      <h1 className="absolute font-title w-full left-1/2 -translate-x-1/2 lg:top-3/4 top-[70%] -translate-y-1/2 xl:text-4xl lg:text-3xl text-lg text-white mx-auto text-center px-4 tracking-tight">
         {title}
       </h1>
     </div>

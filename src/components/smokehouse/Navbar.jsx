@@ -9,7 +9,7 @@ const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(false);
 
   return (
-    <div className="w-full relative lg:h-[425px] h-[350px] font-poppins">
+    <div className="w-full relative lg:h-[425px] h-[350px] font-poppins z-10">
       {/* small fixed top menu for mobile */}
       <div className="top-0 left-0 w-full bg-black lg:hidden h-12 fixed z-40">
         <div className="flex flex-row-reverse items-center px-4 justify-between h-full">
@@ -54,7 +54,7 @@ const Navbar = () => {
       {/* main navbar (logo + desktop links) */}
       <div className="w-full py-6 mt-12 lg:mt-0 bg-transparent text-white">
         <div className="flex items-center justify-center lg:justify-between px-2 w-full xl:max-w-screen-xl lg:max-w-screen-lg mx-auto">
-          <Link to="/home">
+          <Link to="/hours-and-menus">
             <img src={Logo} className="h-24 w-36" alt="" />
           </Link>
 
@@ -143,7 +143,7 @@ const Navbar = () => {
               />
             </svg>
           </div>
-          <Link to="/home">
+          <Link to="/hours-and-menus">
             <img src={Logo} alt="logo" className="object-cover h-24 w-full " />
           </Link>
           <div className="flex flex-col text-xl font-medium items-center justify-center mt-12 space-y-6 ">
