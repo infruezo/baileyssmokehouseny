@@ -7,6 +7,7 @@ module.exports = {
         primary: {
           eateryBrown: "#7F4726",
           eateryLightBrown: "#F1ECE8",
+          smokehouseBrown: "#6B1E1B",
         },
       },
     },

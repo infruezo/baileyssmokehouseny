@@ -11,6 +11,8 @@ import Events from "./pages/smokehouse/Events";
 import SmokehouseGallery from "./pages/smokehouse/SmokehouseGallery";
 import Contact from "./pages/smokehouse/Contact";
 import ScrollToTop from "./components/ScrollToTop";
+import RestaurantBars from "./pages/smokehouse/RestaurantBars";
+import EateryCateringTakout from "./pages/smokehouse/EateryCateringTakout";
 
 function App() {
   return (
@@ -27,6 +29,11 @@ function App() {
         <Route path="/event-calendar" element={<Events />} />
         <Route path="/gallery" element={<SmokehouseGallery />} />
         <Route path="/contact-us" element={<Contact />} />
+        <Route path="/restaurant-bars" element={<RestaurantBars />} />
+        <Route
+          path="/eatery-catering-takeout"
+          element={<EateryCateringTakout />}
+        />
         <Route path="*" element={<Navigate to="/home" />} />
       </Routes>
     </BrowserRouter>

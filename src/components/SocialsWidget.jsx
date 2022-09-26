@@ -7,15 +7,15 @@ const SocialsWidget = ({ direction }) => {
     <div
       className={`${
         direction === "vertical"
-          ? "absolute left-[5px] top-1/2 -translate-y-1/2 hidden lg:block z-50"
-          : ""
+          ? "fixed left-[5px] top-1/2 -translate-y-1/2 hidden lg:block z-50"
+          : "absolute"
       }`}
     >
       <div
         className={`${
           direction === "vertical"
             ? "px-2 py-6 flex flex-col space-y-4"
-            : "flex flex-row items-center space-x-4"
+            : "absolute flex flex-row items-center space-x-4 mt-5"
         }`}
       >
         <a
