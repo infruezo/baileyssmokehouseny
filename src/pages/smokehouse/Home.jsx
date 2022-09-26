@@ -21,7 +21,9 @@ const Home = () => {
   useEffect(() => {
     const getEvents = async () => {
       setLoading(true);
-      const response = await axios.get("/api/events-upcoming?num=6");
+      const response = await axios.get(
+        "http://www.baileyssmokehouseny.com/wp-json/mobile-hawk/v1/events-upcoming?num=6"
+      );
 
       if (response) {
         setEvents(response.data);
