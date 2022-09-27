@@ -21,6 +21,7 @@ const Main = () => {
               src={SmokehouseBg}
               className="w-full h-full object-cover "
               alt=""
+              loading="lazy"
             />
 
             {/* overlay */}
@@ -33,6 +34,7 @@ const Main = () => {
                 src={Smokehouse}
                 className="lg:h-48 lg:w-56 w-32 h-28"
                 alt="logo"
+                loading="lazy"
               />
               <h1 className="text-white font-bold lg:text-4xl text-2xl px-4 text-center">
                 Smokehouse, Takeout & Catering
@@ -45,7 +47,12 @@ const Main = () => {
         <div className="lg:flex-1 min-h-screen relative flex items-center justify-center">
           {/* background image and overlay */}
           <div className="absolute w-full h-full top-0 left-0 -z-10">
-            <img src={EateryBg} className="w-full h-full object-cover" alt="" />
+            <img
+              src={EateryBg}
+              loading="lazy"
+              className="w-full h-full object-cover"
+              alt=""
+            />
 
             {/* overlay */}
             <div className="bg-black w-full h-full absolute left-0 top-0 bg-opacity-30"></div>
@@ -57,6 +64,7 @@ const Main = () => {
                 src={Eaterylogo}
                 className="lg:h-48 lg:w-56 w-32 h-28"
                 alt="logo"
+                loading="lazy"
               />
               <h1 className="text-white font-bold lg:text-4xl text-2xl px-4 text-center">
                 Bailey’s Eatery, Breakfast bar & Bistro

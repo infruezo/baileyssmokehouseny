@@ -5,7 +5,7 @@ const Loader = () => {
   return (
     <div className="h-[600px] bg-primary-eateryLightBrown w-full">
       <div className="flex items-center justify-center text-center h-full w-full">
-        <img src={LoadingGif} alt="" />
+        <img src={LoadingGif} loading="lazy" alt="" />
       </div>
     </div>
   );

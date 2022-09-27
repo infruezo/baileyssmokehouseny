@@ -32,6 +32,7 @@ const Slider = () => {
                   src={slideImage.image}
                   className="h-full w-full object-cover z-10"
                   alt=""
+                  loading="lazy"
                 />
               </div>
             </div>

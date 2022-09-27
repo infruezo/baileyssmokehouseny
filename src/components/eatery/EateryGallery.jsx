@@ -27,6 +27,7 @@ const EateryGallery = () => {
             onClick={() => openImageViewer(index)}
             className="object-cover w-48 h-32 cursor-pointer"
             key={index}
+            loading="lazy"
             alt=""
           />
         ))}

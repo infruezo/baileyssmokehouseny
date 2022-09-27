@@ -77,6 +77,7 @@ const Navbar = () => {
               src={EateryLogo}
               className="h-24 w-24 lg:h-36 lg:w-36 object-contain"
               alt=""
+              loading="lazy"
             />
           </Link>
 
@@ -160,6 +161,7 @@ const Navbar = () => {
               <img
                 src={EateryLogo}
                 alt="logo"
+                loading="lazy"
                 className="object-cover scale-50 transform w-full"
               />
               <div className="flex flex-col text-xl font-medium items-center justify-center mt-12 space-y-8 ">

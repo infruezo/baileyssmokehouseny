@@ -16,10 +16,10 @@ const Testimonials = () => {
               WHAT OUR CUSTOMER SAY
             </h4>
             <h1 className="font-title lg:text-3xl text-lg">TESTIMONIALS</h1>
-            <img src={whiteDivider} alt="" />
+            <img src={whiteDivider} loading="lazy" alt="" />
           </div>
 
-          <div className="w-full h-full  xl:max-w-screen-xl lg:max-w-screen-lg max-w-screen-sm mx-auto lg:translate-y-[40%] translate-y-[35%]">
+          <div className="w-full h-full  xl:max-w-screen-xl lg:max-w-screen-lg max-w-screen-sm mx-auto lg:translate-y-[40%] translate-y-[30%]">
             <Slide>
               {EateryTestimonials.map((Testimonial, index) => (
                 <div

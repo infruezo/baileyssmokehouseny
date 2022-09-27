@@ -48,6 +48,7 @@ const Home = () => {
           src={Banner}
           className="h-full w-full absolute top-0 left-0 object-cover"
           alt="bannerImage"
+          loading="lazy"
         />
 
         {/* hero section text */}
@@ -88,7 +89,12 @@ const Home = () => {
 
             {/* bg image */}
             <div className="absolute w-full h-full left-0 top-0 -z-10">
-              <img src={Card1} className="w-full h-full object-cover" alt="" />
+              <img
+                src={Card1}
+                loading="lazy"
+                className="w-full h-full object-cover"
+                alt=""
+              />
             </div>
           </div>
 
@@ -105,7 +111,12 @@ const Home = () => {
 
             {/* bg image */}
             <div className="absolute w-full h-full left-0 top-0 -z-10">
-              <img src={Card2} className="w-full h-full object-cover" alt="" />
+              <img
+                src={Card2}
+                loading="lazy"
+                className="w-full h-full object-cover"
+                alt=""
+              />
             </div>
           </div>
 
@@ -122,7 +133,12 @@ const Home = () => {
 
             {/* bg image */}
             <div className="absolute w-full h-full left-0 top-0 -z-10">
-              <img src={Card3} className="w-full h-full object-cover" alt="" />
+              <img
+                src={Card3}
+                loading="lazy"
+                className="w-full h-full object-cover"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -136,6 +152,7 @@ const Home = () => {
             src={HomeAbout}
             className="float-right object-cover xl:h-auto xl:w-auto lg:w-[400px] lg:h-[400px] md:w-[325px] md:h-[325px] w-[200px] h-[200px]"
             alt=""
+            loading="lazy"
           />
 
           <div className="space-y-8">
@@ -149,6 +166,7 @@ const Home = () => {
                   src={brownDivider}
                   className="w-[100px] md:w-[200px] lg:w-auto"
                   alt=""
+                  loading="lazy"
                 />
               </div>
               <p className="font-medium">
@@ -205,6 +223,7 @@ const Home = () => {
                   src={brownDivider}
                   className="w-[100px] md:w-[200px] lg:w-[400px] object-cover mx-auto"
                   alt=""
+                  loading="lazy"
                 />
               </div>
             </div>

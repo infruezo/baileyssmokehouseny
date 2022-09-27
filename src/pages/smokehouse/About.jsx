@@ -20,6 +20,7 @@ const About = () => {
             src={HomeAbout}
             className="float-right object-cover xl:h-auto xl:w-auto lg:w-[400px] lg:h-[400px] md:w-[325px] md:h-[325px] w-[200px] h-[200px]"
             alt=""
+            loading="lazy"
           />
 
           <div className="space-y-8">
@@ -33,6 +34,7 @@ const About = () => {
                   src={brownDivider}
                   className="w-[100px] md:w-[200px] lg:w-auto"
                   alt=""
+                  loading="lazy"
                 />
               </div>
               <p className="font-medium">

@@ -37,6 +37,7 @@ const About = () => {
               src={AboutUs}
               className="h-full w-full lg:w-[500px] lg:h-[320px] object-cover shadow-md"
               alt=""
+              loading="lazy"
             />
           </div>
         </div>

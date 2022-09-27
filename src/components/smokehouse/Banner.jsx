@@ -10,6 +10,7 @@ const Banner = ({ title }) => {
           src={BannerImg}
           className="h-full w-full object-cover"
           alt="banner"
+          loading="lazy"
         />
       </div>
 

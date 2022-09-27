@@ -55,7 +55,7 @@ const Navbar = () => {
       <div className="w-full py-6 mt-12 lg:mt-0 bg-transparent text-white">
         <div className="flex items-center justify-center lg:justify-between px-2 w-full xl:max-w-screen-xl lg:max-w-screen-lg mx-auto">
           <Link to="/hours-and-menus">
-            <img src={Logo} className="h-24 w-36" alt="" />
+            <img src={Logo} loading="lazy" className="h-24 w-36" alt="" />
           </Link>
 
           <div className="hidden lg:flex lg:flex-col lg:space-y-6">
@@ -144,7 +144,12 @@ const Navbar = () => {
             </svg>
           </div>
           <Link to="/hours-and-menus">
-            <img src={Logo} alt="logo" className="object-cover h-24 w-full " />
+            <img
+              src={Logo}
+              alt="logo"
+              loading="lazy"
+              className="object-cover h-24 w-full "
+            />
           </Link>
           <div className="flex flex-col text-xl font-medium items-center justify-center mt-12 space-y-6 ">
             <Link

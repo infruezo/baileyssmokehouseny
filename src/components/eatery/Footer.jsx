@@ -10,7 +10,12 @@ const Footer = () => {
         <div className="lg:max-w-screen-2xl w-full flex flex-col space-y-10 items-center lg:space-y-0 lg:flex-row lg:justify-between lg:space-x-4 lg:items-start py-24 mx-auto h-full lg:px-8">
           {/* logo */}
           <Link to="/eatery" className=" flex-1">
-            <img src={EateryLogo} className="h-36 w-36 object-contain" alt="" />
+            <img
+              src={EateryLogo}
+              className="h-36 w-36 object-contain"
+              loading="lazy"
+              alt=""
+            />
           </Link>
 
           {/* about */}

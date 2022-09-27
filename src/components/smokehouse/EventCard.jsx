@@ -8,6 +8,7 @@ const EventCard = ({ event }) => {
         src={event?.img_url}
         className="h-3/4 w-full object-cover object-top"
         alt=""
+        loading="lazy"
       />
 
       <div className="flex flex-col space-y-1 p-4">
