@@ -3,6 +3,7 @@ import Banner from "../../components/smokehouse/Banner";
 import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
 import Testimonials from "../../components/smokehouse/Testimonials";
+import SocialsWidget from "../../components/SocialsWidget";
 
 import HomeAbout from "../../images/smokehouse/home-about.png";
 import brownDivider from "../../images/smokehouse/title-brown.png";
@@ -11,6 +12,7 @@ const About = () => {
   return (
     <div className="font-poppins">
       <Navbar />
+      <SocialsWidget direction="vertical" />
       <Banner title="ABOUT US" />
       {/* About Us */}
       <div className="bg-primary-eateryLightBrown lg:pb-72 py-20 w-full lg:pt-32 -mt-12 lg:mt-0">

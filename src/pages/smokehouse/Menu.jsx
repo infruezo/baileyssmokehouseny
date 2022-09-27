@@ -6,6 +6,7 @@ import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
 import { SmokehouseMenutabs } from "../../utils/data";
 import DisclaimerImg from "../../images/smokehouse/menus/disclaimer.jpeg";
+import SocialsWidget from "../../components/SocialsWidget";
 
 const Menu = () => {
   const [currentTab, setCurrentTab] = useState("1");
@@ -18,6 +19,7 @@ const Menu = () => {
     <div className="font-poppins">
       <Navbar />
       <Banner title="MENU" />
+      <SocialsWidget direction="vertical" />
 
       {/* menus section */}
       <div className="min-h-screen w-full bg-primary-eateryLightBrown py-16 lg:py-20 -mt-12">
