@@ -9,7 +9,7 @@ import brownDivider from "../../images/smokehouse/title-brown.png";
 
 const About = () => {
   return (
-    <div>
+    <div className="font-poppins">
       <Navbar />
       <Banner title="ABOUT US" />
       {/* About Us */}

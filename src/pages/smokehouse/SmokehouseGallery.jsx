@@ -5,7 +5,7 @@ import Navbar from "../../components/smokehouse/Navbar";
 
 const SmokehouseGallery = () => {
   return (
-    <div>
+    <div className="font-poppins">
       <Navbar />
       <Banner title="GALLERY" />
       <div className="h-screen"></div>

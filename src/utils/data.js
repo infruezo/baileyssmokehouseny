@@ -231,3 +231,18 @@ export const SmokehouseMenutabs = [
     content: { original: CateringMenu1 },
   },
 ];
+
+export const SmokehouseCateringMenus = [
+  {
+    id: 1,
+    tabTitle: "OFF-SITE PARTY",
+    title: "",
+    content: { original: OffsitePartyMenu1 },
+  },
+  {
+    id: 2,
+    tabTitle: "CATERING",
+    title: "",
+    content: { original: CateringMenu1 },
+  },
+];

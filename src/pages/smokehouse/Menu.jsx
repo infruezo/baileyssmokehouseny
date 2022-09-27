@@ -5,6 +5,7 @@ import Banner from "../../components/smokehouse/Banner";
 import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
 import { SmokehouseMenutabs } from "../../utils/data";
+import DisclaimerImg from "../../images/smokehouse/menus/disclaimer.jpeg";
 
 const Menu = () => {
   const [currentTab, setCurrentTab] = useState("1");
@@ -14,12 +15,17 @@ const Menu = () => {
   };
 
   return (
-    <div>
+    <div className="font-poppins">
       <Navbar />
       <Banner title="MENU" />
 
       {/* menus section */}
-      <div className="min-h-screen w-full bg-primary-eateryLightBrown py-16 lg:py-32 -mt-12">
+      <div className="min-h-screen w-full bg-primary-eateryLightBrown py-16 lg:py-20 -mt-12">
+        {/* disclaimer / fee image */}
+        <div className="w-full flex justify-center pb-12">
+          <img src={DisclaimerImg} className="h-32 w-48 object-cover " alt="" />
+        </div>
+
         <div className="w-full h-full px-4 xl:max-w-screen-2xl lg:max-w-screen-xl md:max-w-screen-lg mx-auto">
           {/* tabs */}
           <div className="w-full h-full">

@@ -5,7 +5,7 @@ import Navbar from "../../components/smokehouse/Navbar";
 
 const Events = () => {
   return (
-    <div>
+    <div className="font-poppins">
       <Navbar />
       <Banner title="EVENT CALENDAR" />
       <div className="h-screen"></div>

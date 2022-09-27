@@ -5,15 +5,13 @@ import Navbar from "../../components/smokehouse/Navbar";
 
 const RestaurantBars = () => {
   return (
-    <div>
-      <div>
-        <Navbar />
-        <Banner title="RESTAURANT & BARS" />
-        <div className="h-screen"></div>
-        <div className="h-screen"></div>
-        <div className="h-screen"></div>
-        <Footer />
-      </div>
+    <div className="font-poppins">
+      <Navbar />
+      <Banner title="RESTAURANT & BARS" />
+      <div className="h-screen"></div>
+      <div className="h-screen"></div>
+      <div className="h-screen"></div>
+      <Footer />
     </div>
   );
 };
