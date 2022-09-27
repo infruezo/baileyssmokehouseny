@@ -6,6 +6,7 @@ import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
 import SocialsWidget from "../../components/SocialsWidget";
 import Banner from "../../images/smokehouse/main-banner.png";
+import brownDivider from "../../images/smokehouse/title-brown.png";
 
 import Card1 from "../../images/smokehouse/home-card-1.png";
 import Card2 from "../../images/smokehouse/home-card-2.png";
@@ -139,9 +140,17 @@ const Home = () => {
 
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="font-title lg:text-3xl md:text-2xl text-xl text-primary-smokehouseBrown">
-                ABOUT US
-              </h1>
+              <div className="flex items-center space-x-1">
+                <h1 className="font-title lg:text-3xl md:text-2xl text-xl text-primary-smokehouseBrown">
+                  ABOUT US
+                </h1>
+
+                <img
+                  src={brownDivider}
+                  className="w-[100px] md:w-[200px] lg:w-auto"
+                  alt=""
+                />
+              </div>
               <p className="font-medium">
                 Welcome to Baileys Smokehouse where owner Paul Bailey has
                 brought his famed BBQ to Rockland and has added a twist. Here
@@ -156,7 +165,7 @@ const Home = () => {
               <h1 className="font-title lg:text-2xl md:text-xl text-lg text-primary-smokehouseBrown">
                 THE SMOKE RING
               </h1>
-              <p className="font-light text-sm">
+              <p className="font-normal text-sm">
                 This unique cooking process creates what’s known as a “Smoke
                 Ring” which develops along the outside of the meat and around
                 the bones in our products. You can be assured that despite this
@@ -182,12 +191,22 @@ const Home = () => {
         events && (
           <div className="w-full py-16  bg-primary-eateryLightBrown">
             <div className="w-full px-4 text-center">
-              <h3 className="uppercase font-extralight text-xl text-center tracking-wide">
-                Join our party
-              </h3>
-              <h1 className="font-title text-primary-smokehouseBrown text-3xl">
-                UPCOMING EVENTS
-              </h1>
+              <div className="flex flex-col space-y-2">
+                <div>
+                  <h3 className="uppercase font-extralight text-xl text-center tracking-wide">
+                    Join our party
+                  </h3>
+                  <h1 className="font-title text-primary-smokehouseBrown text-3xl">
+                    UPCOMING EVENTS
+                  </h1>
+                </div>
+
+                <img
+                  src={brownDivider}
+                  className="w-[100px] md:w-[200px] lg:w-[400px] object-cover mx-auto"
+                  alt=""
+                />
+              </div>
             </div>
 
             {/* events display */}

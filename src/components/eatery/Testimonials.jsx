@@ -20,8 +20,8 @@ const Testimonials = () => {
                   key={index}
                 >
                   <p>“{Testimonial.testimonial}”</p>
-                  <p className="font-bold text-lg tracking-wide text-primary-eateryLightBrown">
-                    {Testimonial.author}
+                  <p className="font-bold lg:text-lg text-base tracking-wide text-primary-eateryLightBrown">
+                    - {Testimonial.author}
                   </p>
                 </div>
               ))}
