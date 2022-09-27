@@ -19,7 +19,7 @@ import Menu1Thumbnail from "../images/menu-1-thumbnail.png";
 import Menu2Thumbnail from "../images/menu-2-thumbnail.png";
 import Menu3Thumbnail from "../images/menu-3-thumbnail.png";
 
-// gallery images
+// eatery gallery images
 import Gallery1 from "../images/gallery/image-1.jpeg";
 import Gallery2 from "../images/gallery/image-2.jpeg";
 import Gallery3 from "../images/gallery/image-3.jpeg";
@@ -57,6 +57,19 @@ import Gallery34 from "../images/gallery/image-34.jpg";
 import Gallery35 from "../images/gallery/image-35.jpg";
 import Gallery36 from "../images/gallery/image-36.jpeg";
 import Gallery37 from "../images/gallery/image-37.jpeg";
+
+// smokehouse menus import
+import TakeoutMenu1 from "../images/smokehouse/menus/takeout-menu-1.jpg";
+import TakeoutMenu2 from "../images/smokehouse/menus/takeout-menu-2.jpg";
+import TakeoutMenu3 from "../images/smokehouse/menus/takeout-menu-3.jpg";
+import TakeoutMenu4 from "../images/smokehouse/menus/takeout-menu-4.jpg";
+import PartyMenu1 from "../images/smokehouse/menus/party-menu-1.jpg";
+import OffsitePartyMenu1 from "../images/smokehouse/menus/offsite-party-menu-1.jpeg";
+import CateringMenu1 from "../images/smokehouse/menus/catering-menu-1.jpg";
+
+//*********************************************************************************************************/
+// EATERY PAGE DATA
+//*********************************************************************************************************/
 
 export const EaterySlideImages = [
   {
@@ -174,4 +187,47 @@ export const photos = [
   Gallery35,
   Gallery36,
   Gallery37,
+];
+
+//********************************************************************************************************** */
+// SMOKEHOUSE DATA
+//********************************************************************************************************** */
+export const SmokehouseMenutabs = [
+  {
+    id: 1,
+    tabTitle: "TAKEOUT/MAIN RESTAURANT",
+    title: "",
+    content: [
+      {
+        original: TakeoutMenu1,
+      },
+      {
+        original: TakeoutMenu2,
+      },
+      {
+        original: TakeoutMenu3,
+      },
+      {
+        original: TakeoutMenu4,
+      },
+    ],
+  },
+  {
+    id: 2,
+    tabTitle: "PARTY",
+    title: "",
+    content: { original: PartyMenu1 },
+  },
+  {
+    id: 3,
+    tabTitle: "OFF-SITE PARTY",
+    title: "",
+    content: { original: OffsitePartyMenu1 },
+  },
+  {
+    id: 4,
+    tabTitle: "CATERING",
+    title: "",
+    content: { original: CateringMenu1 },
+  },
 ];
