@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="flex-1 w-full h-auto flex flex-col space-y-8">
           {/* about us */}
           <div className="space-y-4">
-            <h1 className="text-2xl font-semibold text-red-500">About Us</h1>
+            <h1 className="text-2xl font-semibold text-red-700">About Us</h1>
             <p className="text-xs lg:text-sm">
               At Baileys we take all reservations and also have a private party
               room available. Contact us by email or phone to make a reservation
@@ -22,7 +22,7 @@ const Footer = () => {
 
           {/* be social */}
           <div className="flex flex-col space-y-4">
-            <h1 className="text-xl font-semibold text-red-500">Be Social</h1>
+            <h1 className="text-xl font-semibold text-red-700">Be Social</h1>
 
             <SocialsWidget direction="horizontal" />
           </div>
@@ -30,11 +30,11 @@ const Footer = () => {
 
         {/* center section of the footer */}
         <div className="flex-1 w-full h-auto flex flex-col space-y-4">
-          <h1 className="text-2xl font-semibold text-red-500">Contact Us</h1>
+          <h1 className="text-2xl font-semibold text-red-700">Contact Us</h1>
           <div className="flex flex-col space-y-6">
             {/* one contact item */}
             <div className="flex items-center space-x-4 text-sm">
-              <BsFillTelephoneFill className="fill-current h-6 w-6 text-red-500" />
+              <BsFillTelephoneFill className="fill-current h-6 w-6 text-red-700" />
               <div className="flex flex-col space-y-1">
                 <p>845-398-1454</p>
                 <p>BBQ Takeout, Catering & Reservations</p>
@@ -43,13 +43,13 @@ const Footer = () => {
 
             {/* one contact item */}
             <div className="flex items-center space-x-4 text-sm">
-              <GrMail className="fill-current h-6 w-6 text-red-500" />
+              <GrMail className="fill-current h-6 w-6 text-red-700" />
               <a href="mailto:info@baileysny.com">info@baileysny.com</a>
             </div>
 
             {/* one contact item */}
             <div className="flex items-center space-x-4 text-sm">
-              <MdLocationOn className="fill-current h-6 w-6 text-red-500" />
+              <MdLocationOn className="fill-current h-6 w-6 text-red-700" />
               <div className="flex flex-col space-y-1">
                 <p>136 East Erie St.</p>
                 <p>Blauvelt, NY 10913</p>
@@ -60,7 +60,7 @@ const Footer = () => {
 
         {/* right side of the footer */}
         <div className="flex-1 w-full h-auto flex flex-col lg:space-y-4 space-y-6 mb-12 lg:mb-0">
-          <h1 className="text-2xl font-semibold text-red-500">
+          <h1 className="text-2xl font-semibold text-red-700">
             Our Newsletter
           </h1>
           <p className="text-xs">To receive the latest news from us please</p>
@@ -69,7 +69,7 @@ const Footer = () => {
             <input
               type="email"
               required
-              className="py-1.5 px-3 rounded-lg shadow-md text-sm outline-none text-gray-900 w-[80%] lg:w-72 focus:ring focus:ring-red-500 duration-300"
+              className="py-1.5 px-3 rounded-lg shadow-md text-sm outline-none text-gray-900 w-[80%] lg:w-72 focus:ring focus:ring-red-700 duration-300"
               placeholder="Email Address..."
             />
 
@@ -77,7 +77,7 @@ const Footer = () => {
               <input
                 type="checkbox"
                 id="termsCheckbox"
-                className="inline-block checked:accent-red-500"
+                className="inline-block checked:accent-red-700"
               />
 
               <label
@@ -89,7 +89,7 @@ const Footer = () => {
               </label>
             </div>
 
-            <button className="bg-red-500 w-24 text-white py-1 rounded-md font-semibold hover:bg-white hover:text-red-500 duration-300">
+            <button className="bg-red-700 w-24 text-white py-1 rounded-md font-semibold hover:bg-white hover:text-red-700 duration-300">
               Send
             </button>
           </form>
@@ -105,7 +105,7 @@ const Footer = () => {
                 href="https://www.constantcontact.com/legal/service-provider"
                 rel="noreferrer"
                 target="_blank"
-                className="text-red-500"
+                className="text-red-700"
               >
                 Emails are serviced by Constant Contact
               </a>
