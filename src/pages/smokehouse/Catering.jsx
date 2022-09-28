@@ -23,7 +23,7 @@ const Catering = () => {
 
       <div className="w-full min-h-screen bg-primary-eateryLightBrown -mt-12 py-8 lg:py-12">
         <div className="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto">
-          <h1 className="lg:text-lg text-base text-primary-smokehouseDarkRed font-bold">
+          <h1 className="lg:text-3xl text-xl text-primary-smokehouseBrown font-medium">
             Let us know about your catering needs!
           </h1>
 

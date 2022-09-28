@@ -28,7 +28,7 @@ const Menu = () => {
           <img src={DisclaimerImg} className="h-32 w-48 object-cover " alt="" />
         </div>
 
-        <div className="w-full h-full px-4 xl:max-w-screen-2xl lg:max-w-screen-xl md:max-w-screen-lg mx-auto">
+        <div className="w-full h-full xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto">
           {/* tabs */}
           <div className="w-full h-full">
             <div className="tabs w-full flex items-center flex-wrap gap-4 lg:gap-x-0 lg:justify-center lg:space-x-4 pb-12">

@@ -15,7 +15,7 @@ const About = () => {
       <SocialsWidget direction="vertical" />
       <Banner title="ABOUT US" />
       {/* About Us */}
-      <div className="bg-primary-eateryLightBrown lg:pb-72 py-20 w-full lg:pt-32 -mt-12 lg:mt-0">
+      <div className="bg-primary-eateryLightBrown lg:pb-72 py-20 w-full lg:pt-32 -mt-12">
         {/* wrapper */}
         <div className="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto">
           <img

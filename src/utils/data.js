@@ -246,3 +246,86 @@ export const SmokehouseCateringMenus = [
     content: { original: CateringMenu1 },
   },
 ];
+
+export const SmokehouseUpcomingEvents = [
+  {
+    title: "Ocktoberfest 2022",
+    content: "",
+    img_url:
+      "http://www.baileyssmokehouseny.com/wp-content/uploads/2022/09/image0-941x1219.jpeg",
+    date: "2022-09-29",
+    startTime: "00:00:00",
+    endDate: "2022-10-02",
+    endTime: "23:59:00",
+  },
+  {
+    title: "Dead Mile Dance",
+    content: "",
+    img_url:
+      "http://www.baileyssmokehouseny.com/wp-content/uploads/2022/09/image0-2-941x1255.jpeg",
+    date: "2022-09-30",
+    startTime: "00:00:00",
+    endDate: "2022-09-30",
+    endTime: "23:59:00",
+  },
+  {
+    title: "Kickin' Nash",
+    content: "",
+    img_url:
+      "http://www.baileyssmokehouseny.com/wp-content/uploads/2022/09/image0-1.jpeg",
+    date: "2022-10-01",
+    startTime: "00:00:00",
+    endDate: "2022-10-01",
+    endTime: "23:59:00",
+  },
+  {
+    title: "Saturday Night Magic featuring JP Laramee",
+    content: "",
+    img_url:
+      "http://www.baileyssmokehouseny.com/wp-content/uploads/2020/10/Baileys-Promo-2021.jpg",
+    date: "2022-10-01",
+    startTime: "18:00:00",
+    endDate: "2022-10-01",
+    endTime: "20:00:00",
+  },
+  {
+    title: "Saturday Night Magic featuring JP Laramee",
+    content: "",
+    img_url:
+      "http://www.baileyssmokehouseny.com/wp-content/uploads/2020/10/Baileys-Promo-2021.jpg",
+    date: "2022-10-08",
+    startTime: "18:00:00",
+    endDate: "2022-10-08",
+    endTime: "20:00:00",
+  },
+  {
+    title: "Saturday Night Magic featuring JP Laramee",
+    content: "",
+    img_url:
+      "http://www.baileyssmokehouseny.com/wp-content/uploads/2020/10/Baileys-Promo-2021.jpg",
+    date: "2022-10-15",
+    startTime: "18:00:00",
+    endDate: "2022-10-15",
+    endTime: "20:00:00",
+  },
+  {
+    title: "Saturday Night Magic featuring JP Laramee",
+    content: "",
+    img_url:
+      "http://www.baileyssmokehouseny.com/wp-content/uploads/2020/10/Baileys-Promo-2021.jpg",
+    date: "2022-10-22",
+    startTime: "18:00:00",
+    endDate: "2022-10-22",
+    endTime: "20:00:00",
+  },
+  {
+    title: "Saturday Night Magic featuring JP Laramee",
+    content: "",
+    img_url:
+      "http://www.baileyssmokehouseny.com/wp-content/uploads/2020/10/Baileys-Promo-2021.jpg",
+    date: "2022-10-29",
+    startTime: "18:00:00",
+    endDate: "2022-10-29",
+    endTime: "20:00:00",
+  },
+];
