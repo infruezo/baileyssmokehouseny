@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+// import axios from "axios";
 
 import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
@@ -12,29 +12,32 @@ import Card1 from "../../images/smokehouse/home-card-1.png";
 import Card2 from "../../images/smokehouse/home-card-2.png";
 import Card3 from "../../images/smokehouse/home-card-3.png";
 import HomeAbout from "../../images/smokehouse/home-about.png";
-import Loader from "../../components/smokehouse/Loader";
+// import Loader from "../../components/smokehouse/Loader";
 import EventCard from "../../components/smokehouse/EventCard";
+import { getUpcomingEvents } from "../../utils/eventData";
 
 const Home = () => {
   const [events, setEvents] = useState(null);
-  const [loading, setLoading] = useState(false);
-
   useEffect(() => {
-    const getEvents = async () => {
-      setLoading(true);
-      const response = await axios.get(
-        "http://www.baileyssmokehouseny.com/wp-json/mobile-hawk/v1/events-upcoming?num=6"
-      );
-
-      if (response) {
-        setEvents(response.data);
-      }
-
-      setLoading(false);
-    };
-
-    getEvents();
+    setEvents(getUpcomingEvents(4));
   }, []);
+
+  // useEffect(() => {
+  //   const getEvents = async () => {
+  //     setLoading(true);
+  //     const response = await axios.get(
+  //       "http://www.baileyssmokehouseny.com/wp-json/mobile-hawk/v1/events-upcoming?num=6"
+  //     );
+
+  //     if (response) {
+  //       setEvents(response.data);
+  //     }
+
+  //     setLoading(false);
+  //   };
+
+  //   getEvents();
+  // }, []);
 
   console.log(events);
 
@@ -203,48 +206,46 @@ const Home = () => {
       </div>
 
       {/* Upcoming Events */}
-      {loading ? (
-        <Loader />
-      ) : (
-        events && (
-          <div className="w-full py-16  bg-primary-eateryLightBrown">
-            <div className="w-full px-4 text-center">
-              <div className="flex flex-col space-y-2">
-                <div>
-                  <h3 className="uppercase font-extralight text-xl text-center tracking-wide">
-                    Join our party
-                  </h3>
-                  <h1 className="font-title text-primary-smokehouseBrown text-3xl">
-                    UPCOMING EVENTS
-                  </h1>
-                </div>
 
-                <img
-                  src={brownDivider}
-                  className="w-[100px] md:w-[200px] lg:w-[400px] object-cover mx-auto"
-                  alt=""
-                  loading="lazy"
-                />
-              </div>
-            </div>
-
-            {/* events display */}
-            <div className="w-full mt-16 h-auto py-8">
-              <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto ">
-                {events.map((event) => (
-                  <EventCard event={event} />
-                ))}
+      {events && (
+        <div className="w-full py-16  bg-primary-eateryLightBrown">
+          <div className="w-full px-4 text-center">
+            <div className="flex flex-col space-y-2">
+              <div>
+                <h3 className="uppercase font-extralight text-xl text-center tracking-wide">
+                  Join our party
+                </h3>
+                <h1 className="font-title text-primary-smokehouseBrown text-3xl">
+                  UPCOMING EVENTS
+                </h1>
               </div>
 
-              <Link
-                to="/event-calendar"
-                className="block px-8 py-2 bg-transparent ring-1 ring-primary-smokehouseBrown w-fit rounded-full text-primary-smokehouseBrown hover:bg-primary-smokehouseBrown hover:text-primary-eateryLightBrown duration-300 shadow-md mx-auto mt-16"
-              >
-                View All Events
-              </Link>
+              <img
+                src={brownDivider}
+                className="w-[100px] md:w-[200px] lg:w-[400px] object-cover mx-auto"
+                alt=""
+                loading="lazy"
+              />
             </div>
           </div>
-        )
+
+          {/* events display */}
+
+          <div className="w-full mt-16 h-auto py-8">
+            <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto ">
+              {events.map((event, idx) => (
+                <EventCard event={event} key={idx} />
+              ))}
+            </div>
+
+            <Link
+              to="/event-calendar"
+              className="block px-8 py-2 bg-transparent ring-1 ring-primary-smokehouseBrown w-fit rounded-full text-primary-smokehouseBrown hover:bg-primary-smokehouseBrown hover:text-primary-eateryLightBrown duration-300 shadow-md mx-auto mt-16"
+            >
+              View All Events
+            </Link>
+          </div>
+        </div>
       )}
 
       <Footer />
