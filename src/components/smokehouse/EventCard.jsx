@@ -16,7 +16,7 @@ const EventCard = ({ event }) => {
       <div className="flex flex-col space-y-1 p-4">
         <h5 className="font-medium">{event?.event.title}</h5>
         <h5 className="font-bold text-primary-smokehouseBrown">
-          {format(new Date(event.event.startDate), "MMMM dd, yyyy")}
+          {format(event.event.startDate, "MMMM dd, yyyy")}
           {/* {format(parseISO(new Date(event.event.startDate)), "MMMM dd, yyyy")} */}
         </h5>
       </div>

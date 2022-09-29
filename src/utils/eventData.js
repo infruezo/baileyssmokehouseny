@@ -1,6 +1,7 @@
 //days 0-6, starting sunday
 export const SmokehouseEvents = [
   {
+    id: "Magical-Fridays-with-JP-Laramee-2022-11-31",
     image: "/events/JP_Laramee.jpg",
     title: "Magical Fridays with JP Laramee",
     category: "Entertainment",
@@ -10,6 +11,7 @@ export const SmokehouseEvents = [
     days: [5],
   },
   {
+    id: "Dead-Mile-Dance-2022-8-30",
     image: "/events/Dead_Mile_Dance.jpeg",
     title: "Dead Mile Dance",
     category: "Live Music",
@@ -19,6 +21,7 @@ export const SmokehouseEvents = [
     days: [5],
   },
   {
+    id: "Kickin-Nash-2022-9-1",
     image: "/events/Kickin_Nash.jpeg",
     title: "Kickin Nash",
     category: "Live Music",
@@ -28,6 +31,7 @@ export const SmokehouseEvents = [
     days: [6],
   },
   {
+    id: "Oktoberfest-2022-8-29",
     image: "/events/Oktoberfest.jpeg",
     title: "Oktoberfest",
     category: "Entertainment",

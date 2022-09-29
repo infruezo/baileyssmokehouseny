@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// import axios from "axios";
 
 import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
@@ -12,7 +11,6 @@ import Card1 from "../../images/smokehouse/home-card-1.png";
 import Card2 from "../../images/smokehouse/home-card-2.png";
 import Card3 from "../../images/smokehouse/home-card-3.png";
 import HomeAbout from "../../images/smokehouse/home-about.png";
-// import Loader from "../../components/smokehouse/Loader";
 import EventCard from "../../components/smokehouse/EventCard";
 import { getUpcomingEvents } from "../../utils/eventData";
 
@@ -21,23 +19,6 @@ const Home = () => {
   useEffect(() => {
     setEvents(getUpcomingEvents(4));
   }, []);
-
-  // useEffect(() => {
-  //   const getEvents = async () => {
-  //     setLoading(true);
-  //     const response = await axios.get(
-  //       "http://www.baileyssmokehouseny.com/wp-json/mobile-hawk/v1/events-upcoming?num=6"
-  //     );
-
-  //     if (response) {
-  //       setEvents(response.data);
-  //     }
-
-  //     setLoading(false);
-  //   };
-
-  //   getEvents();
-  // }, []);
 
   console.log(events);
 
@@ -232,9 +213,11 @@ const Home = () => {
           {/* events display */}
 
           <div className="w-full mt-16 h-auto py-8">
-            <div className="w-full h-full grid grid-cols-1 md:grid-cols-2  gap-8 xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto ">
+            <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 gap-8 xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto ">
               {events.map((event, idx) => (
-                <EventCard event={event} key={idx} />
+                <Link key={idx} to={`/event/${event.event.id}`}>
+                  <EventCard event={event} />
+                </Link>
               ))}
             </div>
 

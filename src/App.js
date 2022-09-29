@@ -12,6 +12,7 @@ import SmokehouseGallery from "./pages/smokehouse/SmokehouseGallery";
 import Contact from "./pages/smokehouse/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 import RestaurantBars from "./pages/smokehouse/RestaurantBars";
+import EventDetail from "./pages/smokehouse/EventDetail";
 import EateryCateringTakout from "./pages/smokehouse/EateryCateringTakout";
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
           path="/eatery-catering-takeout"
           element={<EateryCateringTakout />}
         />
+        <Route path="/event/:id" element={<EventDetail />} />
         <Route path="*" element={<Navigate to="/home" />} />
       </Routes>
     </BrowserRouter>
