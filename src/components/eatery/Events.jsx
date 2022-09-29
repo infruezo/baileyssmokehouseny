@@ -13,6 +13,7 @@ const Events = () => {
           items={EateryEventSlideImages}
           thumbnailPosition="bottom"
           showPlayButton={false}
+          lazyLoad={true}
         />
       </div>
     </div>

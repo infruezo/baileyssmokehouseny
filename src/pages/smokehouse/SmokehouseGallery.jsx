@@ -1,16 +1,55 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
+import ImageViewer from "react-simple-image-viewer";
 import Banner from "../../components/smokehouse/Banner";
 import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
+import { smokehousePhotos } from "../../utils/data";
 
 const SmokehouseGallery = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+  const [isViewerOpen, setIsViewerOpen] = useState(false);
+  const [showNav, setShowNav] = useState(true);
+
+  const openImageViewer = useCallback((index) => {
+    setShowNav(false);
+    setCurrentImage(index);
+    setIsViewerOpen(true);
+  }, []);
+
+  const closeImageViewer = () => {
+    setShowNav(true);
+    setCurrentImage(0);
+    setIsViewerOpen(false);
+  };
   return (
-    <div>
-      <Navbar />
+    <div className="font-poppins">
+      {showNav && <Navbar />}
       <Banner title="GALLERY" />
-      <div className="h-screen"></div>
-      <div className="h-screen"></div>
-      <div className="h-screen"></div>
+      <div className="!z-[9999999] py-12 lg:py-24" id="gallery">
+        <div className="xl:max-w-screen-2xl lg:max-w-screen-xl md:max-w-screen-lg gap-0.5 max-w-screen-sm mx-auto flex items-center  justify-center flex-wrap ">
+          {smokehousePhotos.map((src, index) => (
+            <img
+              src={src}
+              onClick={() => openImageViewer(index)}
+              className="object-cover w-48 h-32 lg:w-80 lg:h-56 cursor-pointer ring-4 ring-black"
+              key={index}
+              loading="lazy"
+              alt=""
+            />
+          ))}
+
+          {isViewerOpen && (
+            <ImageViewer
+              src={smokehousePhotos}
+              currentIndex={currentImage}
+              disableScroll={false}
+              closeOnClickOutside={true}
+              onClose={closeImageViewer}
+              className="z-50"
+            />
+          )}
+        </div>
+      </div>
       <Footer />
     </div>
   );
