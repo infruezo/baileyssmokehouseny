@@ -232,7 +232,7 @@ const Home = () => {
           {/* events display */}
 
           <div className="w-full mt-16 h-auto py-8">
-            <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto ">
+            <div className="w-full h-full grid grid-cols-1 md:grid-cols-2  gap-8 xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto ">
               {events.map((event, idx) => (
                 <EventCard event={event} key={idx} />
               ))}

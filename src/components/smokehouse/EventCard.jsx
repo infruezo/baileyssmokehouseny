@@ -1,5 +1,5 @@
 import React from "react";
-import { format, parseISO } from "date-fns";
+import { format } from "date-fns";
 
 const EventCard = ({ event }) => {
   console.log(format(new Date(event.event.startDate), "MMMM dd, yyyy"));
