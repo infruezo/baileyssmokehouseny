@@ -5,7 +5,7 @@ import Navbar from "../../components/smokehouse/Navbar";
 
 import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
-import events from "../../utils/events";
+
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import { SmokehouseEvents } from "../../utils/eventData";
 
