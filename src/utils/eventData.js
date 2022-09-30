@@ -6,7 +6,7 @@ export const SmokehouseEvents = [
     title: "Magical Fridays with JP Laramee",
     category: "Entertainment",
     text: "",
-    startDate: removeTime(new Date(2022, 0, 1)),
+    startDate: removeTime(new Date(2022, 10, 12)),
     endDate: removeTime(new Date(2022, 1, 31)),
     days: [5],
   },
