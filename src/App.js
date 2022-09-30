@@ -14,6 +14,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import RestaurantBars from "./pages/smokehouse/RestaurantBars";
 import EventDetail from "./pages/smokehouse/EventDetail";
 import EateryCateringTakout from "./pages/smokehouse/EateryCateringTakout";
+import SmokehouseHiring from "./pages/smokehouse/SmokehouseHiring";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           path="/eatery-catering-takeout"
           element={<EateryCateringTakout />}
         />
+        <Route path="/new-city-now-hiring" element={<SmokehouseHiring />} />
         <Route path="/event/:id" element={<EventDetail />} />
         <Route path="*" element={<Navigate to="/home" />} />
       </Routes>

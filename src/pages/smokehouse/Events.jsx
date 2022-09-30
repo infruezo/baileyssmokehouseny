@@ -9,6 +9,7 @@ import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import { getUpcomingEvents } from "../../utils/eventData";
 import MiniEventDisplayCard from "../../components/smokehouse/MiniEventDisplayCard";
+import SocialsWidget from "../../components/SocialsWidget";
 
 const Events = () => {
   const [events, setEvents] = useState(getUpcomingEvents(4));
@@ -27,6 +28,7 @@ const Events = () => {
     <div className="font-poppins h-full w-full">
       <Navbar />
       <Banner title="EVENT CALENDAR" />
+      <SocialsWidget direction="vertical" />
       <div className="w-full h-full py-12 bg-primary-eateryLightBrown -mt-12">
         <div className="h-full w-full mx-auto px-4 xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md ">
           {/* calendar */}

@@ -6,12 +6,14 @@ import Navbar from "../../components/smokehouse/Navbar";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { GrMail } from "react-icons/gr";
 import { MdLocationOn } from "react-icons/md";
+import SocialsWidget from "../../components/SocialsWidget";
 
 const Contact = () => {
   return (
     <div className="font-poppins">
       <Navbar />
       <Banner title="CONTACT US" />
+      <SocialsWidget direction="vertical" />
 
       <div className="w-full h-full bg-primary-eateryLightBrown py-12 -mt-12">
         <div className="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto">

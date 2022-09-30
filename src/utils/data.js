@@ -279,6 +279,21 @@ export const SmokehouseCateringMenus = [
   },
 ];
 
+export const SmokehouseTakeoutMenu = [
+  {
+    original: TakeoutMenu1,
+  },
+  {
+    original: TakeoutMenu2,
+  },
+  {
+    original: TakeoutMenu3,
+  },
+  {
+    original: TakeoutMenu4,
+  },
+];
+
 export const SmokehouseEateryCateringTakeout = [
   {
     id: 1,

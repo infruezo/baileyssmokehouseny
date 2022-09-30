@@ -3,6 +3,7 @@ import ImageViewer from "react-simple-image-viewer";
 import Banner from "../../components/smokehouse/Banner";
 import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
+import SocialsWidget from "../../components/SocialsWidget";
 import { smokehousePhotos } from "../../utils/data";
 
 const SmokehouseGallery = () => {
@@ -25,8 +26,9 @@ const SmokehouseGallery = () => {
     <div className="font-poppins">
       {showNav && <Navbar />}
       <Banner title="GALLERY" />
+      <SocialsWidget direction="vertical" />
       <div className="!z-[9999999] py-12 lg:py-24" id="gallery">
-        <div className="xl:max-w-screen-2xl lg:max-w-screen-xl md:max-w-screen-lg gap-0.5 max-w-screen-sm mx-auto flex items-center  justify-center flex-wrap ">
+        <div className="xl:max-w-screen-2xl lg:max-w-screen-xl md:max-w-screen-lg  gap-0.5 max-w-screen-sm mx-auto flex items-center  justify-center flex-wrap ">
           {smokehousePhotos.map((src, index) => (
             <img
               src={src}
