@@ -20,8 +20,6 @@ const Home = () => {
     setEvents(getUpcomingEvents(4));
   }, []);
 
-  console.log(events);
-
   return (
     <div className="relative font-poppins">
       <Navbar />

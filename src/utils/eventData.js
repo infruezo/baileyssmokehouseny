@@ -7,7 +7,7 @@ export const SmokehouseEvents = [
     category: "Entertainment",
     text: "",
     startDate: removeTime(new Date(2022, 0, 1)),
-    endDate: removeTime(new Date(2022, 11, 31)),
+    endDate: removeTime(new Date(2022, 1, 31)),
     days: [5],
   },
   {
