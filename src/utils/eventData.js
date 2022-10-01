@@ -79,7 +79,7 @@ function getEventsForMonthInternal(eventList, year, month) {
     });
 
     d.setDate(d.getDate() + 1);
-  } while (d.getMonth() === (month - 1));
+  } while (d.getMonth() === month - 1);
 
   return matchedEvents;
 }

@@ -10,10 +10,21 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import { getEventsForMonth } from "../../utils/eventData";
 import MiniEventDisplayCard from "../../components/smokehouse/MiniEventDisplayCard";
 import SocialsWidget from "../../components/SocialsWidget";
+import { format } from "date-fns";
 
 const Events = () => {
-  const [events, setEvents] = useState(getEventsForMonth(2022,10));
   const [eventsDetailsList, setEventsDetailsList] = useState([]);
+
+  // getting the current month + year to set the default value of the calendar
+  const [year, setYear] = useState(new Date().getFullYear());
+  const [month, setMonth] = useState(parseInt(new Date().getMonth() + 1));
+
+  const [events, setEvents] = useState(getEventsForMonth(year, month));
+
+  const handleNavigate = (e) => {
+    setYear(format(e, "yyyy"));
+    setMonth(format(e, "MM"));
+  };
 
   useEffect(() => {
     events.map((event) =>
@@ -40,6 +51,7 @@ const Events = () => {
             defaultView="month"
             startAccessor="instanceDate"
             endAccessor="instanceDate"
+            onNavigate={(e) => handleNavigate(e)}
             events={eventsDetailsList}
             style={{ height: "100vh" }}
             className="bg-white"

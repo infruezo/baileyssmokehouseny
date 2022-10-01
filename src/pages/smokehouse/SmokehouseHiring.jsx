@@ -4,7 +4,6 @@ import Banner from "../../components/smokehouse/Banner";
 import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
 import SocialsWidget from "../../components/SocialsWidget";
-import { SmokehouseCateringMenus } from "../../utils/data";
 
 const SmokehouseHiring = () => {
   return (

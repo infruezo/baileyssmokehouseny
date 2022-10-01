@@ -64,14 +64,14 @@ const EventDetail = () => {
                     </h3>
                   )}
                   {event.text && <h3>description: {event.text}</h3>}
-                  <h3>
+                  <div>
                     <h3 className="text-xl">
                       <span className="text-primary-smokehouseDarkRed font-medium">
                         Date:{" "}
                       </span>
                       {format(event.startDate, "MMMM dd, yyyy")}
                     </h3>
-                  </h3>
+                  </div>
                 </div>
               </div>
             </div>
