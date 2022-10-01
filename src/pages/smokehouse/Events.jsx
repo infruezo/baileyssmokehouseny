@@ -30,7 +30,7 @@ const Events = () => {
     events.map((event) =>
       setEventsDetailsList((prevArray) => [...prevArray, event])
     );
-  }, [month]);
+  }, []);
 
   moment.locale("en-US");
   const localizer = momentLocalizer(moment);
