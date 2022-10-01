@@ -213,7 +213,7 @@ const Home = () => {
           <div className="w-full mt-16 h-auto py-8">
             <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 gap-8 xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto ">
               {events.map((event, idx) => (
-                <Link key={idx} to={`/event/${event.event.id}`}>
+                <Link key={idx} to={`/event/${event.id}`}>
                   <EventCard event={event} />
                 </Link>
               ))}

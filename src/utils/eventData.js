@@ -54,7 +54,7 @@ function getUpcomingEventsInternal(eventList, num) {
   do {
     eventList.forEach((e) => {
       if (d >= e.startDate && d <= e.endDate && e.days.includes(d.getDay())) {
-        matchedEvents.push({ date: new Date(d), event: e });
+        matchedEvents.push({ ...e, instanceDate: new Date(d) });
       }
     });
 
@@ -69,19 +69,26 @@ export function getEventsForMonth(year, month) {
 }
 function getEventsForMonthInternal(eventList, year, month) {
   var matchedEvents = [];
-  let d = normalDate(new Date(year, month, 1));
+  let d = normalDate(year, month, 1);
 
   do {
     eventList.forEach((e) => {
       if (d >= e.startDate && d <= e.endDate && e.days.includes(d.getDay())) {
-        matchedEvents.push({ date: new Date(d), event: e });
+        matchedEvents.push({ ...e, instanceDate: new Date(d) });
       }
     });
 
     d.setDate(d.getDate() + 1);
-  } while (d.getMonth() === month);
+  } while (d.getMonth() === (month - 1));
 
   return matchedEvents;
+}
+
+export function getEventById(id) {
+  return getEventByIdInternal(SmokehouseEvents, id);
+}
+function getEventByIdInternal(eventList, id) {
+  return eventList.find((e) => e.id === id);
 }
 
 /// helpers
@@ -93,7 +100,7 @@ function normalDate(year, month, day) {
   return removeTime(new Date(year, month - 1, day));
 }
 
-function getMaxDate(eventList){
+function getMaxDate(eventList) {
   return new Date(
     Math.max(
       ...eventList.map((e) => {

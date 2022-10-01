@@ -10,8 +10,8 @@ const MiniEventDisplayCard = ({ event }) => {
         <Link to={`/event/${event.id}`}>
           <img src={event.image} className="w-full h-full" alt="" />
           <div className="h-full w-full absolute left-0 top-0 bg-primary-smokehouseDarkRed/80 flex items-center justify-center flex-col space-y-2 text-white font-bold">
-            <p className="font-normal">{format(event.startDate, "MMM")}</p>
-            <p className="text-3xl">{format(event.startDate, "dd")}</p>
+            <p className="font-normal">{format(event.instanceDate, "MMM")}</p>
+            <p className="text-3xl">{format(event.instanceDate, "dd")}</p>
           </div>
         </Link>
       </div>
