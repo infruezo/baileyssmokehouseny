@@ -65,6 +65,9 @@ function getUpcomingEventsInternal(eventList, num) {
 }
 
 export function getEventsForMonth(year, month) {
+  console.log(
+    "method was called for the year: " + year + " and the month: " + month
+  );
   return getEventsForMonthInternal(SmokehouseEvents, year, month);
 }
 function getEventsForMonthInternal(eventList, year, month) {
