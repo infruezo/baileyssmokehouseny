@@ -26,11 +26,6 @@ const Events = () => {
     setMonth(format(e, "MM"));
   };
 
-  const handleClick = () => {
-    console.log("Year: " + year);
-    console.log("Month: " + month);
-  };
-
   useEffect(() => {
     events.map((event) =>
       setEventsDetailsList((prevArray) => [...prevArray, event])
@@ -61,13 +56,6 @@ const Events = () => {
             style={{ height: "100vh" }}
             className="bg-white"
           />
-
-          <button
-            onClick={handleClick}
-            className="px-8 py-2 text-white bg-black"
-          >
-            click to get month and year value
-          </button>
 
           {/* events */}
           <div className="pt-16 w-full h-full">
