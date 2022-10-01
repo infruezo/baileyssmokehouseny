@@ -1,50 +1,46 @@
 //days 0-6, starting sunday
 export const SmokehouseEvents = [
   {
-    id: "Magical-Fridays-with-JP-Laramee-2022-11-31",
+    id: "Saturday-Night-Magic-Featuring-JP-Laramee-2022",
     image: "/events/JP_Laramee.jpg",
-    title: "Magical Fridays with JP Laramee",
+    title: "Saturday Night Magic featuring JP Laramee",
     category: "Entertainment",
     text: "",
-    startDate: removeTime(new Date(2022, 10, 12)),
-    endDate: removeTime(new Date(2022, 1, 31)),
-    days: [5],
+    startDate: normalDate(2022, 1, 1),
+    endDate: normalDate(2022, 12, 31),
+    days: [6],
   },
   {
-    id: "Dead-Mile-Dance-2022-8-30",
+    id: "Dead-Mile-Dance-2022-09-30",
     image: "/events/Dead_Mile_Dance.jpeg",
     title: "Dead Mile Dance",
     category: "Live Music",
     text: "",
-    startDate: removeTime(new Date(2022, 8, 30)),
-    endDate: removeTime(new Date(2022, 8, 30)),
+    startDate: normalDate(2022, 9, 30),
+    endDate: normalDate(2022, 9, 30),
     days: [5],
   },
   {
-    id: "Kickin-Nash-2022-9-1",
+    id: "Kickin-Nash-2022-10-01",
     image: "/events/Kickin_Nash.jpeg",
     title: "Kickin Nash",
     category: "Live Music",
     text: "",
-    startDate: removeTime(new Date(2022, 9, 1)),
-    endDate: removeTime(new Date(2022, 9, 1)),
+    startDate: normalDate(2022, 10, 1),
+    endDate: normalDate(2022, 10, 1),
     days: [6],
   },
   {
-    id: "Oktoberfest-2022-8-29",
+    id: "Oktoberfest-2022",
     image: "/events/Oktoberfest.jpeg",
     title: "Oktoberfest",
     category: "Entertainment",
     text: "",
-    startDate: removeTime(new Date(2022, 8, 29)),
-    endDate: removeTime(new Date(2022, 9, 2)),
+    startDate: normalDate(2022, 9, 29),
+    endDate: normalDate(2022, 10, 2),
     days: [0, 4, 5, 6],
   },
 ];
-
-function removeTime(date = new Date()) {
-  return new Date(date.getFullYear(), date.getMonth(), date.getDate());
-}
 
 export function getUpcomingEvents(num) {
   return getUpcomingEventsInternal(SmokehouseEvents, num);
@@ -53,13 +49,7 @@ function getUpcomingEventsInternal(eventList, num) {
   var matchedEvents = [];
   let d = removeTime(new Date());
 
-  const maxDate = new Date(
-    Math.max(
-      ...eventList.map((e) => {
-        return new Date(e.endDate);
-      })
-    )
-  );
+  const maxDate = getMaxDate(eventList);
 
   do {
     eventList.forEach((e) => {
@@ -79,7 +69,7 @@ export function getEventsForMonth(year, month) {
 }
 function getEventsForMonthInternal(eventList, year, month) {
   var matchedEvents = [];
-  let d = removeTime(new Date(year, month, 1));
+  let d = normalDate(new Date(year, month, 1));
 
   do {
     eventList.forEach((e) => {
@@ -92,4 +82,23 @@ function getEventsForMonthInternal(eventList, year, month) {
   } while (d.getMonth() === month);
 
   return matchedEvents;
+}
+
+/// helpers
+function removeTime(date) {
+  return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+}
+
+function normalDate(year, month, day) {
+  return removeTime(new Date(year, month - 1, day));
+}
+
+function getMaxDate(eventList){
+  return new Date(
+    Math.max(
+      ...eventList.map((e) => {
+        return new Date(e.endDate);
+      })
+    )
+  );
 }
