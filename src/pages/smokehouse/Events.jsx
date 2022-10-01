@@ -7,17 +7,17 @@ import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import { getUpcomingEvents } from "../../utils/eventData";
+import { getEventsForMonth } from "../../utils/eventData";
 import MiniEventDisplayCard from "../../components/smokehouse/MiniEventDisplayCard";
 import SocialsWidget from "../../components/SocialsWidget";
 
 const Events = () => {
-  const [events, setEvents] = useState(getUpcomingEvents(4));
+  const [events, setEvents] = useState(getEventsForMonth(2022,10));
   const [eventsDetailsList, setEventsDetailsList] = useState([]);
 
   useEffect(() => {
     events.map((event) =>
-      setEventsDetailsList((prevArray) => [...prevArray, event.event])
+      setEventsDetailsList((prevArray) => [...prevArray, event])
     );
   }, []);
 
@@ -38,8 +38,8 @@ const Events = () => {
             localizer={localizer}
             defaultDate={new Date()}
             defaultView="month"
-            startAccessor="startDate"
-            endAccessor="endDate"
+            startAccessor="instanceDate"
+            endAccessor="instanceDate"
             events={eventsDetailsList}
             style={{ height: "100vh" }}
             className="bg-white"
@@ -49,7 +49,7 @@ const Events = () => {
           <div className="pt-16 w-full h-full">
             <div className="flex flex-col space-y-4">
               {events.map((item, idx) => (
-                <MiniEventDisplayCard event={item.event} key={idx} />
+                <MiniEventDisplayCard event={item} key={idx} />
               ))}
             </div>
           </div>

@@ -6,24 +6,21 @@ import EventCard from "../../components/smokehouse/EventCard";
 import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
 import SocialsWidget from "../../components/SocialsWidget";
-import { getUpcomingEvents } from "../../utils/eventData";
+import { getEventById, getUpcomingEvents } from "../../utils/eventData";
 
 const EventDetail = () => {
   let id = useParams().id;
-  const [eventsList, setEventsList] = useState(getUpcomingEvents(4));
   const [event, setEvent] = useState(null);
-
   useEffect(() => {
-    eventsList.map((event) => {
-      if (event.event.id === id) {
-        setEvent(event);
-        return 1;
-      }
+    console.log(id);
+    setEvent(getEventById(id));
+  }, []);
+  const [events, setEvents] = useState(null);
+  useEffect(() => {
+    setEvents(getUpcomingEvents(8));
+  }, []);
 
-      return 0;
-    });
-  }, [eventsList, id]);
-
+  console.log(event);
   return (
     <div className="font-poppins">
       <Navbar />
@@ -37,12 +34,12 @@ const EventDetail = () => {
             // EVENT FOUND SCREEN
             <div className="w-full h-full flex flex-col space-y-4">
               <h1 className="font-title tracking-tight lg:text-3xl text-lg text-primary-smokehouseDarkRed">
-                {event.event.title}
+                {event.title}
               </h1>
 
               <div className="w-full flex flex-col space-y-4 lg:flex-row lg:space-x-8 lg:space-y-0">
                 <img
-                  src={event.event.image}
+                  src={event.image}
                   className="lg:w-fit w-full h-[600px]"
                   alt=""
                 />
@@ -56,23 +53,23 @@ const EventDetail = () => {
                     <span className="text-primary-smokehouseDarkRed font-medium">
                       Event Name:{" "}
                     </span>
-                    {event.event.title}
+                    {event.title}
                   </h3>
-                  {event.event.category && (
+                  {event.category && (
                     <h3 className="text-xl">
                       <span className="text-primary-smokehouseDarkRed font-medium">
                         Event Category:{" "}
                       </span>
-                      {event.event.category}
+                      {event.category}
                     </h3>
                   )}
-                  {event.event.text && <h3>description: {event.event.text}</h3>}
+                  {event.text && <h3>description: {event.text}</h3>}
                   <h3>
                     <h3 className="text-xl">
                       <span className="text-primary-smokehouseDarkRed font-medium">
                         Date:{" "}
                       </span>
-                      {format(event.event.startDate, "MMMM dd, yyyy")}
+                      {format(event.startDate, "MMMM dd, yyyy")}
                     </h3>
                   </h3>
                 </div>
@@ -85,15 +82,14 @@ const EventDetail = () => {
                 Event not found
               </h1>
               <h5 className="lg:text-lg text-base font-medium">
-                Check all available events here:
+                Check upcoming events here:
               </h5>
-
               {/* events display */}
               <div className="w-full bg-primary-eateryLightBrown">
                 <div className="w-full mt-8 h-auto py-8">
                   <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 gap-8 xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto ">
-                    {eventsList.map((event, idx) => (
-                      <Link key={idx} to={`/event/${event.event.id}`}>
+                    {events?.map((event, idx) => (
+                      <Link key={idx} to={`/event/${event.id}`}>
                         <EventCard event={event} />
                       </Link>
                     ))}
