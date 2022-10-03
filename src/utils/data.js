@@ -1,3 +1,5 @@
+import { normalDate } from "./dateUtils";
+
 // Eatery Hero Slide Images
 import EaterySlider1 from "../images/slider-1.png";
 import EaterySlider2 from "../images/slider-2.png";
@@ -98,6 +100,7 @@ import TakeoutMenu4 from "../images/smokehouse/menus/takeout-menu-4.jpg";
 import PartyMenu1 from "../images/smokehouse/menus/party-menu-1.jpg";
 import OffsitePartyMenu1 from "../images/smokehouse/menus/offsite-party-menu-1.jpeg";
 import CateringMenu1 from "../images/smokehouse/menus/catering-menu-1.jpg";
+
 
 //*********************************************************************************************************/
 // EATERY PAGE DATA
@@ -224,6 +227,50 @@ export const photos = [
 //********************************************************************************************************** */
 // SMOKEHOUSE DATA
 //********************************************************************************************************** */
+//days 0-6, starting sunday
+export const SmokehouseEvents = [
+  {
+    id: "Saturday-Night-Magic-Featuring-JP-Laramee-2022",
+    image: "/events/JP_Laramee.jpg",
+    title: "Saturday Night Magic featuring JP Laramee",
+    category: "Entertainment",
+    text: "",
+    startDate: normalDate(2022, 1, 1),
+    endDate: normalDate(2022, 12, 31),
+    days: [6],
+  },
+  {
+    id: "Dead-Mile-Dance-2022-09-30",
+    image: "/events/Dead_Mile_Dance.jpeg",
+    title: "Dead Mile Dance",
+    category: "Live Music",
+    text: "",
+    startDate: normalDate(2022, 9, 30),
+    endDate: normalDate(2022, 9, 30),
+    days: [5],
+  },
+  {
+    id: "Kickin-Nash-2022-10-01",
+    image: "/events/Kickin_Nash.jpeg",
+    title: "Kickin Nash",
+    category: "Live Music",
+    text: "",
+    startDate: normalDate(2022, 10, 1),
+    endDate: normalDate(2022, 10, 1),
+    days: [6],
+  },
+  {
+    id: "Oktoberfest-2022",
+    image: "/events/Oktoberfest.jpeg",
+    title: "Oktoberfest",
+    category: "Entertainment",
+    text: "",
+    startDate: normalDate(2022, 9, 29),
+    endDate: normalDate(2022, 10, 2),
+    days: [0, 4, 5, 6],
+  },
+];
+
 export const SmokehouseMenutabs = [
   {
     id: 1,

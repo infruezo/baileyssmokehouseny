@@ -6,18 +6,18 @@ import EventCard from "../../components/smokehouse/EventCard";
 import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
 import SocialsWidget from "../../components/SocialsWidget";
-import { getEventById, getUpcomingEvents } from "../../utils/eventData";
+import { Site, getEventById, getUpcomingEvents } from "../../utils/eventUtils";
 
 const EventDetail = () => {
   let id = useParams().id;
   const [event, setEvent] = useState(null);
   useEffect(() => {
     console.log(id);
-    setEvent(getEventById(id));
+    setEvent(getEventById(Site.Smokehouse, id));
   }, []);
   const [events, setEvents] = useState(null);
   useEffect(() => {
-    setEvents(getUpcomingEvents(8));
+    setEvents(getUpcomingEvents(Site.Smokehouse, 8));
   }, []);
 
   console.log(event);
@@ -67,9 +67,13 @@ const EventDetail = () => {
                   <div>
                     <h3 className="text-xl">
                       <span className="text-primary-smokehouseDarkRed font-medium">
-                        Date:{" "}
+                        Upcoming Date(s):{" "}
                       </span>
-                      {format(event.startDate, "MMMM dd, yyyy")}
+                      <ul>
+                        {event.upcomingDates.map((d) => (
+                          <li>{format(d, "MMMM dd, yyyy")}</li>
+                        ))}
+                      </ul>
                     </h3>
                   </div>
                 </div>

@@ -7,7 +7,7 @@ import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 
 import "react-big-calendar/lib/css/react-big-calendar.css";
-import { getEventsForMonth } from "../../utils/eventData";
+import { Site, getEventsForMonth } from "../../utils/eventUtils";
 import MiniEventDisplayCard from "../../components/smokehouse/MiniEventDisplayCard";
 import SocialsWidget from "../../components/SocialsWidget";
 import { format } from "date-fns";
@@ -19,7 +19,7 @@ const Events = () => {
   const [year, setYear] = useState(new Date().getFullYear());
   const [month, setMonth] = useState(parseInt(new Date().getMonth() + 1));
 
-  const [events, setEvents] = useState(getEventsForMonth(year, month));
+  const [events, setEvents] = useState(getEventsForMonth(Site.Smokehouse, year, month));
 
   const handleNavigate = (e) => {
     setYear(format(e, "yyyy"));
