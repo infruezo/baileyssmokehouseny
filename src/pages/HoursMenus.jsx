@@ -8,11 +8,11 @@ import OrderAppGiftCards from "../components/smokehouse/OrderAppGiftCards";
 import SectionTitle from "../components/smokehouse/SectionTitle";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
-import { getUpcomingEvents } from "../utils/eventData";
+import { Site, getUpcomingEvents } from "../utils/eventUtils";
 import { SmokehouseTakeoutMenu } from "../utils/data";
 
 const HoursMenus = () => {
-  const [events, setEvents] = useState(getUpcomingEvents(4));
+  const [events, setEvents] = useState(getUpcomingEvents(Site.Smokehouse, 4));
 
   return (
     <div>

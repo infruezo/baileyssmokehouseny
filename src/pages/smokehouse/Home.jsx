@@ -12,12 +12,12 @@ import Card2 from "../../images/smokehouse/home-card-2.png";
 import Card3 from "../../images/smokehouse/home-card-3.png";
 import HomeAbout from "../../images/smokehouse/home-about.png";
 import EventCard from "../../components/smokehouse/EventCard";
-import { getUpcomingEvents } from "../../utils/eventData";
+import { Site, getUpcomingEvents } from "../../utils/eventUtils";
 
 const Home = () => {
   const [events, setEvents] = useState(null);
   useEffect(() => {
-    setEvents(getUpcomingEvents(4));
+    setEvents(getUpcomingEvents(Site.Smokehouse, 4));
   }, []);
 
   return (
