@@ -6,19 +6,20 @@
   "facebookLink": "https://www.facebook.com/baileyssmokehouse/",
   "twitterLink": "https://twitter.com/baileysblauvelt",
   "instagramLink": "https://www.instagram.com/baileysmokehouse/",
+  "aboutImage": "images/eatery/about.jpg",
   "EaterySlideImages": [
     {
-      "image": "./images/eatery/slider-1.png",
+      "image": "images/eatery/slider-1.png",
       "title": "Enjoy our daily offers",
       "text": "We have great offers with amazing prices every week, check it out today!"
     },
     {
-      "image": "./images/eatery/slider-2.png",
+      "image": "images/eatery/slider-2.png",
       "title": "Enjoy our daily offers",
       "text": "We have great offers with amazing prices every week, check it out today!"
     },
     {
-      "image": "./images/eatery/slider-3.png",
+      "image": "images/eatery/slider-3.png",
       "title": "Enjoy our daily offers",
       "text": "We have great offers with amazing prices every week, check it out today!"
     }

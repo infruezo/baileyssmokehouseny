@@ -1,8 +1,7 @@
 import React from "react";
 import SectionTitle from "./SectionTitle";
-import AboutUs from "../../images/about.jpg";
 
-const About = () => {
+const About = ({ data }) => {
   return (
     <div
       className="lg:h-[550px] h-auto w-full pt-2  bg-primary-eateryLightBrown"
@@ -34,7 +33,7 @@ const About = () => {
         <div className="flex-1 h-[85%] w-full py-6 lg:py-0">
           <div className="h-full w-full flex items-center justify-center px-6">
             <img
-              src={AboutUs}
+              src={data.aboutImage}
               className="h-full w-full lg:w-[500px] lg:h-[320px] object-cover shadow-md"
               alt=""
               loading="lazy"

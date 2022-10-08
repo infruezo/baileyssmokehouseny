@@ -32,7 +32,7 @@ const Eatery = () => {
     <div className="font-poppins">
       <Navbar data={data} />
       <Slider slider={slider} />
-      <About />
+      <About data={data} />
       <Events />
       <Menus />
       <OpenTimes />
