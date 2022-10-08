@@ -1,9 +1,8 @@
 import React, { useState, useCallback } from "react";
 import ImageViewer from "react-simple-image-viewer";
 import SectionTitle from "./SectionTitle";
-import { photos } from "../../utils/data";
 
-const EateryGallery = () => {
+const EateryGallery = ({ galleryPhotos }) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
 
@@ -21,7 +20,7 @@ const EateryGallery = () => {
     <div className="z-[9999999]" id="gallery">
       <SectionTitle title="Gallery" />
       <div className="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md max-w-screen-sm mx-auto flex items-center justify-center gap-1 flex-wrap">
-        {photos.map((src, index) => (
+        {galleryPhotos.map((src, index) => (
           <img
             src={src}
             onClick={() => openImageViewer(index)}
@@ -34,7 +33,7 @@ const EateryGallery = () => {
 
         {isViewerOpen && (
           <ImageViewer
-            src={photos}
+            src={galleryPhotos}
             currentIndex={currentImage}
             disableScroll={false}
             closeOnClickOutside={true}

@@ -16,16 +16,7 @@ const About = ({ data }) => {
             <h1 className="text-primary-eateryBrown text-xl font-semibold">
               Welcome to the Bailey’s Eatery.
             </h1>
-            <p className="text-primary-eateryBrown/70">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Aspernatur corporis totam quidem voluptatibus velit? Facilis
-              labore in unde sapiente quidem explicabo itaque ullam, recusandae
-              culpa quas, vel cum sit enim? Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit. Magnam distinctio ut qui nesciunt
-              quaerat beatae officia a doloremque necessitatibus odit voluptate
-              dolorum soluta consequatur provident molestiae recusandae iure,
-              temporibus deserunt.
-            </p>
+            <p className="text-primary-eateryBrown/70">{data.aboutText}</p>
           </div>
         </div>
 

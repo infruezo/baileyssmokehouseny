@@ -1,27 +1,129 @@
 {
   "logo": "./images/eatery/eaterylogo.png",
   "phone": "845-398-1454",
+  "email": "info@baileysny.com",
   "location": "135 East Erie St. Blauvelt, NY 10913",
-  "openCloseTime": "7am to 10pm",
+  "openingTime": "7am",
+  "closingTime": "10pm",
+  "breakfastTime": "7am",
+  "lunchTime": "2pm",
+  "EveningMenu": "2pm – 10pm",
   "facebookLink": "https://www.facebook.com/baileyssmokehouse/",
   "twitterLink": "https://twitter.com/baileysblauvelt",
   "instagramLink": "https://www.instagram.com/baileysmokehouse/",
-  "aboutImage": "images/eatery/about.jpg",
+  "aboutImage": "./images/eatery/about.jpg",
+  "storefrontImage": "./images/eatery/storefront.jpg",
+  "aboutText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur corporis totam quidem voluptatibus velit? Facilis labore in unde sapiente quidem explicabo itaque ullam, recusandae culpa quas, vel cum sit enim? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam distinctio ut qui nesciunt quaerat beatae officia a doloremque necessitatibus odit voluptate dolorum soluta consequatur provident molestiae recusandae iure, temporibus deserunt.",
   "EaterySlideImages": [
     {
-      "image": "images/eatery/slider-1.png",
+      "image": "./images/eatery/slider-1.png",
       "title": "Enjoy our daily offers",
       "text": "We have great offers with amazing prices every week, check it out today!"
     },
     {
-      "image": "images/eatery/slider-2.png",
+      "image": "./images/eatery/slider-2.png",
       "title": "Enjoy our daily offers",
       "text": "We have great offers with amazing prices every week, check it out today!"
     },
     {
-      "image": "images/eatery/slider-3.png",
+      "image": "./images/eatery/slider-3.png",
       "title": "Enjoy our daily offers",
       "text": "We have great offers with amazing prices every week, check it out today!"
     }
+  ],
+
+  "EateryEventSlideImages": [
+    {
+      "original": "./images/eatery/events-slider/event-1.jpeg",
+      "thumbnail": "./images/eatery/events-slider/event-1-thumbnail.png"
+    },
+    {
+      "original": "./images/eatery/events-slider/event-2.jpeg",
+      "thumbnail": "./images/eatery/events-slider/event-2-thumbnail.png"
+    },
+    {
+      "original": "./images/eatery/events-slider/event-3.jpg",
+      "thumbnail": "./images/eatery/events-slider/event-3-thumbnail.png"
+    }
+  ],
+
+  "EateryMenuSlideImages": [
+    {
+      "original": "./images/eatery/menus/menu-1.jpeg",
+      "thumbnail": "./images/eatery/menus/menu-1-thumbnail.png"
+    },
+    {
+      "original": "./images/eatery/menus/menu-2.jpeg",
+      "thumbnail": "./images/eatery/menus/menu-2-thumbnail.png"
+    },
+    {
+      "original": "./images/eatery/menus/menu-3.jpeg",
+      "thumbnail": "./images/eatery/menus/menu-3-thumbnail.png"
+    }
+  ],
+
+  "EateryTestimonials": [
+    {
+      "testimonial": "Love Bailey’s- our go – to place on a weekly basis – delicious barbecue, attentive staff and service, great atmosphere!! Had the downstairs room for my birthday and it was a fantastic party – everyone loved it – keep up the great work!!! Also love the Bailey’s catered food at the many K of C parties and events!!",
+
+      "author": "Eileen Corry Griffith"
+    },
+    {
+      "testimonial": "HANDS DOWN THE BEST!!! I had baileys cater my wedding yesterday and I absolutely couldn’t be any happier. Paul took such great care of us through the first day we came to him all the way to the very last minute of our weddding day. he treated us like family and was so professional and so well experienced. he took time out of his busy work day to come help set up the day before, along with handling and solving all my wedding issues. EVERY SINGLE PERSON SAID HOW GREAT THE FOOD WAS",
+
+      "author": "Jessie Mikel Jaymes"
+    },
+    {
+      "testimonial": "Yummy dinner for hungry fam… Mac n cheese, baby back ribs; pulled short ribs, smoked sausage, pulled pork, with sides of corn souffle and smoked beans.",
+      "author": "Regina Marie Aragon Espino"
+    },
+    {
+      "testimonial": "I had been to Bailey’s several years ago, and the one thing I remembered was that the food was great. I brought my boyfriend here last night, for the first time, and let’s just say, he was not disappointed. We started with the MAC and cheese, pulled pork egg rolls, as an appetizer- . The spare ribs were by far the best ribs I’ve ever had. Pulled pork sandwich was great, my only suggestion would be putting it on a softer roll. Nonetheless, it was still very tasty. Our waitress was excellent- friendly, attentive and had great recommendations. All in all, if you want some good BBQ, go to Baileys!",
+      "author": "Maria von Heine-Geldern"
+    },
+    {
+      "testimonial": "I brought my wife kids and mother here for dinner, It was Saturday night and the place was packed. They got us in relatively quick and the food was phenomenal. Look forward to going back. Having one of my children’s birthday parties in August at our house and going to get it catered by Bailey’s.",
+      "author": "Peter Clemente"
+    }
+  ],
+
+  "GalleryPhotos": [
+    "images/eatery/gallery/image-1.jpeg",
+    "images/eatery/gallery/image-2.jpeg",
+    "images/eatery/gallery/image-3.jpeg",
+    "images/eatery/gallery/image-4.jpeg",
+    "images/eatery/gallery/image-5.jpeg",
+    "images/eatery/gallery/image-6.jpeg",
+    "images/eatery/gallery/image-7.jpeg",
+    "images/eatery/gallery/image-8.jpeg",
+    "images/eatery/gallery/image-9.jpeg",
+    "images/eatery/gallery/image-10.jpeg",
+    "images/eatery/gallery/image-11.jpeg",
+    "images/eatery/gallery/image-12.jpeg",
+    "images/eatery/gallery/image-13.jpeg",
+    "images/eatery/gallery/image-14.jpeg",
+    "images/eatery/gallery/image-15.jpeg",
+    "images/eatery/gallery/image-16.jpeg",
+    "images/eatery/gallery/image-17.jpeg",
+    "images/eatery/gallery/image-18.jpg",
+    "images/eatery/gallery/image-19.jpg",
+    "images/eatery/gallery/image-20.jpg",
+    "images/eatery/gallery/image-21.jpg",
+    "images/eatery/gallery/image-22.jpg",
+    "images/eatery/gallery/image-23.jpg",
+    "images/eatery/gallery/image-24.jpg",
+    "images/eatery/gallery/image-25.jpg",
+    "images/eatery/gallery/image-26.jpg",
+    "images/eatery/gallery/image-27.jpg",
+    "images/eatery/gallery/image-28.jpg",
+    "images/eatery/gallery/image-29.jpg",
+    "images/eatery/gallery/image-30.jpg",
+    "images/eatery/gallery/image-31.jpg",
+    "images/eatery/gallery/image-32.jpg",
+    "images/eatery/gallery/image-33.jpg",
+    "images/eatery/gallery/image-34.jpg",
+    "images/eatery/gallery/image-35.jpg",
+    "images/eatery/gallery/image-36.jpeg",
+    "images/eatery/gallery/image-37.jpeg"
   ]
 }

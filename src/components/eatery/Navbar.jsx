@@ -35,7 +35,11 @@ const Navbar = ({ data }) => {
             {/* one icon */}
             <div className="flex items-center space-x-2">
               <BsFillClockFill className="h-5 w-5" />
-              <p>{data.openCloseTime}</p>
+              <p>
+                {data.openingTime}
+                {" to "}
+                {data.closingTime}
+              </p>
             </div>
           </div>
 

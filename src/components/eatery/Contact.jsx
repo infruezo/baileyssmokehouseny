@@ -5,7 +5,7 @@ import { MdLocationOn } from "react-icons/md";
 
 import SectionTitle from "./SectionTitle";
 
-const Contact = () => {
+const Contact = ({ data }) => {
   return (
     <div id="contact" className="">
       <SectionTitle title="Contact Us" />
@@ -105,17 +105,15 @@ const Contact = () => {
                 <div className="flex flex-col space-y-4">
                   <div className="flex items-center space-x-2">
                     <BsFillTelephoneFill className="fill-current text-primary-eateryBrown h-6 w-6" />
-                    <p className="font-semibold text-lg">845-398-1454</p>
+                    <p className="font-semibold text-lg">{data.phone}</p>
                   </div>
                   <div className="flex items-center space-x-2">
                     <GrMail className="fill-current text-primary-eateryBrown h-6 w-6" />
-                    <p className="font-semibold text-lg">info@baileysny.com</p>
+                    <p className="font-semibold text-lg">{data.email}</p>
                   </div>
                   <div className="flex items-center space-x-2">
                     <MdLocationOn className="fill-current text-primary-eateryBrown h-6 w-6" />
-                    <p className="font-semibold text-lg">
-                      135 East Erie St. Blauvelt, NY 10913
-                    </p>
+                    <p className="font-semibold text-lg">{data.location}</p>
                   </div>
                 </div>
               </div>
