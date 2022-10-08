@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import EateryLogo from "../../images/eaterylogo.png";
 
-const Footer = () => {
+const Footer = ({ data }) => {
   return (
     <footer className="lg:mt-32 mt-16 text-primary-eateryLightBrown relative">
       {/* wrapper */}
@@ -11,7 +10,7 @@ const Footer = () => {
           {/* logo */}
           <Link to="/eatery" className=" flex-1">
             <img
-              src={EateryLogo}
+              src={data.logo}
               className="h-36 w-36 object-contain"
               loading="lazy"
               alt=""

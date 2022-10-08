@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import SocialsWidget from "../components/SocialsWidget";
 
 import Smokehouse from "../images/smokehouselogo.png";
-import Eaterylogo from "../images/eaterylogo.png";
 import SmokehouseBg from "../images/smokehouse-bg.jpg";
 import EateryBg from "../images/eatery-bg.jpg";
 
@@ -61,7 +60,7 @@ const Main = () => {
           <Link to="/eatery">
             <div className="w-full h-full flex flex-col space-y-4 p-4 items-center">
               <img
-                src={Eaterylogo}
+                src="./images/eatery/eaterylogo.png"
                 className="lg:h-48 lg:w-56 w-32 h-28"
                 alt="logo"
                 loading="lazy"

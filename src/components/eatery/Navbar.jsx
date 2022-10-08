@@ -6,11 +6,9 @@ import { FaTwitterSquare } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { FiMenu } from "react-icons/fi";
 import * as Scroll from "react-scroll";
-
-import EateryLogo from "../../images/eaterylogo.png";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ data }) => {
   let SmoothLink = Scroll.Link;
 
   const [activeMenu, setActiveMenu] = useState(false);
@@ -25,43 +23,31 @@ const Navbar = () => {
             {/* one icon */}
             <div className="flex items-center space-x-2">
               <BsFillTelephoneFill className="h-5 w-5" />
-              <p>845-398-1454</p>
+              <p>{data.phone}</p>
             </div>
 
             {/* one icon */}
             <div className="flex items-center space-x-2">
               <MdLocationOn className="h-6 w-6" />
-              <p>135 East Erie St. Blauvelt, NY 10913</p>
+              <p>{data.location}</p>
             </div>
 
             {/* one icon */}
             <div className="flex items-center space-x-2">
               <BsFillClockFill className="h-5 w-5" />
-              <p>7am to 10pm</p>
+              <p>{data.openCloseTime}</p>
             </div>
           </div>
 
           {/* left side */}
           <div className="flex items-center xl:space-x-4 lg:space-x-2 space-x-4">
-            <a
-              href="https://www.facebook.com/baileyssmokehouse/"
-              rel="noreferrer"
-              target="_blank"
-            >
+            <a href={data.facebookLink} rel="noreferrer" target="_blank">
               <GrFacebook className="h-4 w-4 lg:h-6 lg:w-6" />
             </a>
-            <a
-              href="https://twitter.com/baileysblauvelt"
-              rel="noreferrer"
-              target="_blank"
-            >
+            <a href={data.twitterLink} rel="noreferrer" target="_blank">
               <FaTwitterSquare className="h-5 w-5 lg:h-7 lg:w-7" />
             </a>
-            <a
-              href="https://www.instagram.com/baileysmokehouse/"
-              rel="noreferrer"
-              target="_blank"
-            >
+            <a href={data.instagramLink} rel="noreferrer" target="_blank">
               <AiFillInstagram className="h-5 w-5 lg:h-8 lg:w-8" />
             </a>
           </div>
@@ -74,7 +60,7 @@ const Navbar = () => {
           {/* logo */}
           <Link to="/eatery">
             <img
-              src={EateryLogo}
+              src={data.logo}
               className="h-24 w-24 lg:h-36 lg:w-36 object-contain"
               alt=""
               loading="lazy"
@@ -159,7 +145,7 @@ const Navbar = () => {
                 </svg>
               </div>
               <img
-                src={EateryLogo}
+                src={data.logo}
                 alt="logo"
                 loading="lazy"
                 className="object-cover scale-50 transform w-full"

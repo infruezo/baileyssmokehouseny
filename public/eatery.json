@@ -1,0 +1,26 @@
+{
+  "logo": "./images/eatery/eaterylogo.png",
+  "phone": "845-398-1454",
+  "location": "135 East Erie St. Blauvelt, NY 10913",
+  "openCloseTime": "7am to 10pm",
+  "facebookLink": "https://www.facebook.com/baileyssmokehouse/",
+  "twitterLink": "https://twitter.com/baileysblauvelt",
+  "instagramLink": "https://www.instagram.com/baileysmokehouse/",
+  "EaterySlideImages": [
+    {
+      "image": "./images/eatery/slider-1.png",
+      "title": "Enjoy our daily offers",
+      "text": "We have great offers with amazing prices every week, check it out today!"
+    },
+    {
+      "image": "./images/eatery/slider-2.png",
+      "title": "Enjoy our daily offers",
+      "text": "We have great offers with amazing prices every week, check it out today!"
+    },
+    {
+      "image": "./images/eatery/slider-3.png",
+      "title": "Enjoy our daily offers",
+      "text": "We have great offers with amazing prices every week, check it out today!"
+    }
+  ]
+}

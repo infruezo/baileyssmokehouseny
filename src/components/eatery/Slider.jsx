@@ -1,14 +1,14 @@
 import React from "react";
 import "react-slideshow-image/dist/styles.css";
 import { Slide } from "react-slideshow-image";
-import { EaterySlideImages } from "../../utils/data";
+// import { EaterySlideImages } from "../../../public/images/eatery/data";
 
-const Slider = () => {
+const Slider = ({ slider }) => {
   return (
     <div>
       <div className="slide-container">
         <Slide>
-          {EaterySlideImages.map((slideImage, index) => (
+          {slider.map((slideImage, index) => (
             <div
               className="each-fade xl:h-[600px] lg:h-[500px] h-[400px] w-full "
               key={index}

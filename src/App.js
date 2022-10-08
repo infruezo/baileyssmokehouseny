@@ -15,12 +15,14 @@ import RestaurantBars from "./pages/smokehouse/RestaurantBars";
 import EventDetail from "./pages/smokehouse/EventDetail";
 import EateryCateringTakout from "./pages/smokehouse/EateryCateringTakout";
 import SmokehouseHiring from "./pages/smokehouse/SmokehouseHiring";
+// import JsonTest from "./pages/JsonTest";
 
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
+        {/* <Route path="/" element={<JsonTest />} /> */}
         <Route path="/" element={<Main />} />
         <Route path="/eatery" element={<Eatery />} />
         <Route path="/hours-and-menus" element={<HoursMenus />} />
