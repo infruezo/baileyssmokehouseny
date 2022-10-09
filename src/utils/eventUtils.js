@@ -1,4 +1,4 @@
-import { SmokehouseEvents } from './data.js';
+import { SitePopup, SmokehouseEvents } from './data.js';
 import { normalDate, removeTime, getMaxDate } from "./dateUtils";
 
 export const Site = Object.freeze({
@@ -6,13 +6,17 @@ export const Site = Object.freeze({
   Eatery: 2,
   NewCity: 3
 });
-export function getSiteData(site) {
+function getSiteData(site) {
   switch (site) {
     case Site.Smokehouse:
       return SmokehouseEvents;
     default:
       return [];
   }
+}
+
+export function getSitePopup() {
+  return getUpcomingEventsInternal(SitePopup, 1);
 }
 
 export function getUpcomingEvents(site, num) {
