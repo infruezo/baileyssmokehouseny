@@ -5,7 +5,7 @@ import { BsGiftFill } from "react-icons/bs";
 const SocialsWidget = ({ direction }) => {
   return (
     <div
-      className={`${
+      className={`mix-blend-difference ${
         direction === "vertical"
           ? "fixed left-[5px] top-1/2 -translate-y-1/2 hidden lg:block z-50"
           : "absolute"

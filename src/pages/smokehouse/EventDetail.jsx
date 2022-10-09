@@ -12,15 +12,13 @@ const EventDetail = () => {
   let id = useParams().id;
   const [event, setEvent] = useState(null);
   useEffect(() => {
-    console.log(id);
     setEvent(getEventById(Site.Smokehouse, id));
-  }, []);
+  }, [id]);
   const [events, setEvents] = useState(null);
   useEffect(() => {
     setEvents(getUpcomingEvents(Site.Smokehouse, 8));
   }, []);
 
-  console.log(event);
   return (
     <div className="font-poppins">
       <Navbar />

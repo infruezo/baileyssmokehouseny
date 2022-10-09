@@ -74,6 +74,17 @@ export const EateryTestimonials = [
 //********************************************************************************************************** */
 // SMOKEHOUSE DATA
 //********************************************************************************************************** */
+export const SitePopup = [
+  {
+    title: "Test Important Popup",
+    image: "/events/JP_Laramee.jpg",
+    text: "Here is some text that should go beneath the picture.",
+    startDate: normalDate(2022, 1, 1),
+    endDate: normalDate(2022, 12, 31),
+    days: [6],
+  },
+];
+
 //days 0-6, starting sunday
 export const SmokehouseEvents = [
   {

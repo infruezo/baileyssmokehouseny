@@ -13,8 +13,6 @@ import SocialsWidget from "../../components/SocialsWidget";
 import { format } from "date-fns";
 
 const Events = () => {
-  const [eventsDetailsList, setEventsDetailsList] = useState([]);
-
   // getting the current month + year to set the default value of the calendar
   const [year, setYear] = useState(new Date().getFullYear());
   const [month, setMonth] = useState(parseInt(new Date().getMonth() + 1));
@@ -27,10 +25,8 @@ const Events = () => {
   };
 
   useEffect(() => {
-    events.map((event) =>
-      setEventsDetailsList((prevArray) => [...prevArray, event])
-    );
-  }, []);
+    setEvents(getEventsForMonth(Site.Smokehouse, year, month));
+  }, [year,month]);
 
   moment.locale("en-US");
   const localizer = momentLocalizer(moment);
@@ -52,7 +48,7 @@ const Events = () => {
             startAccessor="instanceDate"
             endAccessor="instanceDate"
             onNavigate={(e) => handleNavigate(e)}
-            events={eventsDetailsList}
+            events={events}
             style={{ height: "100vh" }}
             className="bg-white"
           />
