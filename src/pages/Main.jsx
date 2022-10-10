@@ -31,7 +31,7 @@ const Main = () => {
             <div className="w-full h-full flex flex-col space-y-4 p-4 items-center">
               <img
                 src={Smokehouse}
-                className="lg:h-48 lg:w-56 w-32 h-28"
+                className="lg:h-48 lg:w-64 w-40 h-28"
                 alt="logo"
                 loading="lazy"
               />

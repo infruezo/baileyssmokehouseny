@@ -36,14 +36,14 @@ const Home = () => {
         {/* hero section text */}
         <div className="mx-auto text-white absolute left-1/2 -translate-x-1/2 top-[60%] -translate-y-1/2 flex flex-col space-y-8 text-center z-0 w-full px-8 lg:px-0">
           <div>
-            <h1 className="xl:text-4xl lg:text-3xl text-lg font-title">
+            <h1 className="xl:text-4xl lg:text-3xl text-base sm:text-lg font-title">
               WELCOME TO
             </h1>
-            <h1 className="xl:text-4xl lg:text-3xl text-lg font-title">
+            <h1 className="xl:text-4xl lg:text-3xl text-base sm:text-lg font-title">
               BAILEY'S SMOKEHOUSE
             </h1>
           </div>
-          <h5 className="xl:text-2xl lg:text-xl text-base text-center">
+          <h5 className="xl:text-2xl lg:text-xl text-base sm:text-lg text-center">
             Full service restaurant and bars, catering and takeout.
           </h5>
           <Link
@@ -127,7 +127,7 @@ const Home = () => {
       </div>
 
       {/* About Us */}
-      <div className="bg-primary-eateryLightBrown lg:pb-72 py-20 w-full lg:pt-32">
+      <div className="bg-primary-eateryLightBrown lg:pb-32 py-20 w-full lg:pt-32">
         {/* wrapper */}
         <div className="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto">
           <img
@@ -187,7 +187,7 @@ const Home = () => {
       {/* Upcoming Events */}
 
       {events && (
-        <div className="w-full py-16  bg-primary-eateryLightBrown">
+        <div className="w-full lg:py-16 pt-4 pb-8  bg-primary-eateryLightBrown">
           <div className="w-full px-4 text-center">
             <div className="flex flex-col space-y-2">
               <div>

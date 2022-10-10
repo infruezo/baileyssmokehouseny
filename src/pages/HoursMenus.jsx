@@ -10,6 +10,7 @@ import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { Site, getUpcomingEvents } from "../utils/eventUtils";
 import { SmokehouseTakeoutMenu } from "../utils/data";
+import SocialsWidget from "../components/SocialsWidget";
 
 const HoursMenus = () => {
   const [events, setEvents] = useState(getUpcomingEvents(Site.Smokehouse, 4));
@@ -18,6 +19,7 @@ const HoursMenus = () => {
     <div>
       <Navbar />
       <Banner title="HOURS AND MENUS" />
+      <SocialsWidget direction="vertical" />
 
       {/* main section */}
       <div className="bg-primary-eateryLightBrown lg:pb-72 pb-20 pt-0 w-full lg:pt-0 -mt-12">

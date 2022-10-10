@@ -7,7 +7,7 @@ const Events = ({ events }) => {
   return (
     <div id="events">
       <SectionTitle title="Events and Specials" />
-      <div className="py-16 lg:max-w-screen-xl mx-auto">
+      <div className="py-2 lg:max-w-screen-xl mx-auto">
         <ImageGallery
           items={events}
           thumbnailPosition="bottom"

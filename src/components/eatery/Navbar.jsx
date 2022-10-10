@@ -130,7 +130,7 @@ const Navbar = ({ data }) => {
 
           {/* mobile menu */}
           {activeMenu && (
-            <div className="fixed top-0 z-40 left-0 flex flex-col items-center w-full h-screen max-h-screen p-20 overflow-y-hidden bg-primary-eateryLightBrown text-primary-eateryBrown md:hidden">
+            <div className="fixed top-0 z-40 left-0 flex flex-col items-center w-full h-screen max-h-screen p-20 overflow-y-hidden bg-primary-eateryLightBrown text-primary-eateryBrown lg:hidden">
               <div className="absolute top-4 right-4">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

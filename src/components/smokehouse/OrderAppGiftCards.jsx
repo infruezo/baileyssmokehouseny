@@ -20,7 +20,7 @@ const OrderAppGiftCards = () => {
       </div>
       {/* one element */}
 
-      <div className="col-span-1 h-full py-8 lg:py-0 flex flex-col space-y-6 items-center justify-center w-full">
+      <div className="col-span-1 h-full lg:py-0 flex flex-col space-y-6 items-center justify-center w-full">
         <GiSmartphone className="h-12 w-12 fill-current text-primary-smokehouseBrown" />
         <a
           href="https://apps.apple.com/us/app/baileys-smokehouse/id1071489928"

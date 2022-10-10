@@ -10,7 +10,7 @@ const Contact = ({ data }) => {
     <div id="contact" className="">
       <SectionTitle title="Contact Us" />
 
-      <div className="w-full h-auto py-12 lg:py-0 mt-12">
+      <div className="w-full h-auto pb-12 lg:py-0 mt-8 lg:mt-12">
         <div className="w-full h-full flex flex-col space-y-8 lg:flex-row lg:space-y-0">
           {/* contact form */}
           <div className="flex-1 h-full w-full">

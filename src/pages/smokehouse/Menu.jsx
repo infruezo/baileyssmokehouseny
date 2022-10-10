@@ -24,7 +24,7 @@ const Menu = () => {
       {/* menus section */}
       <div className="min-h-screen w-full bg-primary-eateryLightBrown py-16 lg:py-20 -mt-12">
         {/* disclaimer / fee image */}
-        <div className="w-full flex justify-center pb-12">
+        <div className="w-full flex justify-center pb-12 lg:-mt-14 -mt-12">
           <img src={DisclaimerImg} className="h-32 w-48 object-cover " alt="" />
         </div>
 
@@ -61,7 +61,8 @@ const Menu = () => {
                         <div>
                           <img
                             src={tab?.content?.original}
-                            className="h-full lg:max-w-[800px] w-full object-cover mx-auto"
+                            // className="h-full lg:max-w-[800px] w-full object-cover mx-auto"
+                            className="lg:max-h-[855px] h-auto w-auto object-cover mx-auto"
                             alt=""
                           />
                         </div>

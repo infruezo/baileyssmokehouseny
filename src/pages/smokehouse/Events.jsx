@@ -11,22 +11,31 @@ import { Site, getEventsForMonth } from "../../utils/eventUtils";
 import MiniEventDisplayCard from "../../components/smokehouse/MiniEventDisplayCard";
 import SocialsWidget from "../../components/SocialsWidget";
 import { format } from "date-fns";
+import { useNavigate } from "react-router-dom";
 
 const Events = () => {
+  const navigate = useNavigate();
+
   // getting the current month + year to set the default value of the calendar
   const [year, setYear] = useState(new Date().getFullYear());
   const [month, setMonth] = useState(parseInt(new Date().getMonth() + 1));
 
-  const [events, setEvents] = useState(getEventsForMonth(Site.Smokehouse, year, month));
+  const [events, setEvents] = useState(
+    getEventsForMonth(Site.Smokehouse, year, month)
+  );
 
   const handleNavigate = (e) => {
     setYear(format(e, "yyyy"));
     setMonth(format(e, "MM"));
   };
 
+  const handleSelect = (e) => {
+    navigate(`/event/${e.id}`);
+  };
+
   useEffect(() => {
     setEvents(getEventsForMonth(Site.Smokehouse, year, month));
-  }, [year,month]);
+  }, [year, month]);
 
   moment.locale("en-US");
   const localizer = momentLocalizer(moment);
@@ -48,6 +57,7 @@ const Events = () => {
             startAccessor="instanceDate"
             endAccessor="instanceDate"
             onNavigate={(e) => handleNavigate(e)}
+            onSelectEvent={(e) => handleSelect(e)}
             events={events}
             style={{ height: "100vh" }}
             className="bg-white"
@@ -55,7 +65,7 @@ const Events = () => {
 
           {/* events */}
           <div className="pt-16 w-full h-full">
-            <div className="flex flex-col space-y-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-4 lg:gap-x-10">
               {events.map((item, idx) => (
                 <MiniEventDisplayCard event={item} key={idx} />
               ))}

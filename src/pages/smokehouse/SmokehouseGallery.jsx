@@ -27,8 +27,11 @@ const SmokehouseGallery = () => {
       {showNav && <Navbar />}
       <Banner title="GALLERY" />
       <SocialsWidget direction="vertical" />
-      <div className="!z-[9999999] py-12 lg:py-24" id="gallery">
-        <div className="xl:max-w-screen-2xl lg:max-w-screen-xl md:max-w-screen-lg  gap-0.5 max-w-screen-sm mx-auto flex items-center  justify-center flex-wrap ">
+      <div
+        className="py-2 lg:py-24 bg-primary-eateryLightBrown -mt-12 lg:-mt-12"
+        id="gallery"
+      >
+        <div className="xl:max-w-screen-2xl lg:max-w-screen-xl md:max-w-screen-lg  gap-0.5 max-w-screen-sm mx-auto flex items-center  justify-center flex-wrap">
           {smokehousePhotos.map((src, index) => (
             <img
               src={src}

@@ -55,7 +55,7 @@ const Navbar = () => {
       <div className="w-full py-6 mt-12 lg:mt-0 bg-transparent text-white">
         <div className="flex items-center justify-center lg:justify-between px-2 w-full xl:max-w-screen-xl lg:max-w-screen-lg mx-auto">
           <Link to="/hours-and-menus">
-            <img src={Logo} loading="lazy" className="h-24 w-36" alt="" />
+            <img src={Logo} loading="lazy" className="h-24 w-32" alt="" />
           </Link>
 
           <div className="hidden lg:flex lg:flex-col lg:space-y-6">
@@ -125,7 +125,7 @@ const Navbar = () => {
 
       {/* mobile menu */}
       {activeMenu && (
-        <div className="fixed top-0 z-50 left-0 flex flex-col items-center w-full h-screen max-h-screen px-20 pt-3 pb-12 overflow-y-hidden bg-[#161616] text-red-50 md:hidden">
+        <div className="fixed top-0 z-50 left-0 flex flex-col items-center w-full h-screen max-h-screen px-20 pt-3 pb-12 overflow-y-hidden bg-[#161616] text-red-50 lg:hidden">
           <div className="absolute top-4 right-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -143,12 +143,12 @@ const Navbar = () => {
               />
             </svg>
           </div>
-          <Link to="/hours-and-menus">
+          <Link to="/hours-and-menus" className="w-full">
             <img
               src={Logo}
               alt="logo"
               loading="lazy"
-              className="object-cover h-24 w-full "
+              className="object-cover h-20 w-auto mx-auto"
             />
           </Link>
           <div className="flex flex-col text-xl font-medium items-center justify-center mt-12 space-y-6 ">

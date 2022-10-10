@@ -51,18 +51,16 @@ const SocialsWidget = ({ direction }) => {
           </div>
         </a>
 
-        {direction === "vertical" && (
-          <a
-            href="https://baileysandnanuetny.instagift.com/"
-            rel="noreferrer"
-            target="_blank"
-            className="!cursor-pointer group"
-          >
-            <div className="border-2 border-white p-2 group-hover:border-purple-500 duration-300  ">
-              <BsGiftFill className="fill-current text-white group-hover:text-purple-500 duration-300 " />
-            </div>
-          </a>
-        )}
+        <a
+          href="https://baileysandnanuetny.instagift.com/"
+          rel="noreferrer"
+          target="_blank"
+          className="!cursor-pointer group"
+        >
+          <div className="border-2 border-white p-2 group-hover:border-purple-500 duration-300  ">
+            <BsGiftFill className="fill-current text-white group-hover:text-purple-500 duration-300 " />
+          </div>
+        </a>
       </div>
     </div>
   );

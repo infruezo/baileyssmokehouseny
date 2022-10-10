@@ -7,7 +7,7 @@ const Menus = ({ menus }) => {
   return (
     <div id="menus">
       <SectionTitle title="Our Menus" />
-      <div className="py-16 lg:max-w-screen-xl mx-auto">
+      <div className="py-2 lg:max-w-screen-xl mx-auto">
         <ImageGallery
           items={menus}
           thumbnailPosition="bottom"
