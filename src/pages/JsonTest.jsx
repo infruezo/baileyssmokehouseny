@@ -1,27 +1,27 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import EventPopup from "../components/smokehouse/EventPopup";
 
 const JsonTest = () => {
-  const [data, setData] = useState([]);
-  const [events, setEvents] = useState([]);
+  // const [data, setData] = useState([]);
+  // const [events, setEvents] = useState([]);
 
-  const fetchData = async () => {
-    const response = await axios.get("data.json", {
-      "Content-Type": "application/json",
-      Accept: "application/json",
-    });
-    setData(response.data);
-    setEvents(response.data.events);
-  };
+  // const fetchData = async () => {
+  //   const response = await axios.get("data.json", {
+  //     "Content-Type": "application/json",
+  //     Accept: "application/json",
+  //   });
+  //   setData(response.data);
+  //   setEvents(response.data.events);
+  // };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
 
   return (
     <>
-      <p>{data.text}</p>
-      <img src={events.img} alt="not found" />
+      <EventPopup />
     </>
   );
 };

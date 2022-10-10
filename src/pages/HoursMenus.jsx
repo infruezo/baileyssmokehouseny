@@ -11,6 +11,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import { Site, getUpcomingEvents } from "../utils/eventUtils";
 import { SmokehouseTakeoutMenu } from "../utils/data";
 import SocialsWidget from "../components/SocialsWidget";
+import EventPopup from "../components/smokehouse/EventPopup";
 
 const HoursMenus = () => {
   const [events, setEvents] = useState(getUpcomingEvents(Site.Smokehouse, 4));

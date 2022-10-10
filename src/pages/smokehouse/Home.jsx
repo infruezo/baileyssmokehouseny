@@ -13,6 +13,7 @@ import Card3 from "../../images/smokehouse/home-card-3.png";
 import HomeAbout from "../../images/smokehouse/home-about.png";
 import EventCard from "../../components/smokehouse/EventCard";
 import { Site, getUpcomingEvents } from "../../utils/eventUtils";
+import EventPopup from "../../components/smokehouse/EventPopup";
 
 const Home = () => {
   const [events, setEvents] = useState(null);
@@ -24,6 +25,9 @@ const Home = () => {
     <div className="relative font-poppins">
       <Navbar />
       <SocialsWidget direction="vertical" />
+
+      <EventPopup />
+
       {/* special banner for home page */}
       <div className="w-full lg:h-[700px] h-[500px] absolute top-0 left-0 z-0">
         <img

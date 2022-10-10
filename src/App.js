@@ -15,9 +15,14 @@ import RestaurantBars from "./pages/smokehouse/RestaurantBars";
 import EventDetail from "./pages/smokehouse/EventDetail";
 import EateryCateringTakout from "./pages/smokehouse/EateryCateringTakout";
 import SmokehouseHiring from "./pages/smokehouse/SmokehouseHiring";
-// import JsonTest from "./pages/JsonTest";
+
+import { getSitePopup } from "./utils/eventUtils";
+
+import JsonTest from "./pages/JsonTest";
 
 function App() {
+  console.log(getSitePopup());
+
   return (
     <BrowserRouter>
       <ScrollToTop />

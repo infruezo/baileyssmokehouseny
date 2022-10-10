@@ -76,6 +76,7 @@ export const EateryTestimonials = [
 //********************************************************************************************************** */
 export const SitePopup = [
   {
+    id: "id-doesnt-exist",
     title: "Test Important Popup",
     image: "/events/JP_Laramee.jpg",
     text: "Here is some text that should go beneath the picture.",
