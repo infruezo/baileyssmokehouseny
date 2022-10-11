@@ -11,6 +11,28 @@ module.exports = {
           smokehouseDarkRed: "#6E2724",
         },
       },
+
+      animation: {
+        popup: "popup 0.5s ease-in-out",
+      },
+      keyframes: {
+        popup: {
+          "0%": {
+            display: "none",
+            opacity: 0,
+          },
+
+          "3%": {
+            display: "block",
+            opacity: 0,
+          },
+
+          "100%": {
+            display: "block",
+            opacity: 1,
+          },
+        },
+      },
     },
     fontFamily: {
       poppins: ["Poppins", "arial"],
