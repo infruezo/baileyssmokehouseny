@@ -128,6 +128,16 @@ export const SmokehouseEvents = [
     endDate: normalDate(2022, 10, 2),
     days: [0, 4, 5, 6],
   },
+  {
+    id: "Test-event-delete-later",
+    image: "/events/Oktoberfest.jpeg",
+    title: "Test Event 123",
+    category: "Coding",
+    text: "",
+    startDate: normalDate(2022, 10, 12),
+    endDate: normalDate(2022, 10, 12),
+    days: [3],
+  },
 ];
 
 export const SmokehouseMenutabs = [

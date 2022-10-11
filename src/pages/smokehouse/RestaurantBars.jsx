@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "../../components/smokehouse/Banner";
+import EventPopup from "../../components/smokehouse/EventPopup";
 import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
 
@@ -8,6 +9,8 @@ const RestaurantBars = () => {
     <div className="font-poppins">
       <Navbar />
       <Banner title="RESTAURANT & BARS" />
+      <EventPopup />
+
       <div className="bg-primary-eateryLightBrown lg:pb-72 py-20 w-full lg:pt-16 -mt-12">
         <div className="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto">
           {/* title and text*/}

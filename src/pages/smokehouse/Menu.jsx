@@ -7,6 +7,7 @@ import Navbar from "../../components/smokehouse/Navbar";
 import { SmokehouseMenutabs } from "../../utils/data";
 import DisclaimerImg from "../../images/smokehouse/menus/disclaimer.jpeg";
 import SocialsWidget from "../../components/SocialsWidget";
+import EventPopup from "../../components/smokehouse/EventPopup";
 
 const Menu = () => {
   const [currentTab, setCurrentTab] = useState("1");
@@ -20,6 +21,7 @@ const Menu = () => {
       <Navbar />
       <Banner title="MENU" />
       <SocialsWidget direction="vertical" />
+      <EventPopup />
 
       {/* menus section */}
       <div className="min-h-screen w-full bg-primary-eateryLightBrown py-16 lg:py-20 -mt-12">

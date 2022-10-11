@@ -12,6 +12,7 @@ import MiniEventDisplayCard from "../../components/smokehouse/MiniEventDisplayCa
 import SocialsWidget from "../../components/SocialsWidget";
 import { format } from "date-fns";
 import { useNavigate } from "react-router-dom";
+import EventPopup from "../../components/smokehouse/EventPopup";
 
 const Events = () => {
   const navigate = useNavigate();
@@ -45,6 +46,8 @@ const Events = () => {
       <Navbar />
       <Banner title="EVENT CALENDAR" />
       <SocialsWidget direction="vertical" />
+      <EventPopup />
+
       <div className="w-full h-full py-12 bg-primary-eateryLightBrown -mt-12">
         <div className="h-full w-full mx-auto px-4 xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md ">
           {/* calendar */}

@@ -7,6 +7,7 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import { GrMail } from "react-icons/gr";
 import { MdLocationOn } from "react-icons/md";
 import SocialsWidget from "../../components/SocialsWidget";
+import EventPopup from "../../components/smokehouse/EventPopup";
 
 const Contact = () => {
   return (
@@ -14,6 +15,7 @@ const Contact = () => {
       <Navbar />
       <Banner title="CONTACT US" />
       <SocialsWidget direction="vertical" />
+      <EventPopup />
 
       <div className="w-full h-full bg-primary-eateryLightBrown py-12 -mt-12">
         <div className="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto">

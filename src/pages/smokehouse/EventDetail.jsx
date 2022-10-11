@@ -3,39 +3,37 @@ import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import Banner from "../../components/smokehouse/Banner";
 import EventCard from "../../components/smokehouse/EventCard";
+import EventPopup from "../../components/smokehouse/EventPopup";
 import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
 import SocialsWidget from "../../components/SocialsWidget";
 import { Site, getEventById, getUpcomingEvents } from "../../utils/eventUtils";
 
 const EventDetail = () => {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const [eventFound, setEventFound] = useState(false);
 
   let id = useParams().id;
 
   const [event, setEvent] = useState(null);
   const [events, setEvents] = useState(null);
-  useEffect(() => {
-    setLoading(true);
-    setEvents(getUpcomingEvents(Site.Smokehouse, 8));
-    setLoading(false);
-  }, []);
 
   useEffect(() => {
-    if (!loading) {
-      setEventFound(events.find((data) => data.id === id));
-      if (eventFound) {
-        setEvent(getEventById(Site.Smokehouse, id));
-      }
-    }
-  }, [events, id, loading, eventFound]);
+    setEvent(getEventById(Site.Smokehouse, id));
+  }, [id]);
+
+  useEffect(() => {
+    setEvents(getUpcomingEvents(Site.Smokehouse, 8));
+  }, []);
+
+  console.log(events);
 
   return (
     <div className="font-poppins">
       <Navbar />
       <SocialsWidget direction="vertical" />
       <Banner title="" />
+      <EventPopup />
 
       {/* event detail */}
       <div className="bg-primary-eateryLightBrown lg:pb-72 py-20 w-full lg:pt-16 -mt-12">

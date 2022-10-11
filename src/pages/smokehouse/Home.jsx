@@ -25,7 +25,6 @@ const Home = () => {
     <div className="relative font-poppins">
       <Navbar />
       <SocialsWidget direction="vertical" />
-
       <EventPopup />
 
       {/* special banner for home page */}

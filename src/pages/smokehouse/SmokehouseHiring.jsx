@@ -1,6 +1,7 @@
 import React from "react";
 
 import Banner from "../../components/smokehouse/Banner";
+import EventPopup from "../../components/smokehouse/EventPopup";
 import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
 import SocialsWidget from "../../components/SocialsWidget";
@@ -11,6 +12,7 @@ const SmokehouseHiring = () => {
       <Navbar />
       <Banner title="BAILEY'S SMOKEHOUSE 2" />
       <SocialsWidget direction="vertical" />
+      <EventPopup />
 
       <div className="w-full min-h-screen bg-primary-eateryLightBrown -mt-12 py-8 lg:py-12">
         <div className="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto text-center">

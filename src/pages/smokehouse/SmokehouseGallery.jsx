@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from "react";
 import ImageViewer from "react-simple-image-viewer";
 import Banner from "../../components/smokehouse/Banner";
+import EventPopup from "../../components/smokehouse/EventPopup";
 import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
 import SocialsWidget from "../../components/SocialsWidget";
@@ -27,6 +28,8 @@ const SmokehouseGallery = () => {
       {showNav && <Navbar />}
       <Banner title="GALLERY" />
       <SocialsWidget direction="vertical" />
+      <EventPopup />
+
       <div
         className="py-2 lg:py-24 bg-primary-eateryLightBrown -mt-12 lg:-mt-12"
         id="gallery"

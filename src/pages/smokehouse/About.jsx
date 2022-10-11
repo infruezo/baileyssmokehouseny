@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "../../components/smokehouse/Banner";
+import EventPopup from "../../components/smokehouse/EventPopup";
 import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
 import Testimonials from "../../components/smokehouse/Testimonials";
@@ -14,6 +15,7 @@ const About = () => {
       <Navbar />
       <SocialsWidget direction="vertical" />
       <Banner title="ABOUT US" />
+      <EventPopup />
       {/* About Us */}
       <div className="bg-primary-eateryLightBrown lg:pb-72 py-20 w-full lg:pt-32 -mt-12">
         {/* wrapper */}

@@ -1,23 +1,32 @@
 import { format } from "date-fns";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IoIosCloseCircleOutline } from "react-icons/io";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { getSitePopup } from "../../utils/eventUtils";
 
 const EventPopup = () => {
   const navigate = useNavigate();
 
-  const [showModal, setShowModal] = useState(true);
   const [featuredEvent, setFeaturedEvent] = useState(getSitePopup());
+  const [visible, setVisible] = React.useState(false);
 
   const handleNavigate = () => {
     navigate(`/event/${featuredEvent[0].id}`);
-    setShowModal(false);
+    setVisible(false);
   };
+
+  useEffect(() => {
+    let pop_status = sessionStorage.getItem("pop_status");
+    if (!pop_status) {
+      setVisible(true);
+      sessionStorage.setItem("pop_status", 1);
+    }
+  }, []);
+  if (!visible) return null;
 
   return (
     <>
-      {showModal ? (
+      {visible ? (
         <>
           <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-[100] outline-none focus:outline-none bg-black/50">
             <div className="relative w-full my-6 mx-auto lg:w-[600px] px-2 lg:px-0">
@@ -30,7 +39,7 @@ const EventPopup = () => {
                   </h3>
                   <button
                     className="p-1 ml-auto border-0 text-black float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
-                    onClick={() => setShowModal(false)}
+                    onClick={() => setVisible(false)}
                   >
                     <span className="text-red-500 focus:outline-none">
                       <IoIosCloseCircleOutline className="h-8 w-8" />
@@ -60,7 +69,7 @@ const EventPopup = () => {
                   <button
                     className="bg-red-500 text-white hover:bg-red-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => setShowModal(false)}
+                    onClick={() => setVisible(false)}
                   >
                     Dismiss
                   </button>

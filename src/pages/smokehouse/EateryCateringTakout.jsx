@@ -5,6 +5,7 @@ import Navbar from "../../components/smokehouse/Navbar";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { SmokehouseEateryCateringTakeout } from "../../utils/data";
+import EventPopup from "../../components/smokehouse/EventPopup";
 
 const EateryCateringTakout = () => {
   const [currentTab, setCurrentTab] = useState("1");
@@ -17,6 +18,7 @@ const EateryCateringTakout = () => {
     <div className="font-poppins">
       <Navbar />
       <Banner title="EATERY, CATERING & TAKEOUT" />
+      <EventPopup />
 
       {/* main section */}
       <div className="bg-primary-eateryLightBrown lg:pb-72 py-20 w-full lg:pt-24 -mt-12">

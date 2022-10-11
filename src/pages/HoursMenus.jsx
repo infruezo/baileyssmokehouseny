@@ -22,6 +22,8 @@ const HoursMenus = () => {
       <Banner title="HOURS AND MENUS" />
       <SocialsWidget direction="vertical" />
 
+      <EventPopup />
+
       {/* main section */}
       <div className="bg-primary-eateryLightBrown lg:pb-72 pb-20 pt-0 w-full lg:pt-0 -mt-12">
         <OrderAppGiftCards />
