@@ -38,7 +38,7 @@ const EventDetail = () => {
       {/* event detail */}
       <div className="bg-primary-eateryLightBrown lg:pb-72 py-20 w-full lg:pt-16 -mt-12">
         <div className="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto">
-          {eventFound ? (
+          {event ? (
             // EVENT FOUND SCREEN
             <div className="w-full h-full flex flex-col space-y-4">
               <h1 className="font-title tracking-tight lg:text-3xl text-lg text-primary-smokehouseDarkRed">
