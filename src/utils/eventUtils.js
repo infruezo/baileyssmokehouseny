@@ -1,10 +1,10 @@
-import { SitePopup, SmokehouseEvents } from './data.js';
+import { SitePopup, SmokehouseEvents } from "./data.js";
 import { normalDate, removeTime, getMaxDate } from "./dateUtils";
 
 export const Site = Object.freeze({
   Smokehouse: 1,
   Eatery: 2,
-  NewCity: 3
+  NewCity: 3,
 });
 function getSiteData(site) {
   switch (site) {
@@ -67,5 +67,5 @@ export function getEventById(site, id) {
 function getEventByIdInternal(eventList, id) {
   const event = eventList.find((e) => e.id === id);
   const upcoming = getUpcomingEventsInternal([event], 6);
-  return { ...event, upcomingDates: upcoming.map(u => u.instanceDate) };
+  return { ...event, upcomingDates: upcoming.map((u) => u.instanceDate) };
 }
