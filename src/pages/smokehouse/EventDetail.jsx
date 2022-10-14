@@ -41,7 +41,6 @@ const EventDetail = () => {
     };
 
     fetchEvent();
-    setLoading(false);
   }, [id]);
 
   useEffect(() => {
