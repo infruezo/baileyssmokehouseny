@@ -17,7 +17,7 @@ import EventPopup from "../../components/smokehouse/EventPopup";
 
 const Home = () => {
   const [events, setEvents] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true);

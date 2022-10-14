@@ -3,13 +3,11 @@ import React, { useState, useEffect } from "react";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import { getSitePopup } from "../../utils/eventUtils";
-// import { getSitePopup } from "../../utils/eventUtils";
 
 const EventPopup = () => {
   const navigate = useNavigate();
 
   const [featuredEvent, setFeaturedEvent] = useState([]);
-  const [loading, setLoading] = useState(false);
   const [visible, setVisible] = useState(false);
 
   const handleNavigate = () => {
@@ -18,22 +16,21 @@ const EventPopup = () => {
   };
 
   useEffect(() => {
-    const fetchFeaturedEvent = async () => {
-      const event = await getSitePopup();
-      setFeaturedEvent(event);
+    const fetchData = async () => {
+      const data = await getSitePopup();
+      setFeaturedEvent(data);
     };
 
-    setLoading(true);
-    fetchFeaturedEvent();
-    setLoading(false);
+    fetchData();
+
+    console.log(featuredEvent[0]);
 
     let pop_status = sessionStorage.getItem("pop_status");
-    if (!pop_status && !loading) {
-      setVisible(false);
+    if (!pop_status) {
+      setVisible(true);
       sessionStorage.setItem("pop_status", 1);
     }
   }, []);
-
   if (!visible) return null;
   if (featuredEvent === null || featuredEvent.length === 0) return null;
 
@@ -46,7 +43,9 @@ const EventPopup = () => {
             id="modal"
           >
             <div className="relative w-full my-6 mx-auto lg:w-[600px] px-2 lg:px-0 animate-popup">
+              {/*content*/}
               <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-primary-eateryLightBrown outline-none focus:outline-none">
+                {/*header*/}
                 <div className="flex items-center justify-between p-5 border-b border-solid border-primary-smokehouseDarkRed/25 rounded-t">
                   <h3 className="text-lg lg:text-2xl font-bold text-primary-smokehouseDarkRed">
                     {featuredEvent[0].title}
@@ -60,7 +59,7 @@ const EventPopup = () => {
                     </span>
                   </button>
                 </div>
-
+                {/*body*/}
                 <div className="relative flex flex-col w-full">
                   <img
                     src={featuredEvent[0].image}
@@ -81,7 +80,7 @@ const EventPopup = () => {
                     </h1>
                   </div>
                 </div>
-
+                {/*footer*/}
                 <div className="flex items-center space-x-4 justify-end p-6 border-t border-solid border-primary-smokehouseDarkRed/25 rounded-b">
                   <button
                     className="bg-red-500 text-white hover:bg-red-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"

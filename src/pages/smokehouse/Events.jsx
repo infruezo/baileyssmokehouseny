@@ -20,7 +20,7 @@ const Events = () => {
   // getting the current month + year to set the default value of the calendar
   const [year, setYear] = useState(new Date().getFullYear());
   const [month, setMonth] = useState(parseInt(new Date().getMonth() + 1));
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const [events, setEvents] = useState([]);
 
