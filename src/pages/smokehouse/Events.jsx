@@ -20,10 +20,9 @@ const Events = () => {
   // getting the current month + year to set the default value of the calendar
   const [year, setYear] = useState(new Date().getFullYear());
   const [month, setMonth] = useState(parseInt(new Date().getMonth() + 1));
+  const [loading, setLoading] = useState(false);
 
-  const [events, setEvents] = useState(
-    getEventsForMonth(Site.Smokehouse, year, month)
-  );
+  const [events, setEvents] = useState([]);
 
   const handleNavigate = (e) => {
     setYear(format(e, "yyyy"));
@@ -33,51 +32,61 @@ const Events = () => {
   const handleSelect = (e) => {
     navigate(`/event/${e.id}`);
   };
-
   useEffect(() => {
-    setEvents(getEventsForMonth(Site.Smokehouse, year, month));
+    const fetchMonthData = async () => {
+      setLoading(true);
+      const eventData = await getEventsForMonth(Site.Smokehouse, year, month);
+      setEvents(eventData);
+      setLoading(false);
+    };
+
+    fetchMonthData();
   }, [year, month]);
 
   moment.locale("en-US");
   const localizer = momentLocalizer(moment);
 
   return (
-    <div className="font-poppins h-full w-full">
-      <Navbar />
-      <Banner title="EVENT CALENDAR" />
-      <SocialsWidget direction="vertical" />
-      <EventPopup />
+    <>
+      {!loading && (
+        <div className="font-poppins h-full w-full">
+          <Navbar />
+          <Banner title="EVENT CALENDAR" />
+          <SocialsWidget direction="vertical" />
+          <EventPopup />
 
-      <div className="w-full h-full py-12 bg-primary-eateryLightBrown -mt-12">
-        <div className="h-full w-full mx-auto px-4 xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md ">
-          {/* calendar */}
-          <Calendar
-            views={["day", "work_week", "month"]}
-            selectable
-            localizer={localizer}
-            defaultDate={new Date()}
-            defaultView="month"
-            startAccessor="instanceDate"
-            endAccessor="instanceDate"
-            onNavigate={(e) => handleNavigate(e)}
-            onSelectEvent={(e) => handleSelect(e)}
-            events={events}
-            style={{ height: "100vh" }}
-            className="bg-white"
-          />
+          <div className="w-full h-full py-12 bg-primary-eateryLightBrown -mt-12">
+            <div className="h-full w-full mx-auto px-4 xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md ">
+              {/* calendar */}
+              <Calendar
+                views={["day", "work_week", "month"]}
+                selectable
+                localizer={localizer}
+                defaultDate={new Date()}
+                defaultView="month"
+                startAccessor="instanceDate"
+                endAccessor="instanceDate"
+                onNavigate={(e) => handleNavigate(e)}
+                onSelectEvent={(e) => handleSelect(e)}
+                events={events}
+                style={{ height: "100vh" }}
+                className="bg-white"
+              />
 
-          {/* events */}
-          <div className="pt-16 w-full h-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-4 lg:gap-x-10">
-              {events.map((item, idx) => (
-                <MiniEventDisplayCard event={item} key={idx} />
-              ))}
+              {/* events */}
+              <div className="pt-16 w-full h-full">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-y-4 lg:gap-x-10">
+                  {events.map((item, idx) => (
+                    <MiniEventDisplayCard event={item} key={idx} />
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
+          <Footer />
         </div>
-      </div>
-      <Footer />
-    </div>
+      )}
+    </>
   );
 };
 

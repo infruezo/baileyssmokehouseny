@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Banner from "../components/smokehouse/Banner";
 import EventCard from "../components/smokehouse/EventCard";
@@ -14,7 +14,16 @@ import SocialsWidget from "../components/SocialsWidget";
 import EventPopup from "../components/smokehouse/EventPopup";
 
 const HoursMenus = () => {
-  const [events, setEvents] = useState(getUpcomingEvents(Site.Smokehouse, 4));
+  const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getUpcomingEvents(Site.Smokehouse, 4);
+      setEvents(data);
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div>

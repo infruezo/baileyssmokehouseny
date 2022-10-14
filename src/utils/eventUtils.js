@@ -1,4 +1,5 @@
-import { SitePopup, SmokehouseEvents } from "./data.js";
+import axios from "axios";
+// import { SitePopup } from "./data.js";
 import { normalDate, removeTime, getMaxDate } from "./dateUtils";
 
 export const Site = Object.freeze({
@@ -6,23 +7,65 @@ export const Site = Object.freeze({
   Eatery: 2,
   NewCity: 3,
 });
-function getSiteData(site) {
+
+export async function getSitePopup() {
+  const event = await getFeaturedEvent();
+  const data = await getUpcomingEventsInternal(event, 1);
+  return data;
+}
+
+async function getData() {
+  const response = await axios.get("events.json");
+  return response.data;
+}
+
+async function getEventData() {
+  const response = await axios.get("../events.json");
+  return response.data;
+}
+
+async function getFeaturedEvent() {
+  const response = await axios.get("./featuredEvent.json");
+  return response.data;
+}
+
+async function getSiteData(site) {
+  const events = await getData();
+
   switch (site) {
     case Site.Smokehouse:
-      return SmokehouseEvents;
+      return events;
     default:
       return [];
   }
 }
 
-export function getSitePopup() {
-  return getUpcomingEventsInternal(SitePopup, 1);
+async function getEventSiteData(site) {
+  const events = await getEventData();
+
+  switch (site) {
+    case Site.Smokehouse:
+      return events;
+    default:
+      return [];
+  }
 }
 
-export function getUpcomingEvents(site, num) {
-  return getUpcomingEventsInternal(getSiteData(site), num);
+export async function getUpcomingEvents(site, num) {
+  const siteData = await getSiteData(site);
+  const data = await getUpcomingEventsInternal(siteData, num);
+
+  return data;
 }
-function getUpcomingEventsInternal(eventList, num) {
+
+export async function getUpcomingEventsEventDetail(site, num) {
+  const siteData = await getEventSiteData(site);
+  const data = await getUpcomingEventsInternal(siteData, num);
+
+  return data;
+}
+
+async function getUpcomingEventsInternal(eventList, num) {
   var matchedEvents = [];
   let d = removeTime(new Date());
 
@@ -30,7 +73,11 @@ function getUpcomingEventsInternal(eventList, num) {
 
   do {
     eventList.forEach((e) => {
-      if (d >= e.startDate && d <= e.endDate && e.days.includes(d.getDay())) {
+      if (
+        d >= new Date(e.startDate) &&
+        d <= new Date(e.endDate) &&
+        e.days.includes(d.getDay())
+      ) {
         matchedEvents.push({ ...e, instanceDate: new Date(d) });
       }
     });
@@ -41,16 +88,22 @@ function getUpcomingEventsInternal(eventList, num) {
   return matchedEvents.slice(0, num);
 }
 
-export function getEventsForMonth(site, year, month) {
-  return getEventsForMonthInternal(getSiteData(site), year, month);
+export async function getEventsForMonth(site, year, month) {
+  const siteData = await getSiteData(site);
+  const data = await getEventsForMonthInternal(siteData, year, month);
+  return data;
 }
-function getEventsForMonthInternal(eventList, year, month) {
+async function getEventsForMonthInternal(eventList, year, month) {
   var matchedEvents = [];
   let d = normalDate(year, month, 1);
 
   do {
     eventList.forEach((e) => {
-      if (d >= e.startDate && d <= e.endDate && e.days.includes(d.getDay())) {
+      if (
+        d >= new Date(e.startDate) &&
+        d <= new Date(e.endDate) &&
+        e.days.includes(d.getDay())
+      ) {
         matchedEvents.push({ ...e, instanceDate: new Date(d) });
       }
     });
@@ -61,11 +114,27 @@ function getEventsForMonthInternal(eventList, year, month) {
   return matchedEvents;
 }
 
-export function getEventById(site, id) {
-  return getEventByIdInternal(getSiteData(site), id);
+export async function getEventById(site, id) {
+  const siteData = await getEventSiteData(site);
+  const data = await getEventByIdInternal(siteData, id);
+  return data;
 }
-function getEventByIdInternal(eventList, id) {
+
+async function getEventByIdInternal(eventList, id) {
   const event = eventList.find((e) => e.id === id);
-  const upcoming = getUpcomingEventsInternal([event], 6);
+  const upcoming = await getUpcomingEventsInternal([event], 6);
   return { ...event, upcomingDates: upcoming.map((u) => u.instanceDate) };
 }
+
+async function showData() {
+  // const r = await getEventById(
+
+  //   Site.Smokehouse,
+  //   "Saturday-Night-Magic-Featuring-JP-Laramee-2022"
+  // );
+
+  const r = await getSitePopup();
+  // console.log(r);
+}
+
+showData();

@@ -7,7 +7,12 @@ import EventPopup from "../../components/smokehouse/EventPopup";
 import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
 import SocialsWidget from "../../components/SocialsWidget";
-import { Site, getEventById, getUpcomingEvents } from "../../utils/eventUtils";
+import {
+  Site,
+  getEventById,
+  getUpcomingEvents,
+  getUpcomingEventsEventDetail,
+} from "../../utils/eventUtils";
 
 const EventDetail = () => {
   // const [loading, setLoading] = useState(true);
@@ -19,16 +24,30 @@ const EventDetail = () => {
   const [events, setEvents] = useState(null);
 
   useEffect(() => {
-    try {
-      setEvent(getEventById(Site.Smokehouse, id));
-      setEventFound(true);
-    } catch (error) {
-      setEventFound(false);
-    }
+    const fetchEvent = async () => {
+      try {
+        const result = await getEventById(Site.Smokehouse, id);
+        if (result) {
+          setEventFound(true);
+          setEvent(result);
+        } else {
+          setEventFound(false);
+        }
+      } catch (error) {
+        setEventFound(false);
+      }
+    };
+
+    fetchEvent();
   }, [id]);
 
   useEffect(() => {
-    setEvents(getUpcomingEvents(Site.Smokehouse, 8));
+    const fetchAllEvents = async () => {
+      const eventList = await getUpcomingEventsEventDetail(Site.Smokehouse, 8);
+      setEvents(eventList);
+    };
+
+    fetchAllEvents();
   }, []);
 
   return (

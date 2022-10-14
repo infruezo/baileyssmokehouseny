@@ -16,18 +16,11 @@ import EventDetail from "./pages/smokehouse/EventDetail";
 import EateryCateringTakout from "./pages/smokehouse/EateryCateringTakout";
 import SmokehouseHiring from "./pages/smokehouse/SmokehouseHiring";
 
-import { getSitePopup } from "./utils/eventUtils";
-
-import JsonTest from "./pages/JsonTest";
-
 function App() {
-  console.log(getSitePopup());
-
   return (
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
-        {/* <Route path="/" element={<JsonTest />} /> */}
         <Route path="/" element={<Main />} />
         <Route path="/eatery" element={<Eatery />} />
         <Route path="/hours-and-menus" element={<HoursMenus />} />
