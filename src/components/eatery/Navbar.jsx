@@ -59,13 +59,13 @@ const Navbar = ({ data }) => {
       </div>
 
       {/* main navbar */}
-      <div className="h-20 lg:h-32 px-4">
+      <div className="h-28 lg:h-32 px-4  lg:py-0 ">
         <div className="w-full xl:max-w-screen-2xl lg:max-w-screen-xl md:max-w-screen-lg h-full mx-auto flex items-center justify-between ">
           {/* logo */}
           <Link to="/eatery">
             <img
               src={data.logo}
-              className="h-24 w-24 lg:h-36 lg:w-36 object-contain"
+              className="w-[177px] h-[112px] scale-75 lg:scale-100 object-cover"
               alt=""
               loading="lazy"
             />
@@ -152,7 +152,7 @@ const Navbar = ({ data }) => {
                 src={data.logo}
                 alt="logo"
                 loading="lazy"
-                className="object-cover scale-50 transform w-full"
+                className="object-cover w-[177px] h-[112px] scale-75"
               />
               <div className="flex flex-col text-xl font-medium items-center justify-center mt-12 space-y-8 ">
                 <SmoothLink

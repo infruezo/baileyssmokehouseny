@@ -28,10 +28,10 @@ const Main = () => {
           </div>
 
           <Link to="/hours-and-menus">
-            <div className="w-full h-full flex flex-col space-y-4 p-4 items-center">
+            <div className="w-full h-full flex flex-col space-y-4 lg:space-y-12 p-4 items-center">
               <img
                 src={Smokehouse}
-                className="lg:h-48 lg:w-64 w-40 h-28"
+                className="w-[261px] h-[140px] object-cover"
                 alt="logo"
                 loading="lazy"
               />
@@ -58,10 +58,10 @@ const Main = () => {
           </div>
 
           <Link to="/eatery">
-            <div className="w-full h-full flex flex-col space-y-4 p-4 items-center">
+            <div className="w-full h-full flex flex-col space-y-4 lg:space-y-8 p-4 items-center">
               <img
                 src="./images/eatery/eaterylogo.png"
-                className="lg:h-48 lg:w-56 w-32 h-28"
+                className="w-[261px] h-[165px]"
                 alt="logo"
                 loading="lazy"
               />
