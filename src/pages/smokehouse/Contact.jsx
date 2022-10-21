@@ -8,8 +8,13 @@ import { GrMail } from "react-icons/gr";
 import { MdLocationOn } from "react-icons/md";
 import SocialsWidget from "../../components/SocialsWidget";
 import EventPopup from "../../components/smokehouse/EventPopup";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
+  function onChange(value) {
+    console.log("Captcha value:", value);
+  }
+
   return (
     <div className="font-poppins">
       <Navbar />
@@ -48,6 +53,12 @@ const Contact = () => {
                 rows="11"
                 placeholder="Message"
               ></textarea>
+
+              {/* google captcha */}
+              <ReCAPTCHA
+                sitekey={process.env.REACT_APP_GOOGLE_CAPTCHA_SITE_KEY}
+                onChange={onChange}
+              />
 
               {/* submit button */}
               <button

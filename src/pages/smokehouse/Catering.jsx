@@ -8,6 +8,7 @@ import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
 import SocialsWidget from "../../components/SocialsWidget";
 import { SmokehouseCateringMenus } from "../../utils/data";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Catering = () => {
   const [currentTab, setCurrentTab] = useState("1");
@@ -15,6 +16,10 @@ const Catering = () => {
   const handleTabClick = (e) => {
     setCurrentTab(e.target.id);
   };
+
+  function onChange(value) {
+    console.log("Captcha value:", value);
+  }
 
   return (
     <div className="font-poppins">
@@ -88,6 +93,12 @@ const Catering = () => {
                 rows="10"
                 placeholder="Message"
               ></textarea>
+
+              {/* google captcha */}
+              <ReCAPTCHA
+                sitekey={process.env.REACT_APP_GOOGLE_CAPTCHA_SITE_KEY}
+                onChange={onChange}
+              />
 
               {/* submit button */}
               <button

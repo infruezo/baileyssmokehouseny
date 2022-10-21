@@ -23,8 +23,6 @@ const EventPopup = () => {
 
     fetchData();
 
-    console.log(featuredEvent[0]);
-
     let pop_status = sessionStorage.getItem("pop_status");
     if (!pop_status) {
       setVisible(true);

@@ -3,8 +3,13 @@ import { BsFillTelephoneFill } from "react-icons/bs";
 import { GrMail } from "react-icons/gr";
 import SocialsWidget from "../SocialsWidget";
 import { MdLocationOn } from "react-icons/md";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Footer = () => {
+  function onChange(value) {
+    console.log("Captcha value:", value);
+  }
+
   return (
     <footer className="font-poppins relative h-full w-full pt-16 pb-24 bg-[#161616] text-white">
       <div className="h-full w-full  xl:max-w-screen-2xl lg:max-w-screen-xl md:max-w-lg px-4 mx-auto flex flex-col space-y-14 lg:space-y-0 lg:flex-row lg:space-x-8 ">
@@ -88,6 +93,13 @@ const Footer = () => {
                 (You can unsubscribe anytime)
               </label>
             </div>
+
+            {/* google captcha */}
+            <ReCAPTCHA
+              sitekey={process.env.REACT_APP_GOOGLE_CAPTCHA_SITE_KEY}
+              onChange={onChange}
+              theme="dark"
+            />
 
             <button className="bg-red-700 w-24 text-white py-1 rounded-md font-semibold hover:bg-white hover:text-red-700 duration-300">
               Send

@@ -4,8 +4,13 @@ import { GrMail } from "react-icons/gr";
 import { MdLocationOn } from "react-icons/md";
 
 import SectionTitle from "./SectionTitle";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = ({ data }) => {
+  function onChange(value) {
+    console.log("Captcha value:", value);
+  }
+
   return (
     <div id="contact" className="">
       <SectionTitle title="Contact Us" />
@@ -81,6 +86,12 @@ const Contact = ({ data }) => {
                       className="w-full px-2 py-2 rounded-md shadow-sm focus:ring focus:ring-primary-eateryBrown duration-300 outline-none"
                     ></textarea>
                   </div>
+
+                  {/* google captcha */}
+                  <ReCAPTCHA
+                    sitekey={process.env.REACT_APP_GOOGLE_CAPTCHA_SITE_KEY}
+                    onChange={onChange}
+                  />
 
                   <button
                     type="submit"
