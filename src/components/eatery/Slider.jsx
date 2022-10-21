@@ -1,8 +1,10 @@
 import React from "react";
 import "react-slideshow-image/dist/styles.css";
 import { Slide } from "react-slideshow-image";
+import * as Scroll from "react-scroll";
 
 const Slider = ({ slider }) => {
+  let SmoothLink = Scroll.Link;
   return (
     <div className="slide-container ">
       <Slide>
@@ -20,9 +22,16 @@ const Slider = ({ slider }) => {
                   <p className="font-semibold lg:text-2xl text-sm">
                     {slideImage.text}
                   </p>
-                  <button className="shadow-md font-semibold px-6 py-4 bg-primary-eateryBrown rounded-full">
+
+                  <SmoothLink
+                    className="shadow-md font-semibold px-6 py-4 bg-primary-eateryBrown rounded-full cursor-pointer"
+                    to="menus"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                  >
                     Our Menu
-                  </button>
+                  </SmoothLink>
                 </div>
               </div>
 
