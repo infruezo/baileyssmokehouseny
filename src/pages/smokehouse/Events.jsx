@@ -25,6 +25,7 @@ const Events = () => {
   const [events, setEvents] = useState([]);
 
   const handleNavigate = (e) => {
+    console.log(e);
     setYear(format(e, "yyyy"));
     setMonth(format(e, "MM"));
   };
@@ -34,10 +35,8 @@ const Events = () => {
   };
   useEffect(() => {
     const fetchMonthData = async () => {
-      setLoading(true);
       const eventData = await getEventsForMonth(Site.Smokehouse, year, month);
       setEvents(eventData);
-      setLoading(false);
     };
 
     fetchMonthData();
@@ -48,7 +47,7 @@ const Events = () => {
 
   return (
     <>
-      {!loading && (
+      {
         <div className="font-poppins h-full w-full">
           <Navbar />
           <Banner title="EVENT CALENDAR" />
@@ -85,7 +84,7 @@ const Events = () => {
           </div>
           <Footer />
         </div>
-      )}
+      }
     </>
   );
 };
