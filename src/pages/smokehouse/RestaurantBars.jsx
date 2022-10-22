@@ -31,7 +31,7 @@ const RestaurantBars = () => {
           {/* images section */}
           <div className="w-full h-full py-8 space-y-4">
             <img
-              src="/restaurant-and-bars/image-1.jpg"
+              src="images/smokehouse/restaurant-and-bars/image-1.jpg"
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
@@ -53,12 +53,12 @@ const RestaurantBars = () => {
 
             {/* images section */}
             <img
-              src="/restaurant-and-bars/image-2.jpg"
+              src="images/smokehouse/restaurant-and-bars/image-2.jpg"
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
             <img
-              src="/restaurant-and-bars/image-3.jpg"
+              src="images/smokehouse/restaurant-and-bars/image-3.jpg"
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
@@ -81,32 +81,32 @@ const RestaurantBars = () => {
 
             {/* images section */}
             <img
-              src="/restaurant-and-bars/image-4.jpg"
+              src="images/smokehouse/restaurant-and-bars/image-4.jpg"
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
             <img
-              src="/restaurant-and-bars/image-5.jpg"
+              src="images/smokehouse/restaurant-and-bars/image-5.jpg"
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
             <img
-              src="/restaurant-and-bars/image-6.jpg"
+              src="images/smokehouse/restaurant-and-bars/image-6.jpg"
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
             <img
-              src="/restaurant-and-bars/image-7.jpg"
+              src="images/smokehouse/restaurant-and-bars/image-7.jpg"
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
             <img
-              src="/restaurant-and-bars/image-8.jpg"
+              src="images/smokehouse/restaurant-and-bars/image-8.jpg"
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
             <img
-              src="/restaurant-and-bars/image-9.jpg"
+              src="images/smokehouse/restaurant-and-bars/image-9.jpg"
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />

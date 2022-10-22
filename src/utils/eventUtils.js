@@ -15,17 +15,17 @@ export async function getSitePopup() {
 }
 
 async function getData() {
-  const response = await axios.get("events.json");
+  const response = await axios.get("./data/smokehouse/events.json");
   return response.data;
 }
 
 async function getEventData() {
-  const response = await axios.get("../events.json");
+  const response = await axios.get("../data/smokehouse/events.json");
   return response.data;
 }
 
 async function getFeaturedEvent() {
-  const response = await axios.get("./featuredEvent.json");
+  const response = await axios.get("./data/smokehouse/featuredEvent.json");
   return response.data;
 }
 
@@ -125,16 +125,3 @@ async function getEventByIdInternal(eventList, id) {
   const upcoming = await getUpcomingEventsInternal([event], 6);
   return { ...event, upcomingDates: upcoming.map((u) => u.instanceDate) };
 }
-
-async function showData() {
-  // const r = await getEventById(
-
-  //   Site.Smokehouse,
-  //   "Saturday-Night-Magic-Featuring-JP-Laramee-2022"
-  // );
-
-  const r = await getSitePopup();
-  // console.log(r);
-}
-
-showData();

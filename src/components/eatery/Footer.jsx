@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { formatUrl } from "../../utils/urlUtils";
 
 const Footer = ({ data }) => {
   return (
@@ -10,7 +11,7 @@ const Footer = ({ data }) => {
           {/* logo */}
           <Link to="/eatery" className=" flex-1">
             <img
-              src={data.logo}
+              src={formatUrl(data.logo)}
               className="h-36 w-36 object-contain"
               loading="lazy"
               alt=""

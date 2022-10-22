@@ -1,16 +1,27 @@
-import React, { useState, useCallback } from "react";
+import axios from "axios";
+import React, { useState, useCallback, useEffect } from "react";
 import ImageViewer from "react-simple-image-viewer";
 import Banner from "../../components/smokehouse/Banner";
 import EventPopup from "../../components/smokehouse/EventPopup";
 import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
 import SocialsWidget from "../../components/SocialsWidget";
-import { smokehousePhotos } from "../../utils/data";
 
 const SmokehouseGallery = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [isViewerOpen, setIsViewerOpen] = useState(false);
   const [showNav, setShowNav] = useState(true);
+
+  const [galleryImages, setGalleryImages] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get("data/smokehouse/gallery.json");
+      setGalleryImages(response.data);
+    };
+
+    fetchData();
+  }, []);
 
   const openImageViewer = useCallback((index) => {
     setShowNav(false);
@@ -35,7 +46,7 @@ const SmokehouseGallery = () => {
         id="gallery"
       >
         <div className="xl:max-w-screen-2xl lg:max-w-screen-xl md:max-w-screen-lg  gap-0.5 max-w-screen-sm mx-auto flex items-center  justify-center flex-wrap">
-          {smokehousePhotos.map((src, index) => (
+          {galleryImages.map((src, index) => (
             <img
               src={src}
               onClick={() => openImageViewer(index)}
@@ -48,7 +59,7 @@ const SmokehouseGallery = () => {
 
           {isViewerOpen && (
             <ImageViewer
-              src={smokehousePhotos}
+              src={galleryImages}
               currentIndex={currentImage}
               disableScroll={false}
               closeOnClickOutside={true}

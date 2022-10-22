@@ -6,9 +6,7 @@ import { MdLocationOn } from "react-icons/md";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const Footer = () => {
-  function onChange(value) {
-    console.log("Captcha value:", value);
-  }
+  function onChange(value) {}
 
   return (
     <footer className="font-poppins relative h-full w-full pt-16 pb-24 bg-[#161616] text-white">

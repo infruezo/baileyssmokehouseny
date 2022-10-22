@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Logo from "../../images/smokehouselogo.png";
 
 import { GiHamburgerMenu, GiRotaryPhone } from "react-icons/gi";
 import { RiNavigationLine } from "react-icons/ri";
@@ -56,7 +55,7 @@ const Navbar = () => {
         <div className="flex items-center justify-center lg:justify-between px-2 w-full xl:max-w-screen-xl lg:max-w-screen-lg mx-auto">
           <Link to="/hours-and-menus">
             <img
-              src={Logo}
+              src="images/landing/smokehouselogo.png"
               loading="lazy"
               className="h-[h-107px] w-[200px] scale-75 lg:scale-100"
               alt=""
@@ -150,7 +149,7 @@ const Navbar = () => {
           </div>
           <Link to="/hours-and-menus" className="w-full">
             <img
-              src={Logo}
+              src="images/landing/smokehouselogo.png"
               alt="logo"
               loading="lazy"
               className="object-cover h-[h-107px] w-[200px] scale-75  mx-auto"

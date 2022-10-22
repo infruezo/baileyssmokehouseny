@@ -7,6 +7,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import { FiMenu } from "react-icons/fi";
 import * as Scroll from "react-scroll";
 import { Link } from "react-router-dom";
+import { formatUrl } from "../../utils/urlUtils";
 
 const Navbar = ({ data }) => {
   let SmoothLink = Scroll.Link;
@@ -64,7 +65,7 @@ const Navbar = ({ data }) => {
           {/* logo */}
           <Link to="/eatery">
             <img
-              src={data.logo}
+              src={formatUrl(data.logo)}
               className="w-[177px] h-[112px] scale-75 lg:scale-100 object-cover"
               alt=""
               loading="lazy"
@@ -149,7 +150,7 @@ const Navbar = ({ data }) => {
                 </svg>
               </div>
               <img
-                src={data.logo}
+                src={formatUrl(data.logo)}
                 alt="logo"
                 loading="lazy"
                 className="object-cover w-[177px] h-[112px] scale-75"

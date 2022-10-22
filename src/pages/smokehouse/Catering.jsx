@@ -28,9 +28,7 @@ const Catering = () => {
     fetchData();
   }, []);
 
-  function onChange(value) {
-    console.log("Captcha value:", value);
-  }
+  function onChange(value) {}
 
   return (
     <div className="font-poppins">

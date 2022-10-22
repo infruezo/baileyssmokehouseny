@@ -2,7 +2,7 @@
   {
     "id": "id-doesnt-exist",
     "title": "Test Important Popup",
-    "image": "/events/JP_Laramee.jpg",
+    "image": "images/smokehouse/events/JP_Laramee.jpg",
     "text": "Here is some text that should go beneath the picture.",
     "startDate": "Jan 01 2022",
     "endDate": "Dec 31 2022",

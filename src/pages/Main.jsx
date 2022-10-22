@@ -2,10 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import SocialsWidget from "../components/SocialsWidget";
 
-import Smokehouse from "../images/smokehouselogo.png";
-import SmokehouseBg from "../images/smokehouse-bg.jpg";
-import EateryBg from "../images/eatery-bg.jpg";
-
 const Main = () => {
   return (
     <>
@@ -17,7 +13,7 @@ const Main = () => {
           {/* background image and overlay */}
           <div className="absolute w-full h-full top-0 left-0 -z-10">
             <img
-              src={SmokehouseBg}
+              src="images/landing/smokehouse-bg.jpg"
               className="w-full h-full object-cover "
               alt=""
               loading="lazy"
@@ -30,7 +26,7 @@ const Main = () => {
           <Link to="/hours-and-menus">
             <div className="w-full h-full flex flex-col space-y-4 lg:space-y-12 p-4 items-center">
               <img
-                src={Smokehouse}
+                src="images/landing/smokehouselogo.png"
                 className="w-[261px] h-[140px] object-cover"
                 alt="logo"
                 loading="lazy"
@@ -47,7 +43,7 @@ const Main = () => {
           {/* background image and overlay */}
           <div className="absolute w-full h-full top-0 left-0 -z-10">
             <img
-              src={EateryBg}
+              src="images/landing/eatery-bg.jpg"
               loading="lazy"
               className="w-full h-full object-cover"
               alt=""
@@ -60,7 +56,7 @@ const Main = () => {
           <Link to="/eatery">
             <div className="w-full h-full flex flex-col space-y-4 lg:space-y-8 p-4 items-center">
               <img
-                src="./images/eatery/eaterylogo.png"
+                src="images/landing/eaterylogo.png"
                 className="w-[261px] h-[165px]"
                 alt="logo"
                 loading="lazy"

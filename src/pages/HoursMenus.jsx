@@ -9,12 +9,24 @@ import SectionTitle from "../components/smokehouse/SectionTitle";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { Site, getUpcomingEvents } from "../utils/eventUtils";
-import { SmokehouseTakeoutMenu } from "../utils/data";
+
 import SocialsWidget from "../components/SocialsWidget";
 import EventPopup from "../components/smokehouse/EventPopup";
+import axios from "axios";
 
 const HoursMenus = () => {
   const [events, setEvents] = useState([]);
+  const [menus, setMenus] = useState([]);
+
+  useEffect(() => {
+    const getMenus = async () => {
+      const response = await axios.get("data/smokehouse/takeoutMenu.json");
+
+      setMenus(response.data);
+    };
+
+    getMenus();
+  }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -44,7 +56,7 @@ const HoursMenus = () => {
           <div className="w-full h-full mt-16 grid grid-cols-1 lg:grid-cols-2 lg:gap-16 gap-4">
             {/* one news item */}
             <div className="col-span-1 flex flex-col space-y-2">
-              <img src="/news/image-1.jpeg" alt="" />
+              <img src="images/smokehouse/news/image-1.jpeg" alt="" />
               <p className="font-medium text-sm lg:text-lg">
                 Ocktoberfest special serving at the main smokehouse from
                 Thursday to Sunday 9/29 to 10/2
@@ -53,9 +65,17 @@ const HoursMenus = () => {
 
             {/* one news item */}
             <div className="col-span-1 flex flex-col space-y-1">
-              <img src="/news/image-2.png" className="lg:h-96 " alt="" />
+              <img
+                src="images/smokehouse/news/image-2.png"
+                className="lg:h-96 "
+                alt=""
+              />
               <Link to="/new-city-now-hiring">
-                <img src="/news/image-3.png" className="lg:h-96" alt="" />
+                <img
+                  src="images/smokehouse/news/image-3.png"
+                  className="lg:h-96"
+                  alt=""
+                />
               </Link>
               <p className="font-medium text-sm lg:text-lg text-primary-smokehouseDarkRed">
                 191-194 S. Main Street, New City NY 10956
@@ -75,17 +95,21 @@ const HoursMenus = () => {
 
             {/* one news item */}
             <div className="col-span-1 flex flex-col space-y-2">
-              <img src="/news/image-4.jpg" className="h-full" alt="" />
+              <img
+                src="images/smokehouse/news/image-4.jpg"
+                className="h-full"
+                alt=""
+              />
             </div>
 
             {/* one news item */}
             <div className="col-span-1 flex flex-col space-y-2">
-              <img src="/news/image-6.jpg" alt="" />
+              <img src="images/smokehouse/news/image-6.jpg" alt="" />
             </div>
 
             {/* one news item */}
             <div className="col-span-1 flex flex-col space-y-2">
-              <img src="/news/image-5.jpeg" alt="" />
+              <img src="images/smokehouse/news/image-5.jpeg" alt="" />
             </div>
           </div>
 
@@ -126,8 +150,8 @@ const HoursMenus = () => {
               </p>
             </div>
             <div className="w-full h-full grid grid-cols-1 lg:grid-cols-2 lg:gap-12 gap-4">
-              <img src="/indoor-outdoor/image-1.jpeg" alt="" />
-              <img src="/indoor-outdoor/image-2.jpeg" alt="" />
+              <img src="images/smokehouse/indoor-outdoor/image-1.jpeg" alt="" />
+              <img src="images/smokehouse/indoor-outdoor/image-2.jpeg" alt="" />
             </div>
           </div>
 
@@ -155,7 +179,7 @@ const HoursMenus = () => {
           {/* Menu */}
           <SectionTitle title="MENU" />
           <ImageGallery
-            items={SmokehouseTakeoutMenu}
+            items={menus}
             showPlayButton={true}
             showBullets={true}
           />
@@ -164,14 +188,14 @@ const HoursMenus = () => {
           <SectionTitle title="SPECIAL HOURS" />
           <div className="w-full h-full mx-auto lg:max-w-screen-md ">
             <img
-              src="/special-hours/image-1.jpg"
+              src="images/smokehouse/special-hours/image-1.jpg"
               className="pt-4 mx-auto"
               alt=""
             />
           </div>
 
           {/* Pizza and wings */}
-          <SectionTitle title="TAKEOUT HOURS" />
+          <SectionTitle title="PIZZA AND WINGS" />
           <div className="w-full h-full mx-auto lg:max-w-screen-lg">
             <p className="text-center font-medium text-lg lg:text-xl">
               Weekdays: Starting{" "}
@@ -186,17 +210,17 @@ const HoursMenus = () => {
 
             <div className="grid grid-cols-1 w-full h-full lg:grid-cols-3 gap-12">
               <img
-                src="/pizza-and-wings/image-1.jpeg"
+                src="images/smokehouse/pizza-and-wings/image-1.jpeg"
                 className="pt-4 mx-auto h-full w-64"
                 alt=""
               />
               <img
-                src="/pizza-and-wings/image-2.jpg"
+                src="images/smokehouse/pizza-and-wings/image-2.jpg"
                 className="pt-4 mx-auto h-full w-64"
                 alt=""
               />
               <img
-                src="/pizza-and-wings/image-3.jpeg"
+                src="images/smokehouse/pizza-and-wings/image-3.jpeg"
                 className="pt-4 mx-auto h-full w-64"
                 alt=""
               />
@@ -207,7 +231,7 @@ const HoursMenus = () => {
           <SectionTitle title="CRAFT BEERS FOR SALE" />
           <div className="w-full h-full mx-auto lg:max-w-screen-md ">
             <img
-              src="/craft-beers/image-1.jpg"
+              src="images/smokehouse/craft-beers/image-1.jpg"
               className="pt-4 mx-auto"
               alt=""
             />

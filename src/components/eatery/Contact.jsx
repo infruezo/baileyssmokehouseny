@@ -7,9 +7,7 @@ import SectionTitle from "./SectionTitle";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = ({ data }) => {
-  function onChange(value) {
-    console.log("Captcha value:", value);
-  }
+  function onChange(value) {}
 
   return (
     <div id="contact" className="">

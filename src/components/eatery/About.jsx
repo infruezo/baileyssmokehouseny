@@ -1,7 +1,11 @@
 import React from "react";
 import SectionTitle from "./SectionTitle";
+import { formatUrl } from "../../utils/urlUtils";
 
 const About = ({ data }) => {
+  console.log(formatUrl(data.aboutImage));
+  console.log(formatUrl(data.logo));
+
   return (
     <div
       className="lg:h-[550px] h-auto w-full pt-2  bg-primary-eateryLightBrown"
@@ -24,7 +28,7 @@ const About = ({ data }) => {
         <div className="flex-1 h-[85%] w-full py-6 lg:py-0">
           <div className="h-full w-full flex items-center justify-center px-6">
             <img
-              src={data.aboutImage}
+              src={formatUrl(data.aboutImage)}
               className="h-full w-full lg:w-[500px] lg:h-[320px] object-cover shadow-md"
               alt=""
               loading="lazy"

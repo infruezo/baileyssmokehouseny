@@ -1,5 +1,5 @@
 {
-  "logo": "./images/eatery/eaterylogo.png",
+  "logo": "images/landing/eaterylogo.png",
   "phone": "845-398-1454",
   "email": "info@baileysny.com",
   "location": "135 East Erie St. Blauvelt, NY 10913",
@@ -11,22 +11,22 @@
   "facebookLink": "https://www.facebook.com/baileyssmokehouse/",
   "twitterLink": "https://twitter.com/baileysblauvelt",
   "instagramLink": "https://www.instagram.com/baileysmokehouse/",
-  "aboutImage": "./images/eatery/about.jpg",
-  "storefrontImage": "./images/eatery/storefront.jpg",
+  "aboutImage": "images/eatery/about.jpg",
+  "storefrontImage": "images/eatery/storefront.jpg",
   "aboutText": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur corporis totam quidem voluptatibus velit? Facilis labore in unde sapiente quidem explicabo itaque ullam, recusandae culpa quas, vel cum sit enim? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam distinctio ut qui nesciunt quaerat beatae officia a doloremque necessitatibus odit voluptate dolorum soluta consequatur provident molestiae recusandae iure, temporibus deserunt.",
   "EaterySlideImages": [
     {
-      "image": "./images/eatery/slider-1.png",
+      "image": "images/eatery/slider-1.png",
       "title": "Enjoy our daily offers",
       "text": "We have great offers with amazing prices every week, check it out today!"
     },
     {
-      "image": "./images/eatery/slider-2.png",
+      "image": "images/eatery/slider-2.png",
       "title": "Enjoy our daily offers",
       "text": "We have great offers with amazing prices every week, check it out today!"
     },
     {
-      "image": "./images/eatery/slider-3.png",
+      "image": "images/eatery/slider-3.png",
       "title": "Enjoy our daily offers",
       "text": "We have great offers with amazing prices every week, check it out today!"
     }
@@ -34,31 +34,31 @@
 
   "EateryEventSlideImages": [
     {
-      "original": "./images/eatery/events-slider/event-1.jpeg",
-      "thumbnail": "./images/eatery/events-slider/event-1-thumbnail.png"
+      "original": "images/eatery/events-slider/event-1.jpeg",
+      "thumbnail": "images/eatery/events-slider/event-1-thumbnail.png"
     },
     {
-      "original": "./images/eatery/events-slider/event-2.jpeg",
-      "thumbnail": "./images/eatery/events-slider/event-2-thumbnail.png"
+      "original": "images/eatery/events-slider/event-2.jpeg",
+      "thumbnail": "images/eatery/events-slider/event-2-thumbnail.png"
     },
     {
-      "original": "./images/eatery/events-slider/event-3.jpg",
-      "thumbnail": "./images/eatery/events-slider/event-3-thumbnail.png"
+      "original": "images/eatery/events-slider/event-3.jpg",
+      "thumbnail": "images/eatery/events-slider/event-3-thumbnail.png"
     }
   ],
 
   "EateryMenuSlideImages": [
     {
-      "original": "./images/eatery/menus/menu-1.jpeg",
-      "thumbnail": "./images/eatery/menus/menu-1-thumbnail.png"
+      "original": "images/eatery/menus/menu-1.jpeg",
+      "thumbnail": "images/eatery/menus/menu-1-thumbnail.png"
     },
     {
-      "original": "./images/eatery/menus/menu-2.jpeg",
-      "thumbnail": "./images/eatery/menus/menu-2-thumbnail.png"
+      "original": "images/eatery/menus/menu-2.jpeg",
+      "thumbnail": "images/eatery/menus/menu-2-thumbnail.png"
     },
     {
-      "original": "./images/eatery/menus/menu-3.jpeg",
-      "thumbnail": "./images/eatery/menus/menu-3-thumbnail.png"
+      "original": "images/eatery/menus/menu-3.jpeg",
+      "thumbnail": "images/eatery/menus/menu-3-thumbnail.png"
     }
   ],
 

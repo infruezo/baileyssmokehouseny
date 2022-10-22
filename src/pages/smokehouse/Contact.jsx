@@ -11,9 +11,7 @@ import EventPopup from "../../components/smokehouse/EventPopup";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
-  function onChange(value) {
-    console.log("Captcha value:", value);
-  }
+  function onChange(value) {}
 
   return (
     <div className="font-poppins">

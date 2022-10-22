@@ -38,7 +38,7 @@ function App() {
         />
         <Route path="/new-city-now-hiring" element={<SmokehouseHiring />} />
         <Route path="/event/:id" element={<EventDetail />} />
-        <Route path="*" element={<Navigate to="/home" />} />
+        {/* <Route path="*" element={<Navigate to="/home" />} /> */}
       </Routes>
     </BrowserRouter>
   );
