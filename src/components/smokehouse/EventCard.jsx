@@ -1,11 +1,12 @@
 import React from "react";
 import { format } from "date-fns";
+import { formatUrl } from "../../utils/urlUtils";
 
 const EventCard = ({ event }) => {
   return (
     <div className="w-full col-span-1 h-96 shadow-lg rounded-lg overflow-hidden ring-1 ring-primary-smokehouseBrown/10  hover:ring-primary-smokehouseBrown duration-300 cursor-pointer">
       <img
-        src={event.image}
+        src={formatUrl(event.image)}
         className="h-3/4 w-full object-cover object-top"
         alt=""
         loading="lazy"

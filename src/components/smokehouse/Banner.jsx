@@ -1,27 +1,17 @@
 import React from "react";
+import { formatUrl } from "../../utils/urlUtils";
 
 const Banner = ({ title }) => {
   return (
     <div className="lg:h-[425px] h-[350px] absolute left-0 top-0 w-full -z-50">
       {/* Banner Image */}
       <div className="absolute h-full w-full left-0 top-0  bg-black -z-10">
-        {/* added this condition for nested pages */}
-        {/* when the page is nested we need to get one step backwards for the image to display properly */}
-        {title === "" || title === "EATERY, CATERING & TAKEOUT" ? (
-          <img
-            src="../images/smokehouse/banner.jpg"
-            className="h-full w-full object-cover"
-            alt="banner"
-            loading="lazy"
-          />
-        ) : (
-          <img
-            src="images/smokehouse/banner.jpg"
-            className="h-full w-full object-cover"
-            alt="banner"
-            loading="lazy"
-          />
-        )}
+        <img
+          src={formatUrl(`images/smokehouse/banner.jpg`)}
+          className="h-full w-full object-cover"
+          alt="banner"
+          loading="lazy"
+        />
       </div>
 
       {/* page title */}

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import { getSitePopup } from "../../utils/eventUtils";
+import { formatUrl } from "../../utils/urlUtils";
 
 const EventPopup = () => {
   const navigate = useNavigate();
@@ -60,7 +61,7 @@ const EventPopup = () => {
                 {/*body*/}
                 <div className="relative flex flex-col w-full">
                   <img
-                    src={featuredEvent[0].image}
+                    src={formatUrl(featuredEvent[0].image)}
                     alt="eventImage"
                     className="w-full h-80 object-cover"
                   />

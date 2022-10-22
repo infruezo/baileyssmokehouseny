@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
+import { formatUrl } from "../../utils/urlUtils";
 
 const Testimonials = () => {
   const [testimonials, setTestimonials] = useState([]);
@@ -31,7 +32,7 @@ const Testimonials = () => {
                 </h4>
                 <h1 className="font-title lg:text-3xl text-lg">TESTIMONIALS</h1>
                 <img
-                  src="images/smokehouse/white-underline.png"
+                  src={formatUrl(`images/smokehouse/white-underline.png`)}
                   loading="lazy"
                   alt=""
                 />

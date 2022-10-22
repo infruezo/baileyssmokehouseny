@@ -13,6 +13,7 @@ import { Site, getUpcomingEvents } from "../utils/eventUtils";
 import SocialsWidget from "../components/SocialsWidget";
 import EventPopup from "../components/smokehouse/EventPopup";
 import axios from "axios";
+import { formatUrl } from "../utils/urlUtils";
 
 const HoursMenus = () => {
   const [events, setEvents] = useState([]);
@@ -56,7 +57,10 @@ const HoursMenus = () => {
           <div className="w-full h-full mt-16 grid grid-cols-1 lg:grid-cols-2 lg:gap-16 gap-4">
             {/* one news item */}
             <div className="col-span-1 flex flex-col space-y-2">
-              <img src="images/smokehouse/news/image-1.jpeg" alt="" />
+              <img
+                src={formatUrl(`images/smokehouse/news/image-1.jpeg`)}
+                alt=""
+              />
               <p className="font-medium text-sm lg:text-lg">
                 Ocktoberfest special serving at the main smokehouse from
                 Thursday to Sunday 9/29 to 10/2
@@ -66,13 +70,13 @@ const HoursMenus = () => {
             {/* one news item */}
             <div className="col-span-1 flex flex-col space-y-1">
               <img
-                src="images/smokehouse/news/image-2.png"
+                src={formatUrl(`images/smokehouse/news/image-2.png`)}
                 className="lg:h-96 "
                 alt=""
               />
               <Link to="/new-city-now-hiring">
                 <img
-                  src="images/smokehouse/news/image-3.png"
+                  src={formatUrl(`images/smokehouse/news/image-3.png`)}
                   className="lg:h-96"
                   alt=""
                 />
@@ -96,7 +100,7 @@ const HoursMenus = () => {
             {/* one news item */}
             <div className="col-span-1 flex flex-col space-y-2">
               <img
-                src="images/smokehouse/news/image-4.jpg"
+                src={formatUrl(`images/smokehouse/news/image-4.jpg`)}
                 className="h-full"
                 alt=""
               />
@@ -104,12 +108,18 @@ const HoursMenus = () => {
 
             {/* one news item */}
             <div className="col-span-1 flex flex-col space-y-2">
-              <img src="images/smokehouse/news/image-6.jpg" alt="" />
+              <img
+                src={formatUrl(`images/smokehouse/news/image-6.jpg`)}
+                alt=""
+              />
             </div>
 
             {/* one news item */}
             <div className="col-span-1 flex flex-col space-y-2">
-              <img src="images/smokehouse/news/image-5.jpeg" alt="" />
+              <img
+                src={formatUrl(`images/smokehouse/news/image-5.jpeg`)}
+                alt=""
+              />
             </div>
           </div>
 
@@ -150,8 +160,14 @@ const HoursMenus = () => {
               </p>
             </div>
             <div className="w-full h-full grid grid-cols-1 lg:grid-cols-2 lg:gap-12 gap-4">
-              <img src="images/smokehouse/indoor-outdoor/image-1.jpeg" alt="" />
-              <img src="images/smokehouse/indoor-outdoor/image-2.jpeg" alt="" />
+              <img
+                src={formatUrl(`images/smokehouse/indoor-outdoor/image-1.jpeg`)}
+                alt=""
+              />
+              <img
+                src={formatUrl(`images/smokehouse/indoor-outdoor/image-2.jpeg`)}
+                alt=""
+              />
             </div>
           </div>
 
@@ -170,7 +186,7 @@ const HoursMenus = () => {
             </p>
 
             <img
-              src="/eatery-catering-takeout/image-5.jpg"
+              src={formatUrl(`/eatery-catering-takeout/image-5.jpg`)}
               className="pt-4 mx-auto"
               alt=""
             />
@@ -188,7 +204,7 @@ const HoursMenus = () => {
           <SectionTitle title="SPECIAL HOURS" />
           <div className="w-full h-full mx-auto lg:max-w-screen-md ">
             <img
-              src="images/smokehouse/special-hours/image-1.jpg"
+              src={formatUrl(`images/smokehouse/special-hours/image-1.jpg`)}
               className="pt-4 mx-auto"
               alt=""
             />
@@ -210,17 +226,21 @@ const HoursMenus = () => {
 
             <div className="grid grid-cols-1 w-full h-full lg:grid-cols-3 gap-12">
               <img
-                src="images/smokehouse/pizza-and-wings/image-1.jpeg"
+                src={formatUrl(
+                  `images/smokehouse/pizza-and-wings/image-1.jpeg`
+                )}
                 className="pt-4 mx-auto h-full w-64"
                 alt=""
               />
               <img
-                src="images/smokehouse/pizza-and-wings/image-2.jpg"
+                src={formatUrl(`images/smokehouse/pizza-and-wings/image-2.jpg`)}
                 className="pt-4 mx-auto h-full w-64"
                 alt=""
               />
               <img
-                src="images/smokehouse/pizza-and-wings/image-3.jpeg"
+                src={formatUrl(
+                  `images/smokehouse/pizza-and-wings/image-3.jpeg`
+                )}
                 className="pt-4 mx-auto h-full w-64"
                 alt=""
               />
@@ -231,7 +251,7 @@ const HoursMenus = () => {
           <SectionTitle title="CRAFT BEERS FOR SALE" />
           <div className="w-full h-full mx-auto lg:max-w-screen-md ">
             <img
-              src="images/smokehouse/craft-beers/image-1.jpg"
+              src={formatUrl(`images/smokehouse/craft-beers/image-1.jpg`)}
               className="pt-4 mx-auto"
               alt=""
             />

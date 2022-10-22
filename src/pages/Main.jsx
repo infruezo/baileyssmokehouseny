@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import SocialsWidget from "../components/SocialsWidget";
+import { formatUrl } from "../utils/urlUtils";
 
 const Main = () => {
   return (
@@ -13,7 +14,7 @@ const Main = () => {
           {/* background image and overlay */}
           <div className="absolute w-full h-full top-0 left-0 -z-10">
             <img
-              src="images/landing/smokehouse-bg.jpg"
+              src={formatUrl(`images/landing/smokehouse-bg.jpg`)}
               className="w-full h-full object-cover "
               alt=""
               loading="lazy"
@@ -26,7 +27,7 @@ const Main = () => {
           <Link to="/hours-and-menus">
             <div className="w-full h-full flex flex-col space-y-4 lg:space-y-12 p-4 items-center">
               <img
-                src="images/landing/smokehouselogo.png"
+                src={formatUrl(`images/landing/smokehouselogo.png`)}
                 className="w-[261px] h-[140px] object-cover"
                 alt="logo"
                 loading="lazy"
@@ -43,7 +44,7 @@ const Main = () => {
           {/* background image and overlay */}
           <div className="absolute w-full h-full top-0 left-0 -z-10">
             <img
-              src="images/landing/eatery-bg.jpg"
+              src={formatUrl(`images/landing/eatery-bg.jpg`)}
               loading="lazy"
               className="w-full h-full object-cover"
               alt=""
@@ -56,7 +57,7 @@ const Main = () => {
           <Link to="/eatery">
             <div className="w-full h-full flex flex-col space-y-4 lg:space-y-8 p-4 items-center">
               <img
-                src="images/landing/eaterylogo.png"
+                src={formatUrl(`images/landing/eaterylogo.png`)}
                 className="w-[261px] h-[165px]"
                 alt="logo"
                 loading="lazy"
