@@ -6,9 +6,6 @@ import Navbar from "../../components/smokehouse/Navbar";
 import Testimonials from "../../components/smokehouse/Testimonials";
 import SocialsWidget from "../../components/SocialsWidget";
 
-import HomeAbout from "../../images/smokehouse/home-about.png";
-import brownDivider from "../../images/smokehouse/title-brown.png";
-
 const About = () => {
   return (
     <div className="font-poppins">
@@ -21,7 +18,7 @@ const About = () => {
         {/* wrapper */}
         <div className="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto">
           <img
-            src={HomeAbout}
+            src="images/smokehouse/about.png"
             className="float-right object-cover xl:h-auto xl:w-auto lg:w-[400px] lg:h-[400px] md:w-[325px] md:h-[325px] w-[200px] h-[200px]"
             alt=""
             loading="lazy"
@@ -35,7 +32,7 @@ const About = () => {
                 </h1>
 
                 <img
-                  src={brownDivider}
+                  src="images/smokehouse/brown-underline.png"
                   className="w-[100px] md:w-[200px] lg:w-auto"
                   alt=""
                   loading="lazy"

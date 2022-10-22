@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 
@@ -7,8 +7,8 @@ import EventPopup from "../../components/smokehouse/EventPopup";
 import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
 import SocialsWidget from "../../components/SocialsWidget";
-import { SmokehouseCateringMenus } from "../../utils/data";
 import ReCAPTCHA from "react-google-recaptcha";
+import axios from "axios";
 
 const Catering = () => {
   const [currentTab, setCurrentTab] = useState("1");
@@ -16,6 +16,17 @@ const Catering = () => {
   const handleTabClick = (e) => {
     setCurrentTab(e.target.id);
   };
+
+  const [cateringMenus, setCateringMenus] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await axios.get("data/smokehouse/cateringMenu.json");
+      setCateringMenus(response.data);
+    };
+
+    fetchData();
+  }, []);
 
   function onChange(value) {
     console.log("Captcha value:", value);
@@ -114,7 +125,7 @@ const Catering = () => {
           {/* tabs */}
           <div className="w-full h-full mt-12">
             <div className="tabs w-full flex items-center flex-wrap gap-4 lg:gap-x-0 lg:space-x-4 pb-12">
-              {SmokehouseCateringMenus.map((tab, i) => (
+              {cateringMenus.map((tab, i) => (
                 <button
                   key={i}
                   id={tab.id}
@@ -127,7 +138,7 @@ const Catering = () => {
               ))}
             </div>
             <div className="content mx-auto w-full">
-              {SmokehouseCateringMenus.map((tab, i) => (
+              {cateringMenus.map((tab, i) => (
                 <div key={i}>
                   {currentTab === `${tab.id}` && (
                     <div>

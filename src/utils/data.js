@@ -87,88 +87,88 @@ export const SitePopup = [
 ];
 
 //days 0-6, starting sunday
-export const SmokehouseEvents = [
-  {
-    id: "Saturday-Night-Magic-Featuring-JP-Laramee-2022",
-    image: "/events/JP_Laramee.jpg",
-    title: "Saturday Night Magic featuring JP Laramee",
-    category: "Entertainment",
-    text: "",
-    startDate: normalDate(2022, 1, 1),
-    endDate: normalDate(2022, 12, 31),
-    days: [6],
-  },
-  {
-    id: "Dead-Mile-Dance-2022-09-30",
-    image: "/events/Dead_Mile_Dance.jpeg",
-    title: "Dead Mile Dance",
-    category: "Live Music",
-    text: "",
-    startDate: normalDate(2022, 9, 30),
-    endDate: normalDate(2022, 9, 30),
-    days: [5],
-  },
-  {
-    id: "Kickin-Nash-2022-10-01",
-    image: "/events/Kickin_Nash.jpeg",
-    title: "Kickin Nash",
-    category: "Live Music",
-    text: "",
-    startDate: normalDate(2022, 10, 1),
-    endDate: normalDate(2022, 10, 1),
-    days: [6],
-  },
-  {
-    id: "Oktoberfest-2022",
-    image: "/events/Oktoberfest.jpeg",
-    title: "Oktoberfest",
-    category: "Entertainment",
-    text: "",
-    startDate: normalDate(2022, 9, 29),
-    endDate: normalDate(2022, 10, 2),
-    days: [0, 4, 5, 6],
-  },
-];
+// export const SmokehouseEvents = [
+//   {
+//     id: "Saturday-Night-Magic-Featuring-JP-Laramee-2022",
+//     image: "/events/JP_Laramee.jpg",
+//     title: "Saturday Night Magic featuring JP Laramee",
+//     category: "Entertainment",
+//     text: "",
+//     startDate: normalDate(2022, 1, 1),
+//     endDate: normalDate(2022, 12, 31),
+//     days: [6],
+//   },
+//   {
+//     id: "Dead-Mile-Dance-2022-09-30",
+//     image: "/events/Dead_Mile_Dance.jpeg",
+//     title: "Dead Mile Dance",
+//     category: "Live Music",
+//     text: "",
+//     startDate: normalDate(2022, 9, 30),
+//     endDate: normalDate(2022, 9, 30),
+//     days: [5],
+//   },
+//   {
+//     id: "Kickin-Nash-2022-10-01",
+//     image: "/events/Kickin_Nash.jpeg",
+//     title: "Kickin Nash",
+//     category: "Live Music",
+//     text: "",
+//     startDate: normalDate(2022, 10, 1),
+//     endDate: normalDate(2022, 10, 1),
+//     days: [6],
+//   },
+//   {
+//     id: "Oktoberfest-2022",
+//     image: "/events/Oktoberfest.jpeg",
+//     title: "Oktoberfest",
+//     category: "Entertainment",
+//     text: "",
+//     startDate: normalDate(2022, 9, 29),
+//     endDate: normalDate(2022, 10, 2),
+//     days: [0, 4, 5, 6],
+//   },
+// ];
 
-export const SmokehouseMenutabs = [
-  {
-    id: 1,
-    tabTitle: "TAKEOUT/MAIN RESTAURANT",
-    title: "",
-    content: [
-      {
-        original: TakeoutMenu1,
-      },
-      {
-        original: TakeoutMenu2,
-      },
-      {
-        original: TakeoutMenu3,
-      },
-      {
-        original: TakeoutMenu4,
-      },
-    ],
-  },
-  {
-    id: 2,
-    tabTitle: "PARTY",
-    title: "",
-    content: { original: PartyMenu1 },
-  },
-  {
-    id: 3,
-    tabTitle: "OFF-SITE PARTY",
-    title: "",
-    content: { original: OffsitePartyMenu1 },
-  },
-  {
-    id: 4,
-    tabTitle: "CATERING",
-    title: "",
-    content: { original: CateringMenu1 },
-  },
-];
+// export const SmokehouseMenutabs = [
+//   {
+//     id: 1,
+//     tabTitle: "TAKEOUT/MAIN RESTAURANT",
+//     title: "",
+//     content: [
+//       {
+//         original: TakeoutMenu1,
+//       },
+//       {
+//         original: TakeoutMenu2,
+//       },
+//       {
+//         original: TakeoutMenu3,
+//       },
+//       {
+//         original: TakeoutMenu4,
+//       },
+//     ],
+//   },
+//   {
+//     id: 2,
+//     tabTitle: "PARTY",
+//     title: "",
+//     content: { original: PartyMenu1 },
+//   },
+//   {
+//     id: 3,
+//     tabTitle: "OFF-SITE PARTY",
+//     title: "",
+//     content: { original: OffsitePartyMenu1 },
+//   },
+//   {
+//     id: 4,
+//     tabTitle: "CATERING",
+//     title: "",
+//     content: { original: CateringMenu1 },
+//   },
+// ];
 
 export const SmokehouseCateringMenus = [
   {

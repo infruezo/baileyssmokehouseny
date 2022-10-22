@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "tabTitle": "OFF-SITE PARTY",
+    "title": "",
+    "content": {
+      "original": "images/smokehouse/menus/offsite-party-menu-1.jpeg"
+    }
+  },
+  {
+    "id": 2,
+    "tabTitle": "CATERING",
+    "title": "",
+    "content": { "original": "images/smokehouse/menus/catering-menu-1.jpg" }
+  }
+]

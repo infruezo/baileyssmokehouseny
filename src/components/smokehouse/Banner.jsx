@@ -1,5 +1,4 @@
 import React from "react";
-import BannerImg from "../../images/smokehouse/banner.jpg";
 
 const Banner = ({ title }) => {
   return (
@@ -7,7 +6,7 @@ const Banner = ({ title }) => {
       {/* Banner Image */}
       <div className="absolute h-full w-full left-0 top-0  bg-black -z-10">
         <img
-          src={BannerImg}
+          src="images/smokehouse/banner.jpg"
           className="h-full w-full object-cover"
           alt="banner"
           loading="lazy"

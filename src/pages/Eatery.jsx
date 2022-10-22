@@ -22,7 +22,7 @@ const Eatery = () => {
 
   const fetchData = async () => {
     setLoading(true);
-    const response = await axios.get("eatery.json", {
+    const response = await axios.get("data/eatery/main.json", {
       "Content-Type": "application/json",
       Accept: "application/json",
     });

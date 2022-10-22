@@ -4,13 +4,7 @@ import { Link } from "react-router-dom";
 import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
 import SocialsWidget from "../../components/SocialsWidget";
-import Banner from "../../images/smokehouse/main-banner.png";
-import brownDivider from "../../images/smokehouse/title-brown.png";
 
-import Card1 from "../../images/smokehouse/home-card-1.png";
-import Card2 from "../../images/smokehouse/home-card-2.png";
-import Card3 from "../../images/smokehouse/home-card-3.png";
-import HomeAbout from "../../images/smokehouse/home-about.png";
 import EventCard from "../../components/smokehouse/EventCard";
 import { Site, getUpcomingEvents } from "../../utils/eventUtils";
 import EventPopup from "../../components/smokehouse/EventPopup";
@@ -40,7 +34,7 @@ const Home = () => {
           {/* special banner for home page */}
           <div className="w-full lg:h-[700px] h-[500px] absolute top-0 left-0 z-0">
             <img
-              src={Banner}
+              src="images/smokehouse/home/main-banner.png"
               className="h-full w-full absolute top-0 left-0 object-cover"
               alt="bannerImage"
               loading="lazy"
@@ -85,7 +79,7 @@ const Home = () => {
                 {/* bg image */}
                 <div className="absolute w-full h-full left-0 top-0 -z-10">
                   <img
-                    src={Card1}
+                    src="images/smokehouse/home/home-card-2.png"
                     loading="lazy"
                     className="w-full h-full object-cover"
                     alt=""
@@ -107,7 +101,7 @@ const Home = () => {
                 {/* bg image */}
                 <div className="absolute w-full h-full left-0 top-0 -z-10">
                   <img
-                    src={Card2}
+                    src="images/smokehouse/home/home-card-3.png"
                     loading="lazy"
                     className="w-full h-full object-cover"
                     alt=""
@@ -129,7 +123,7 @@ const Home = () => {
                 {/* bg image */}
                 <div className="absolute w-full h-full left-0 top-0 -z-10">
                   <img
-                    src={Card3}
+                    src="images/smokehouse/home/home-card-1.png"
                     loading="lazy"
                     className="w-full h-full object-cover"
                     alt=""
@@ -144,7 +138,7 @@ const Home = () => {
             {/* wrapper */}
             <div className="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto">
               <img
-                src={HomeAbout}
+                src="images/smokehouse/about.png"
                 className="float-right object-cover xl:h-auto xl:w-auto lg:w-[400px] lg:h-[400px] md:w-[325px] md:h-[325px] w-[200px] h-[200px]"
                 alt=""
                 loading="lazy"
@@ -158,7 +152,7 @@ const Home = () => {
                     </h1>
 
                     <img
-                      src={brownDivider}
+                      src="images/smokehouse/brown-underline.png"
                       className="w-[100px] md:w-[200px] lg:w-auto"
                       alt=""
                       loading="lazy"
@@ -215,7 +209,7 @@ const Home = () => {
                   </div>
 
                   <img
-                    src={brownDivider}
+                    src="images/smokehouse/brown-underline.png"
                     className="w-[100px] md:w-[200px] lg:w-[400px] object-cover mx-auto"
                     alt=""
                     loading="lazy"

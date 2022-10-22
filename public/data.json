@@ -1,8 +1,0 @@
-{
-  "text": "value goes here",
-  "events": {
-    "firstEvent": "First event data goes here",
-    "secondEvent": "Second Event data goes here",
-    "img": "/news/image-1.jpeg"
-  }
-}

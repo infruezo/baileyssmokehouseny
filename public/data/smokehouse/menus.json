@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "tabTitle": "TAKEOUT/MAIN RESTAURANT",
+    "title": "",
+    "content": [
+      {
+        "original": "images/smokehouse/menus/takeout-menu-1.jpg"
+      },
+      {
+        "original": "images/smokehouse/menus/takeout-menu-2.jpg"
+      },
+      {
+        "original": "images/smokehouse/menus/takeout-menu-3.jpg"
+      },
+      {
+        "original": "images/smokehouse/menus/takeout-menu-4.jpg"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "tabTitle": "PARTY",
+    "title": "",
+    "content": { "original": "images/smokehouse/menus/party-menu-1.jpg" }
+  },
+  {
+    "id": 3,
+    "tabTitle": "OFF-SITE PARTY",
+    "title": "",
+    "content": {
+      "original": "images/smokehouse/menus/offsite-party-menu-1.jpeg"
+    }
+  },
+  {
+    "id": 4,
+    "tabTitle": "CATERING",
+    "title": "",
+    "content": { "original": "images/smokehouse/menus/catering-menu-1.jpg" }
+  }
+]
