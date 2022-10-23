@@ -24,12 +24,15 @@ const EateryCateringTakout = () => {
       );
 
       setMenus(response.data);
-      response.data[0].content.map((value) =>
-        setTakeoutMenu((prev) => [
-          ...prev,
-          { original: formatUrl(value.original) },
-        ])
-      );
+
+      if (response.data[0].content.length > 1) {
+        response.data[0].content.map((value) =>
+          setTakeoutMenu((prev) => [
+            ...prev,
+            { original: formatUrl(value.original) },
+          ])
+        );
+      }
 
       setLoadingMenu(false);
     };
