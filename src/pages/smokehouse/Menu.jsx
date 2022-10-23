@@ -7,6 +7,7 @@ import Navbar from "../../components/smokehouse/Navbar";
 import SocialsWidget from "../../components/SocialsWidget";
 import EventPopup from "../../components/smokehouse/EventPopup";
 import axios from "axios";
+import { formatUrl } from "../../utils/urlUtils";
 
 const Menu = () => {
   const [currentTab, setCurrentTab] = useState("1");
@@ -19,7 +20,7 @@ const Menu = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("data/smokehouse/menus.json");
+      const response = await axios.get(formatUrl(`data/smokehouse/menus.json`));
       setMenus(response.data);
     };
 
@@ -38,7 +39,7 @@ const Menu = () => {
         {/* disclaimer / fee image */}
         <div className="w-full flex justify-center pb-12 lg:-mt-14 -mt-12">
           <img
-            src="images/smokehouse/menus/disclaimer.jpeg"
+            src={formatUrl(`images/smokehouse/menus/disclaimer.jpeg`)}
             className="h-32 w-48 object-cover "
             alt=""
           />
@@ -76,8 +77,7 @@ const Menu = () => {
                       ) : (
                         <div>
                           <img
-                            src={tab?.content?.original}
-                            // className="h-full lg:max-w-[800px] w-full object-cover mx-auto"
+                            src={formatUrl(tab?.content?.original)}
                             className="lg:max-h-[855px] h-auto w-auto object-cover mx-auto"
                             alt=""
                           />

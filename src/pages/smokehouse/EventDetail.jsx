@@ -12,6 +12,7 @@ import {
   getEventById,
   getUpcomingEventsEventDetail,
 } from "../../utils/eventUtils";
+import { formatUrl } from "../../utils/urlUtils";
 
 const EventDetail = () => {
   // const [loading, setLoading] = useState(true);
@@ -73,7 +74,7 @@ const EventDetail = () => {
 
                   <div className="w-full flex flex-col space-y-4 lg:flex-row lg:space-x-8 lg:space-y-0">
                     <img
-                      src={event?.image}
+                      src={formatUrl(event?.image)}
                       className="lg:w-fit w-full h-[600px]"
                       alt=""
                     />

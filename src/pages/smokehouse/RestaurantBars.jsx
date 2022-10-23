@@ -3,6 +3,7 @@ import Banner from "../../components/smokehouse/Banner";
 import EventPopup from "../../components/smokehouse/EventPopup";
 import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
+import { formatUrl } from "../../utils/urlUtils";
 
 const RestaurantBars = () => {
   return (
@@ -31,7 +32,9 @@ const RestaurantBars = () => {
           {/* images section */}
           <div className="w-full h-full py-8 space-y-4">
             <img
-              src="images/smokehouse/restaurant-and-bars/image-1.jpg"
+              src={formatUrl(
+                `images/smokehouse/restaurant-and-bars/image-1.jpg`
+              )}
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
@@ -53,12 +56,16 @@ const RestaurantBars = () => {
 
             {/* images section */}
             <img
-              src="images/smokehouse/restaurant-and-bars/image-2.jpg"
+              src={formatUrl(
+                `images/smokehouse/restaurant-and-bars/image-2.jpg`
+              )}
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
             <img
-              src="images/smokehouse/restaurant-and-bars/image-3.jpg"
+              src={formatUrl(
+                `images/smokehouse/restaurant-and-bars/image-3.jpg`
+              )}
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
@@ -81,32 +88,44 @@ const RestaurantBars = () => {
 
             {/* images section */}
             <img
-              src="images/smokehouse/restaurant-and-bars/image-4.jpg"
+              src={formatUrl(
+                `images/smokehouse/restaurant-and-bars/image-4.jpg`
+              )}
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
             <img
-              src="images/smokehouse/restaurant-and-bars/image-5.jpg"
+              src={formatUrl(
+                `images/smokehouse/restaurant-and-bars/image-5.jpg`
+              )}
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
             <img
-              src="images/smokehouse/restaurant-and-bars/image-6.jpg"
+              src={formatUrl(
+                `images/smokehouse/restaurant-and-bars/image-6.jpg`
+              )}
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
             <img
-              src="images/smokehouse/restaurant-and-bars/image-7.jpg"
+              src={formatUrl(
+                `images/smokehouse/restaurant-and-bars/image-7.jpg`
+              )}
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
             <img
-              src="images/smokehouse/restaurant-and-bars/image-8.jpg"
+              src={formatUrl(
+                `images/smokehouse/restaurant-and-bars/image-8.jpg`
+              )}
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
             <img
-              src="images/smokehouse/restaurant-and-bars/image-9.jpg"
+              src={formatUrl(
+                `images/smokehouse/restaurant-and-bars/image-9.jpg`
+              )}
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />

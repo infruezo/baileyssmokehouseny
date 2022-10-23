@@ -6,6 +6,7 @@ import EventPopup from "../../components/smokehouse/EventPopup";
 import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
 import SocialsWidget from "../../components/SocialsWidget";
+import { formatUrl } from "../../utils/urlUtils";
 
 const SmokehouseGallery = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -16,7 +17,9 @@ const SmokehouseGallery = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("data/smokehouse/gallery.json");
+      const response = await axios.get(
+        formatUrl(`data/smokehouse/gallery.json`)
+      );
       setGalleryImages(response.data);
     };
 

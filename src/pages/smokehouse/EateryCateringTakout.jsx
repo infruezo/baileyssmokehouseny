@@ -7,16 +7,18 @@ import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 
 import EventPopup from "../../components/smokehouse/EventPopup";
+import { formatUrl } from "../../utils/urlUtils";
 
 const EateryCateringTakout = () => {
   const [currentTab, setCurrentTab] = useState("1");
 
   const [menus, setMenus] = useState([]);
+  const [alternativeMenu, setAlternativeMenu] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        "../data/smokehouse/eateryCateringTakeoutMenu.json"
+        formatUrl(`data/smokehouse/eateryCateringTakeoutMenu.json`)
       );
 
       setMenus(response.data);
@@ -28,6 +30,8 @@ const EateryCateringTakout = () => {
   const handleTabClick = (e) => {
     setCurrentTab(e.target.id);
   };
+
+  console.log(menus);
 
   return (
     <div className="font-poppins">
@@ -62,32 +66,44 @@ const EateryCateringTakout = () => {
           {/* images section */}
           <div className="w-full h-full py-8 space-y-4">
             <img
-              src="../images/smokehouse/eatery-catering-takeout/image-1.jpg"
+              src={formatUrl(
+                `images/smokehouse/eatery-catering-takeout/image-1.jpg`
+              )}
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
             <img
-              src="../images/smokehouse/eatery-catering-takeout/image-2.jpg"
+              src={formatUrl(
+                `images/smokehouse/eatery-catering-takeout/image-2.jpg`
+              )}
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
             <img
-              src="../images/smokehouse/eatery-catering-takeout/image-3.jpg"
+              src={formatUrl(
+                `images/smokehouse/eatery-catering-takeout/image-3.jpg`
+              )}
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
             <img
-              src="../images/smokehouse/eatery-catering-takeout/image-4.jpg"
+              src={formatUrl(
+                `images/smokehouse/eatery-catering-takeout/image-4.jpg`
+              )}
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
             <img
-              src="../images/smokehouse/eatery-catering-takeout/image-5.jpg"
+              src={formatUrl(
+                `images/smokehouse/eatery-catering-takeout/image-5.jpg`
+              )}
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
             <img
-              src="../images/smokehouse/eatery-catering-takeout/image-6.jpg"
+              src={formatUrl(
+                `images/smokehouse/eatery-catering-takeout/image-6.jpg`
+              )}
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
@@ -97,22 +113,30 @@ const EateryCateringTakout = () => {
             </h1>
 
             <img
-              src="../images/smokehouse/eatery-catering-takeout/image-7.jpg"
+              src={formatUrl(
+                `images/smokehouse/eatery-catering-takeout/image-7.jpg`
+              )}
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
             <img
-              src="../images/smokehouse/eatery-catering-takeout/image-8.jpg"
+              src={formatUrl(
+                `images/smokehouse/eatery-catering-takeout/image-8.jpg`
+              )}
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
             <img
-              src="../images/smokehouse/eatery-catering-takeout/image-9.jpg"
+              src={formatUrl(
+                `images/smokehouse/eatery-catering-takeout/image-9.jpg`
+              )}
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
             <img
-              src="../images/smokehouse/eatery-catering-takeout/image-10.jpg"
+              src={formatUrl(
+                `images/smokehouse/eatery-catering-takeout/image-10.jpg`
+              )}
               className="w-full lg:h-[700px] object-cover"
               alt=""
             />
@@ -150,7 +174,7 @@ const EateryCateringTakout = () => {
                       ) : (
                         <div>
                           <img
-                            src={tab?.content?.original}
+                            src={formatUrl(tab?.content?.original)}
                             className="h-full lg:max-w-[800px] w-full object-cover mx-auto"
                             alt=""
                           />

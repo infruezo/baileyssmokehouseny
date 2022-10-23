@@ -5,6 +5,7 @@ import EventPopup from "../../components/smokehouse/EventPopup";
 import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
 import SocialsWidget from "../../components/SocialsWidget";
+import { formatUrl } from "../../utils/urlUtils";
 
 const SmokehouseHiring = () => {
   return (
@@ -18,7 +19,7 @@ const SmokehouseHiring = () => {
         <div className="xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto text-center">
           <div className="w-full h-full mx-auto text-center flex flex-col space-y-3">
             <img
-              src="/news/image-3.png"
+              src={formatUrl(`/news/image-3.png`)}
               className="w-full lg:w-72 mx-auto"
               alt=""
             />

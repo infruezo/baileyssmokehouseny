@@ -1,6 +1,7 @@
 import axios from "axios";
 // import { SitePopup } from "./data.js";
 import { normalDate, removeTime, getMaxDate } from "./dateUtils";
+import { formatUrl } from "./urlUtils";
 
 export const Site = Object.freeze({
   Smokehouse: 1,
@@ -15,17 +16,19 @@ export async function getSitePopup() {
 }
 
 async function getData() {
-  const response = await axios.get("./data/smokehouse/events.json");
+  const response = await axios.get(formatUrl(`data/smokehouse/events.json`));
   return response.data;
 }
 
 async function getEventData() {
-  const response = await axios.get("../data/smokehouse/events.json");
+  const response = await axios.get(formatUrl(`data/smokehouse/events.json`));
   return response.data;
 }
 
 async function getFeaturedEvent() {
-  const response = await axios.get("./data/smokehouse/featuredEvent.json");
+  const response = await axios.get(
+    formatUrl(`data/smokehouse/featuredEvent.json`)
+  );
   return response.data;
 }
 

@@ -9,6 +9,7 @@ import Navbar from "../../components/smokehouse/Navbar";
 import SocialsWidget from "../../components/SocialsWidget";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
+import { formatUrl } from "../../utils/urlUtils";
 
 const Catering = () => {
   const [currentTab, setCurrentTab] = useState("1");
@@ -151,7 +152,7 @@ const Catering = () => {
                       ) : (
                         <div>
                           <img
-                            src={tab?.content?.original}
+                            src={formatUrl(tab?.content?.original)}
                             className="h-full lg:max-w-[800px] w-full object-cover"
                             alt=""
                           />
