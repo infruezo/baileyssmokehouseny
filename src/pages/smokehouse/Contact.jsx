@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import Banner from "../../components/smokehouse/Banner";
 import Footer from "../../components/smokehouse/Footer";
 import Navbar from "../../components/smokehouse/Navbar";
@@ -10,8 +10,40 @@ import SocialsWidget from "../../components/SocialsWidget";
 import EventPopup from "../../components/smokehouse/EventPopup";
 import ReCAPTCHA from "react-google-recaptcha";
 
+import emailjs from "@emailjs/browser";
+
 const Contact = () => {
-  function onChange(value) {}
+  const form = useRef();
+  const [value, setValue] = useState(null);
+
+  function onChange(value) {
+    setValue(value);
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // check for captcha first
+    // if (value) {
+    //   emailjs
+    //     .sendForm(
+    //       "placeholder",
+    //       "placeholder",
+    //       form.current,
+    //       "placeholder"
+    //     )
+    //     .then(
+    //       (result) => {
+    //         console.log(result.text);
+    //       },
+    //       (error) => {
+    //         console.log(error.text);
+    //       }
+    //     );
+    // } else {
+    //   console.log("no captcha");
+    // }
+  };
 
   return (
     <div className="font-poppins">
@@ -29,22 +61,28 @@ const Contact = () => {
           {/* contact form */}
           <div className="py-4 w-full flex flex-col space-y-8 lg:flex-row lg:space-y-0 lg:space-x-8">
             {/* form section */}
-            <form className="lg:flex-1 w-full flex flex-col lg:space-y-8 space-y-4">
+            <form
+              ref={form}
+              onSubmit={handleSubmit}
+              className="lg:flex-1 w-full flex flex-col lg:space-y-8 space-y-4"
+            >
               <input
                 type="text"
                 required
+                name="from_name"
                 placeholder="Name *"
                 className="w-full px-4 py-2 border border-gray-600 placeholder:text-gray-400 outline-none focus:ring-1 focus:ring-primary-smokehouseBrown duration-300 text-primary-smokehouseBrown font-medium bg-transparent rounded-sm shadow-md placeholder:font-light"
               />
               <input
                 type="email"
                 required
+                name="user_email"
                 placeholder="Email *"
                 className="w-full px-4 py-2 border border-gray-600 placeholder:text-gray-400 outline-none focus:ring-1 focus:ring-primary-smokehouseBrown duration-300 text-primary-smokehouseBrown font-medium bg-transparent rounded-sm shadow-md placeholder:font-light"
               />
 
               <textarea
-                name=""
+                name="message"
                 className="px-4 py-2 border border-gray-600 placeholder:text-gray-400 outline-none focus:ring-1 focus:ring-primary-smokehouseBrown duration-300 text-primary-smokehouseBrown font-medium bg-transparent rounded-sm shadow-md placeholder:font-light"
                 id=""
                 cols="30"
