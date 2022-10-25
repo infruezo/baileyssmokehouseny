@@ -10,9 +10,6 @@ import SocialsWidget from "../../components/SocialsWidget";
 import EventPopup from "../../components/smokehouse/EventPopup";
 import ReCAPTCHA from "react-google-recaptcha";
 
-import emailjs from "@emailjs/browser";
-import axios from "axios";
-
 const Contact = () => {
   const form = useRef();
   const [value, setValue] = useState(null);
@@ -26,6 +23,14 @@ const Contact = () => {
     setValue(value);
     setError("");
   }
+
+  const clearFields = () => {
+    setName("");
+    setEmail("");
+    setMessage("");
+    setError("");
+    setValue(null);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -47,7 +52,7 @@ const Contact = () => {
         };
         fetch("http://www.gomobilehawk.com/api/index.php", requestOptions)
           .then((response) => response.json())
-          .then((data) => console.log(data));
+          .then((data) => clearFields());
       } else {
         setError("Please fill out all the fields.");
       }

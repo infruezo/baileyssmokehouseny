@@ -21,6 +21,16 @@ const Contact = ({ data }) => {
     setError("");
   }
 
+  const clearFields = () => {
+    setName("");
+    setEmail("");
+    setGuests(1);
+    setDate("");
+    setMessage("");
+    setError("");
+    setValue(null);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -50,7 +60,7 @@ const Contact = ({ data }) => {
         };
         fetch("http://www.gomobilehawk.com/api/index.php", requestOptions)
           .then((response) => response.json())
-          .then((data) => console.log(data));
+          .then((data) => clearFields());
       } else {
         setError("Please fill out all the fields.");
       }

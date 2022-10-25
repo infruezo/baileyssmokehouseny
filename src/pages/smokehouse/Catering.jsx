@@ -41,6 +41,18 @@ const Catering = () => {
     fetchData();
   }, []);
 
+  const clearFields = () => {
+    setName("");
+    setPhone("");
+    setEmail("");
+    setDate("");
+    setEventType("");
+    setEventTime("");
+    setMessage("");
+    setError("");
+    setValue(null);
+  };
+
   function onChange(value) {
     setValue(value);
     setError("");
@@ -81,7 +93,7 @@ const Catering = () => {
         };
         fetch("http://www.gomobilehawk.com/api/index.php", requestOptions)
           .then((response) => response.json())
-          .then((data) => console.log(data));
+          .then((data) => clearFields());
       } else {
         setError("Please fill out all the fields.");
       }
