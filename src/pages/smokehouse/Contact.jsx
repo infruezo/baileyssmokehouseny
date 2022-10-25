@@ -27,11 +27,6 @@ const Contact = () => {
     setError("");
   }
 
-  const headers = {
-    "Access-Control-Allow-Origin": "*",
-    "Content-Type": "text/html; charset=UTF-8",
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -54,7 +49,7 @@ const Contact = () => {
 
         const requestOptions = {
           method: "POST",
-          headers: { "Content-Type": "text/html; charset=UTF-8" },
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: JSON.stringify({
             subject: `Message from ${name}`,
             email: email,
