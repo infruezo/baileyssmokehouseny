@@ -28,6 +28,7 @@ const Contact = () => {
   }
 
   const headers = {
+    "Access-Control-Allow-Origin": "*",
     "Content-Type": "text/html; charset=UTF-8",
   };
 
@@ -39,17 +40,30 @@ const Contact = () => {
       // check for form values
       if (name !== "" && email !== "" && message !== "") {
         setError("");
-        const response = await axios.post(
-          "http://www.gomobilehawk.com/api/index.php",
-          { headers },
-          {
+        // const response = await axios.post(
+        //   "http://www.gomobilehawk.com/api/index.php",
+        //   { headers },
+        //   {
+        //     subject: `Message from ${name}`,
+        //     email: email,
+        //     message: message,
+        //   }
+        // );
+
+        // console.log(response.data);
+
+        const requestOptions = {
+          method: "POST",
+          headers: { "Content-Type": "text/html; charset=UTF-8" },
+          body: JSON.stringify({
             subject: `Message from ${name}`,
             email: email,
-            message: message,
-          }
-        );
-
-        console.log(response.data);
+            message: `<b>${message}</b>`,
+          }),
+        };
+        fetch("http://www.gomobilehawk.com/api/index.php", requestOptions)
+          .then((response) => response.json())
+          .then((data) => console.log(data));
       } else {
         setError("Please fill out all the fields.");
       }
