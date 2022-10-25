@@ -14,6 +14,18 @@ import { formatUrl } from "../../utils/urlUtils";
 const Catering = () => {
   const [currentTab, setCurrentTab] = useState("1");
 
+  const [error, setError] = useState("");
+
+  const [value, setValue] = useState(null);
+
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [date, setDate] = useState("");
+  const [eventType, setEventType] = useState("");
+  const [eventTime, setEventTime] = useState("");
+  const [message, setMessage] = useState("");
+
   const handleTabClick = (e) => {
     setCurrentTab(e.target.id);
   };
@@ -29,7 +41,54 @@ const Catering = () => {
     fetchData();
   }, []);
 
-  function onChange(value) {}
+  function onChange(value) {
+    setValue(value);
+    setError("");
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // check for captcha first
+    if (value) {
+      // check for form values
+      if (
+        name !== "" &&
+        phone !== "" &&
+        email !== "" &&
+        eventType !== "" &&
+        eventTime !== ""
+      ) {
+        const requestOptions = {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: JSON.stringify({
+            subject: `Catering request from ${name}`,
+            email: email,
+            message: `<h3>Received a catering request from <b>${name}</b></h3>
+            <p><b>Event Type: </b> ${eventType}</p>
+            <p><b>Event Time: </b> ${eventTime} - ${date}</p>
+
+            <br/>
+            <br/>
+            <p><a href="mailto:${email}">Contact via email.</a></p>
+            <br/>
+            <p><a href="tel:${phone}">Call mr(mrs).${name}.</a></p>
+            <br/>
+            <p>Additional infromations (if any): ${message}</p>
+            `,
+          }),
+        };
+        fetch("http://www.gomobilehawk.com/api/index.php", requestOptions)
+          .then((response) => response.json())
+          .then((data) => console.log(data));
+      } else {
+        setError("Please fill out all the fields.");
+      }
+    } else {
+      setError("Please check the captcha first.");
+    }
+  };
 
   return (
     <div className="font-poppins">
@@ -46,19 +105,26 @@ const Catering = () => {
 
           {/* form div */}
           <div className="w-full h-full pt-6">
-            <form className="w-full h-full flex flex-col space-y-4">
+            <form
+              onSubmit={handleSubmit}
+              className="w-full h-full flex flex-col space-y-4"
+            >
               {/* name + phone */}
               <div className="flex flex-col space-y-4 lg:space-y-0 lg:flex-row items-center justify-center lg:items-center lg:justify-between lg:space-x-8">
                 <input
                   type="text"
                   className="w-full px-4 py-2 border border-gray-600 placeholder:text-gray-400 outline-none focus:ring-1 focus:ring-primary-smokehouseBrown duration-300 text-primary-smokehouseBrown font-medium bg-transparent rounded-sm shadow-md placeholder:font-light"
                   placeholder="Name *"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   required
                 />
                 <input
-                  type="text"
+                  type="tel"
                   className="w-full px-4 py-2 border border-gray-600 placeholder:text-gray-400 outline-none focus:ring-1 focus:ring-primary-smokehouseBrown duration-300 text-primary-smokehouseBrown font-medium bg-transparent rounded-sm shadow-md placeholder:font-light"
                   placeholder="Phone *"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   required
                 />
               </div>
@@ -69,11 +135,15 @@ const Catering = () => {
                   type="email"
                   className="w-full px-4 py-2 border border-gray-600 placeholder:text-gray-400 outline-none focus:ring-1 focus:ring-primary-smokehouseBrown duration-300 text-primary-smokehouseBrown font-medium bg-transparent rounded-sm shadow-md placeholder:font-light"
                   placeholder="Email *"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                 />
                 <input
                   type="date"
                   placeholder="jj/mm/aaaa"
+                  value={date}
+                  onChange={(e) => setDate(e.target.value)}
                   className="w-full px-4 py-2 border border-gray-600 !placeholder:text-gray-400 outline-none focus:ring-1 focus:ring-primary-smokehouseBrown duration-300 text-primary-smokehouseBrown font-medium bg-transparent rounded-sm shadow-md placeholder:font-light"
                 />
               </div>
@@ -85,12 +155,16 @@ const Catering = () => {
                   className="w-full px-4 py-2 border border-gray-600 placeholder:text-gray-400 outline-none focus:ring-1 focus:ring-primary-smokehouseBrown duration-300 text-primary-smokehouseBrown font-medium bg-transparent rounded-sm shadow-md placeholder:font-light"
                   placeholder="Type of Event *"
                   required
+                  value={eventType}
+                  onChange={(e) => setEventType(e.target.value)}
                 />
                 <input
                   type="text"
                   className="w-full px-4 py-2 border border-gray-600 placeholder:text-gray-400 outline-none focus:ring-1 focus:ring-primary-smokehouseBrown duration-300 text-primary-smokehouseBrown font-medium bg-transparent rounded-sm shadow-md placeholder:font-light"
                   placeholder="Time of Event *"
                   required
+                  value={eventTime}
+                  onChange={(e) => setEventTime(e.target.value)}
                 />
               </div>
 
@@ -102,6 +176,8 @@ const Catering = () => {
                 cols="30"
                 rows="10"
                 placeholder="Message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
               ></textarea>
 
               {/* google captcha */}
@@ -109,6 +185,13 @@ const Catering = () => {
                 sitekey={process.env.REACT_APP_GOOGLE_CAPTCHA_SITE_KEY}
                 onChange={onChange}
               />
+
+              {/* error */}
+              {error && (
+                <p className="text-red-500 font-medium text-sm border p-2 border-red-500 w-fit rounded-md shadow-sm">
+                  {error}
+                </p>
+              )}
 
               {/* submit button */}
               <button

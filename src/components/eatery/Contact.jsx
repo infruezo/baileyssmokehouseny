@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsFillTelephoneFill } from "react-icons/bs";
 import { GrMail } from "react-icons/gr";
 import { MdLocationOn } from "react-icons/md";
@@ -7,7 +7,57 @@ import SectionTitle from "./SectionTitle";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = ({ data }) => {
-  function onChange(value) {}
+  const [value, setValue] = useState(null);
+  const [error, setError] = useState("");
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [guests, setGuests] = useState(1);
+  const [date, setDate] = useState("");
+  const [message, setMessage] = useState("");
+
+  function onChange(value) {
+    setValue(value);
+    setError("");
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    // check for captcha first
+    if (value) {
+      // check for form values
+      if (
+        name !== "" &&
+        email !== "" &&
+        guests !== "" &&
+        guests >= 1 &&
+        date !== ""
+      ) {
+        const requestOptions = {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: JSON.stringify({
+            subject: `Reservation request from ${name}`,
+            email: email,
+            message: `<h3>Received a reservation request from <b>${name}</b> for <b>${guests}</b> person(s).</h3>
+            <p>Reservation Date: <b>${date}</b></p>
+            <br/>            
+            <br/>            
+            <p>Additional infromations (if any): ${message}</p>
+            `,
+          }),
+        };
+        fetch("http://www.gomobilehawk.com/api/index.php", requestOptions)
+          .then((response) => response.json())
+          .then((data) => console.log(data));
+      } else {
+        setError("Please fill out all the fields.");
+      }
+    } else {
+      setError("Please check the captcha first.");
+    }
+  };
 
   return (
     <div id="contact" className="">
@@ -24,7 +74,10 @@ const Contact = ({ data }) => {
                   Reservation
                 </h1>
 
-                <form className="px-0 lg:px-4 mt-4 space-y-6">
+                <form
+                  onSubmit={handleSubmit}
+                  className="px-0 lg:px-4 mt-4 space-y-6"
+                >
                   {/* one form item */}
                   <div>
                     <label htmlFor="name" className="text-lg font-semibold">
@@ -33,6 +86,9 @@ const Contact = ({ data }) => {
                     <input
                       type="text"
                       id="name"
+                      value={name}
+                      required
+                      onChange={(e) => setName(e.target.value)}
                       className="w-full px-2 py-2 rounded-md shadow-sm focus:ring focus:ring-primary-eateryBrown duration-300 outline-none"
                     />
                   </div>
@@ -45,6 +101,9 @@ const Contact = ({ data }) => {
                     <input
                       type="email"
                       id="email"
+                      required
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       className="w-full px-2 py-2 rounded-md shadow-sm focus:ring focus:ring-primary-eateryBrown duration-300 outline-none"
                     />
                   </div>
@@ -56,7 +115,11 @@ const Contact = ({ data }) => {
                     </label>
                     <input
                       type="number"
+                      value={guests}
+                      onChange={(e) => setGuests(e.target.value)}
+                      min={1}
                       id="guests"
+                      required
                       className="w-full px-2 py-2 rounded-md shadow-sm focus:ring focus:ring-primary-eateryBrown duration-300 outline-none"
                     />
                   </div>
@@ -69,6 +132,9 @@ const Contact = ({ data }) => {
                     <input
                       type="date"
                       id="date"
+                      value={date}
+                      required
+                      onChange={(e) => setDate(e.target.value)}
                       className="w-full px-2 py-2 rounded-md shadow-sm focus:ring focus:ring-primary-eateryBrown duration-300 outline-none"
                     />
                   </div>
@@ -81,6 +147,8 @@ const Contact = ({ data }) => {
                     <textarea
                       type=""
                       id="message"
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                       className="w-full px-2 py-2 rounded-md shadow-sm focus:ring focus:ring-primary-eateryBrown duration-300 outline-none"
                     ></textarea>
                   </div>
@@ -90,6 +158,12 @@ const Contact = ({ data }) => {
                     sitekey={process.env.REACT_APP_GOOGLE_CAPTCHA_SITE_KEY}
                     onChange={onChange}
                   />
+
+                  {error && (
+                    <div className="w-full p-3 bg-red-500/80 text-white rounded-md shadow-sm font-medium text-sm">
+                      {error}
+                    </div>
+                  )}
 
                   <button
                     type="submit"

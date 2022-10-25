@@ -35,17 +35,6 @@ const Contact = () => {
       // check for form values
       if (name !== "" && email !== "" && message !== "") {
         setError("");
-        // const response = await axios.post(
-        //   "http://www.gomobilehawk.com/api/index.php",
-        //   { headers },
-        //   {
-        //     subject: `Message from ${name}`,
-        //     email: email,
-        //     message: message,
-        //   }
-        // );
-
-        // console.log(response.data);
 
         const requestOptions = {
           method: "POST",
