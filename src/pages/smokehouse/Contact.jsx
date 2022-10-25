@@ -11,38 +11,46 @@ import EventPopup from "../../components/smokehouse/EventPopup";
 import ReCAPTCHA from "react-google-recaptcha";
 
 import emailjs from "@emailjs/browser";
+import axios from "axios";
 
 const Contact = () => {
   const form = useRef();
   const [value, setValue] = useState(null);
 
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [error, setError] = useState("");
+
   function onChange(value) {
     setValue(value);
+    setError("");
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     // check for captcha first
-    // if (value) {
-    //   emailjs
-    //     .sendForm(
-    //       "placeholder",
-    //       "placeholder",
-    //       form.current,
-    //       "placeholder"
-    //     )
-    //     .then(
-    //       (result) => {
-    //         console.log(result.text);
-    //       },
-    //       (error) => {
-    //         console.log(error.text);
-    //       }
-    //     );
-    // } else {
-    //   console.log("no captcha");
-    // }
+    if (value) {
+      // check for form values
+      if (name !== "" && email !== "" && message !== "") {
+        setError("");
+        const response = await axios.post(
+          "http://www.gomobilehawk.com/api/index.php",
+          {
+            subject: `Message from ${name}`,
+            email: email,
+            message: message,
+          }
+        );
+
+        console.log(response.data);
+      } else {
+        setError("Please fill out all the fields.");
+      }
+    } else {
+      setError("Please check the captcha first.");
+    }
   };
 
   return (
@@ -71,12 +79,16 @@ const Contact = () => {
                 required
                 name="from_name"
                 placeholder="Name *"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 className="w-full px-4 py-2 border border-gray-600 placeholder:text-gray-400 outline-none focus:ring-1 focus:ring-primary-smokehouseBrown duration-300 text-primary-smokehouseBrown font-medium bg-transparent rounded-sm shadow-md placeholder:font-light"
               />
               <input
                 type="email"
                 required
                 name="user_email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Email *"
                 className="w-full px-4 py-2 border border-gray-600 placeholder:text-gray-400 outline-none focus:ring-1 focus:ring-primary-smokehouseBrown duration-300 text-primary-smokehouseBrown font-medium bg-transparent rounded-sm shadow-md placeholder:font-light"
               />
@@ -87,6 +99,9 @@ const Contact = () => {
                 id=""
                 cols="30"
                 rows="11"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
                 placeholder="Message"
               ></textarea>
 
@@ -95,6 +110,12 @@ const Contact = () => {
                 sitekey={process.env.REACT_APP_GOOGLE_CAPTCHA_SITE_KEY}
                 onChange={onChange}
               />
+
+              {error && (
+                <p className="text-red-500 font-medium text-sm border p-2 border-red-500 w-fit rounded-md shadow-sm">
+                  {error}
+                </p>
+              )}
 
               {/* submit button */}
               <button
@@ -132,6 +153,14 @@ const Contact = () => {
                   <GrMail className="h-6 w-6 text-primary-smokehouseDarkRed fill-current" />
                   <p>info@baileysny.com</p>
                 </div>
+
+                {/* test constant contact form  */}
+                {/* <!-- Begin Constant Contact Inline Form Code --> */}
+                <div
+                  className="ctct-inline-form"
+                  data-form-id="81076f1d-04cf-4b02-92ea-49b1bef406e3"
+                ></div>
+                {/* <!-- End Constant Contact Inline Form Code --> */}
               </div>
 
               {/* map */}
