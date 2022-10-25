@@ -27,6 +27,10 @@ const Contact = () => {
     setError("");
   }
 
+  const headers = {
+    "Content-Type": "text/html; charset=UTF-8",
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -37,6 +41,7 @@ const Contact = () => {
         setError("");
         const response = await axios.post(
           "http://www.gomobilehawk.com/api/index.php",
+          { headers },
           {
             subject: `Message from ${name}`,
             email: email,
