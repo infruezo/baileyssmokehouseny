@@ -161,14 +161,6 @@ const Contact = () => {
                   <GrMail className="h-6 w-6 text-primary-smokehouseDarkRed fill-current" />
                   <p>info@baileysny.com</p>
                 </div>
-
-                {/* test constant contact form  */}
-                {/* <!-- Begin Constant Contact Inline Form Code --> */}
-                <div
-                  className="ctct-inline-form"
-                  data-form-id="81076f1d-04cf-4b02-92ea-49b1bef406e3"
-                ></div>
-                {/* <!-- End Constant Contact Inline Form Code --> */}
               </div>
 
               {/* map */}

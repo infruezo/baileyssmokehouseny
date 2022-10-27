@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { formatUrl } from "../../utils/urlUtils";
+import ConstantContactForm from "../ConstantContactForm";
 
 const Footer = ({ data }) => {
   return (
@@ -39,7 +40,9 @@ const Footer = ({ data }) => {
               <p className="text-sm px-4 lg:text-base lg:px-0 text-primary-eateryLightBrown">
                 Submit your Email to receive all the latest News.
               </p>
-              <form className="w-full relative">
+
+              {/* old form */}
+              {/* <form className="w-full relative">
                 <input
                   type="email"
                   required
@@ -53,7 +56,9 @@ const Footer = ({ data }) => {
                 >
                   Send
                 </button>
-              </form>
+              </form> */}
+
+              <ConstantContactForm />
             </div>
           </div>
         </div>

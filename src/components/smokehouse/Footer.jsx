@@ -4,6 +4,7 @@ import { GrMail } from "react-icons/gr";
 import SocialsWidget from "../SocialsWidget";
 import { MdLocationOn } from "react-icons/md";
 import ReCAPTCHA from "react-google-recaptcha";
+import ConstantContactForm from "../ConstantContactForm";
 
 const Footer = () => {
   function onChange(value) {}
@@ -68,7 +69,8 @@ const Footer = () => {
           </h1>
           <p className="text-xs">To receive the latest news from us please</p>
 
-          <form className="w-full flex flex-col lg:space-y-4 space-y-6">
+          {/* old form */}
+          {/* <form className="w-full flex flex-col lg:space-y-4 space-y-6">
             <input
               type="email"
               required
@@ -92,7 +94,7 @@ const Footer = () => {
               </label>
             </div>
 
-            {/* google captcha */}
+           
             <ReCAPTCHA
               sitekey={process.env.REACT_APP_GOOGLE_CAPTCHA_SITE_KEY}
               onChange={onChange}
@@ -102,7 +104,9 @@ const Footer = () => {
             <button className="bg-red-700 w-24 text-white py-1 rounded-md font-semibold hover:bg-white hover:text-red-700 duration-300">
               Send
             </button>
-          </form>
+          </form> */}
+
+          <ConstantContactForm />
 
           <div className="border-t border-white text-[10px] mt-6 pt-2">
             <p>
