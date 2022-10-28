@@ -54,7 +54,7 @@ const Main = () => {
             <div className="bg-black w-full h-full absolute left-0 top-0 bg-opacity-30"></div>
           </div>
 
-          <Link to="/eatery">
+          <a href="/eatery">
             <div className="w-full h-full flex flex-col space-y-4 lg:space-y-8 p-4 items-center">
               <img
                 src={formatUrl(`images/landing/eaterylogo.png`)}
@@ -66,7 +66,7 @@ const Main = () => {
                 Bailey’s Eatery, Breakfast bar & Bistro
               </h1>
             </div>
-          </Link>
+          </a>
         </div>
 
         {/* Small Footer at the end of the page */}

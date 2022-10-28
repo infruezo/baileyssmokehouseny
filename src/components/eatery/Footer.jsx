@@ -1,9 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { formatUrl } from "../../utils/urlUtils";
 import ConstantContactForm from "../ConstantContactForm";
 
 const Footer = ({ data }) => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(false);
+  }, [loading]);
+
   return (
     <footer className="lg:mt-32 mt-16 text-primary-eateryLightBrown relative">
       {/* wrapper */}
