@@ -74,25 +74,25 @@ const HoursMenus = () => {
                 className="lg:h-96 "
                 alt=""
               />
-              <Link to="/new-city-now-hiring">
+              <a href="/new-city-now-hiring">
                 <img
                   src={formatUrl(`images/smokehouse/news/image-3.png`)}
                   className="lg:h-96"
                   alt=""
                 />
-              </Link>
+              </a>
               <p className="font-medium text-sm lg:text-lg text-primary-smokehouseDarkRed">
                 191-194 S. Main Street, New City NY 10956
               </p>
               <p className="font-medium text-sm lg:text-lg">
                 Baileys is opening a second location in New City and is hiring
                 for all positions. Interested in working with us? Please click{" "}
-                <Link
-                  to="/new-city-now-hiring"
+                <a
+                  href="/new-city-now-hiring"
                   className="text-primary-smokehouseDarkRed underline underline-offset-2 font-bold"
                 >
                   here
-                </Link>{" "}
+                </a>{" "}
                 to submit an application.
               </p>
             </div>
@@ -128,18 +128,18 @@ const HoursMenus = () => {
           <div className="w-full mt-16 h-auto py-8">
             <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 gap-8 xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto ">
               {events.map((event, idx) => (
-                <Link key={idx} to={`/event/${event.id}`}>
+                <a key={idx} href={`/event/${event.id}`}>
                   <EventCard event={event} />
-                </Link>
+                </a>
               ))}
             </div>
 
-            <Link
-              to="/event-calendar"
+            <a
+              href="/event-calendar"
               className="block px-8 py-2 bg-transparent ring-1 ring-primary-smokehouseBrown w-fit rounded-full text-primary-smokehouseBrown hover:bg-primary-smokehouseBrown hover:text-primary-eateryLightBrown duration-300 shadow-md mx-auto mt-16"
             >
               View All Events
-            </Link>
+            </a>
           </div>
 
           {/* indoor/outdoor dining hours */}

@@ -128,18 +128,18 @@ const EventDetail = () => {
                     <div className="w-full mt-8 h-auto py-8">
                       <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 gap-8 xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto ">
                         {events?.map((event, idx) => (
-                          <Link key={idx} to={`/event/${event.id}`}>
+                          <a key={idx} href={`/event/${event.id}`}>
                             <EventCard event={event} />
-                          </Link>
+                          </a>
                         ))}
                       </div>
 
-                      <Link
-                        to="/event-calendar"
+                      <a
+                        href="/event-calendar"
                         className="block px-8 py-2 bg-transparent ring-1 ring-primary-smokehouseBrown w-fit rounded-full text-primary-smokehouseBrown hover:bg-primary-smokehouseBrown hover:text-primary-eateryLightBrown duration-300 shadow-md mx-auto mt-16"
                       >
                         View All Events
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>

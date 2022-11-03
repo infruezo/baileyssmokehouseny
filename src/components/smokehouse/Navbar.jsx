@@ -54,14 +54,14 @@ const Navbar = () => {
       {/* main navbar (logo + desktop links) */}
       <div className="w-full py-6 mt-12 lg:mt-0 bg-transparent text-white">
         <div className="flex items-center justify-center lg:justify-between px-2 w-full xl:max-w-screen-xl lg:max-w-screen-lg mx-auto">
-          <Link to="/hours-and-menus">
+          <a href="/hours-and-menus">
             <img
               src={formatUrl(`images/landing/smokehouselogo.png`)}
               loading="lazy"
               className="h-[h-107px] w-[200px] scale-75 lg:scale-100"
               alt=""
             />
-          </Link>
+          </a>
 
           <div className="hidden lg:flex lg:flex-col lg:space-y-6">
             {/* number and order buttons */}
@@ -96,33 +96,30 @@ const Navbar = () => {
 
             {/* navigation links */}
             <nav className="flex items-center xl:space-x-12 lg:space-x-4 uppercase font-semibold tracking-wide text-lg">
-              <Link className="hover:text-red-400 duration-300" to="/home">
+              <a className="hover:text-red-400 duration-300" href="/home">
                 Home
-              </Link>
-              <Link className="hover:text-red-400 duration-300" to="/about">
+              </a>
+              <a className="hover:text-red-400 duration-300" href="/about">
                 About
-              </Link>
-              <Link className="hover:text-red-400 duration-300" to="/menu">
+              </a>
+              <a className="hover:text-red-400 duration-300" href="/menu">
                 Menu
-              </Link>
-              <Link className="hover:text-red-400 duration-300" to="/catering">
+              </a>
+              <a className="hover:text-red-400 duration-300" href="/catering">
                 Catering
-              </Link>
-              <Link
+              </a>
+              <a
                 className="hover:text-red-400 duration-300"
-                to="/event-calendar"
+                href="/event-calendar"
               >
                 Event Calendar
-              </Link>
-              <Link className="hover:text-red-400 duration-300" to="/gallery">
+              </a>
+              <a className="hover:text-red-400 duration-300" href="/gallery">
                 Gallery
-              </Link>
-              <Link
-                className="hover:text-red-400 duration-300"
-                to="/contact-us"
-              >
+              </a>
+              <a className="hover:text-red-400 duration-300" href="/contact-us">
                 Contact Us
-              </Link>
+              </a>
             </nav>
           </div>
         </div>
@@ -148,64 +145,64 @@ const Navbar = () => {
               />
             </svg>
           </div>
-          <Link to="/hours-and-menus" className="w-full">
+          <a href="/hours-and-menus" className="w-full">
             <img
               src={formatUrl(`images/landing/smokehouselogo.png`)}
               alt="logo"
               loading="lazy"
               className="object-cover h-[h-107px] w-[200px] scale-75  mx-auto"
             />
-          </Link>
+          </a>
           <div className="flex flex-col text-xl font-medium items-center justify-center mt-12 space-y-6 ">
-            <Link
-              to="/home"
+            <a
+              href="/home"
               className="hover:text-red-500 duration-200 cursor-pointer"
               onClick={() => setActiveMenu(false)}
             >
               Home
-            </Link>
-            <Link
-              to="/about"
+            </a>
+            <a
+              href="/about"
               className="hover:text-red-500 duration-200 cursor-pointer"
               onClick={() => setActiveMenu(false)}
             >
               About Us
-            </Link>
-            <Link
-              to="/menu"
+            </a>
+            <a
+              href="/menu"
               className="hover:text-red-500 duration-200 cursor-pointer"
               onClick={() => setActiveMenu(false)}
             >
               Menu
-            </Link>
-            <Link
-              to="/catering"
+            </a>
+            <a
+              href="/catering"
               className="hover:text-red-500 duration-200 cursor-pointer"
               onClick={() => setActiveMenu(false)}
             >
               Catering
-            </Link>
-            <Link
-              to="/event-calendar"
+            </a>
+            <a
+              href="/event-calendar"
               className="hover:text-red-500 duration-200 cursor-pointer"
               onClick={() => setActiveMenu(false)}
             >
               Event Calendar
-            </Link>
-            <Link
-              to="/gallery"
+            </a>
+            <a
+              href="/gallery"
               className="hover:text-red-500 duration-200 cursor-pointer"
               onClick={() => setActiveMenu(false)}
             >
               Gallery
-            </Link>
-            <Link
-              to="/contact-us"
+            </a>
+            <a
+              href="/contact-us"
               className="hover:text-red-500 duration-200 cursor-pointer"
               onClick={() => setActiveMenu(false)}
             >
               Contact Us
-            </Link>
+            </a>
 
             <a
               href="tel:845-398-1454"

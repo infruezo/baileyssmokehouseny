@@ -54,12 +54,12 @@ const Home = () => {
               <h5 className="xl:text-2xl lg:text-xl text-base sm:text-lg text-center">
                 Full service restaurant and bars, catering and takeout.
               </h5>
-              <Link
-                to="/contact-us"
+              <a
+                href="/contact-us"
                 className="px-6 py-2.5 bg-red-500 text-white mx-auto font-semibold rounded-md shadow-md hover:bg-white hover:text-red-500 duration-300 w-fit"
               >
                 CONTACT US
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -69,12 +69,12 @@ const Home = () => {
               {/* one span */}
               <div className="col-span-1 lg:h-full h-64 relative">
                 <div className="h-full w-full flex items-center justify-center">
-                  <Link
-                    to="/restaurant-bars"
+                  <a
+                    href="/restaurant-bars"
                     className="font-title tracking-tighter text-white text-center px-4 lg:px-0"
                   >
                     RESTAURANT & BARS
-                  </Link>
+                  </a>
                 </div>
 
                 {/* bg image */}
@@ -91,12 +91,12 @@ const Home = () => {
               {/* one span */}
               <div className="col-span-1 lg:h-full h-64 relative">
                 <div className="h-full w-full flex items-center justify-center">
-                  <Link
-                    to="/menu"
+                  <a
+                    href="/menu"
                     className="font-title tracking-tighter text-white text-center px-4 lg:px-0"
                   >
                     OUR MENUS
-                  </Link>
+                  </a>
                 </div>
 
                 {/* bg image */}
@@ -113,12 +113,12 @@ const Home = () => {
               {/* one span */}
               <div className="col-span-1 lg:h-full h-64 relative">
                 <div className="h-full w-full flex items-center justify-center">
-                  <Link
-                    to="/eatery-catering-takeout/"
+                  <a
+                    href="/eatery-catering-takeout/"
                     className="font-title tracking-tighter text-white text-center px-4 lg:px-0"
                   >
                     EATERY, CATERING & TAKEOUT
-                  </Link>
+                  </a>
                 </div>
 
                 {/* bg image */}
@@ -184,12 +184,12 @@ const Home = () => {
                   </p>
                 </div>
 
-                <Link
-                  to="/about"
+                <a
+                  href="/about"
                   className="block px-8 py-2 bg-transparent ring-1 ring-primary-smokehouseBrown w-fit rounded-full text-primary-smokehouseBrown hover:bg-primary-smokehouseBrown hover:text-primary-eateryLightBrown duration-300 shadow-md"
                 >
                   READ MORE
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -223,18 +223,18 @@ const Home = () => {
               <div className="w-full mt-16 h-auto py-8">
                 <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 gap-8 xl:max-w-screen-xl lg:max-w-screen-lg md:max-w-screen-md px-4 mx-auto ">
                   {events.map((event, idx) => (
-                    <Link key={idx} to={`/event/${event.id}`}>
+                    <a key={idx} href={`/event/${event.id}`}>
                       <EventCard event={event} />
-                    </Link>
+                    </a>
                   ))}
                 </div>
 
-                <Link
-                  to="/event-calendar"
+                <a
+                  href="/event-calendar"
                   className="block px-8 py-2 bg-transparent ring-1 ring-primary-smokehouseBrown w-fit rounded-full text-primary-smokehouseBrown hover:bg-primary-smokehouseBrown hover:text-primary-eateryLightBrown duration-300 shadow-md mx-auto mt-16"
                 >
                   View All Events
-                </Link>
+                </a>
               </div>
             </div>
           )}

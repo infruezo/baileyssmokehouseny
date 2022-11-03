@@ -8,7 +8,7 @@ const MiniEventDisplayCard = ({ event }) => {
     <div className="w-full h-full flex items-center space-x-4 col-span-1">
       {/* image */}
       <div className="relative h-24 w-24 lg:h-28 lg:w-28 aspect-square rounded-md shadow-sm cursor-pointer">
-        <Link to={`/event/${event.id}`}>
+        <a href={`/event/${event.id}`}>
           <img
             src={formatUrl(event.image)}
             className="w-full h-full rounded-md"
@@ -18,7 +18,7 @@ const MiniEventDisplayCard = ({ event }) => {
             <p className="font-normal">{format(event.instanceDate, "MMM")}</p>
             <p className="text-3xl">{format(event.instanceDate, "dd")}</p>
           </div>
-        </Link>
+        </a>
       </div>
 
       {/* informations */}

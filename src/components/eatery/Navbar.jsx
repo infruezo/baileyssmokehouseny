@@ -63,14 +63,14 @@ const Navbar = ({ data }) => {
       <div className="h-28 lg:h-32 px-4  lg:py-0 ">
         <div className="w-full xl:max-w-screen-2xl lg:max-w-screen-xl md:max-w-screen-lg h-full mx-auto flex items-center justify-between ">
           {/* logo */}
-          <Link to="/eatery">
+          <a href="/eatery">
             <img
               src={formatUrl(data.logo)}
               className="w-[177px] h-[112px] scale-75 lg:scale-100 object-cover"
               alt=""
               loading="lazy"
             />
-          </Link>
+          </a>
 
           {/* links */}
           <div className="lg:flex items-center xl:space-x-14 lg:space-x-8 font-semibold text-lg hidden text-primary-eateryBrown/80">
