@@ -24,7 +24,7 @@ const Main = () => {
             <div className="bg-black w-full h-full absolute left-0 top-0 bg-opacity-30"></div>
           </div>
 
-          <Link to="/hours-and-menus">
+          <a href="/hours-and-menus">
             <div className="w-full h-full flex flex-col space-y-4 lg:space-y-12 p-4 items-center">
               <img
                 src={formatUrl(`images/landing/smokehouselogo.png`)}
@@ -36,7 +36,7 @@ const Main = () => {
                 Smokehouse, Takeout & Catering
               </h1>
             </div>
-          </Link>
+          </a>
         </div>
 
         {/* Right Image */}
