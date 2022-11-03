@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import SocialsWidget from "../components/SocialsWidget";
 import { formatUrl } from "../utils/urlUtils";
 
@@ -15,7 +14,7 @@ const Main = () => {
           <div className="absolute w-full h-full top-0 left-0 -z-10">
             <img
               src={formatUrl(`images/landing/smokehouse-bg.jpg`)}
-              className="w-full h-full object-cover "
+              className="w-full h-full object-cover"
               alt=""
               loading="lazy"
             />
